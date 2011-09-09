@@ -1,0 +1,127 @@
+/* THEME CONTROL */
+html {background: #000; height: 100%;}
+body {background: #000 url(../../img/UnderConstruction/page_bg_default.jpg) no-repeat top center; height: 100%; font-family: Arial, Helvetica, sans-serif; color: #ccc;}
+
+#page {width: 980px;margin: 0px auto 0;}
+#page h1 {padding: 70px 0 20px 0; text-align: center; display: block; height: 50px; }
+#page h1 img {height: 50px; width: auto;}
+
+/* LINKS COLOUR DEPENDING ON THEME */
+#page a {color: #00d8ff;}
+
+body.blue {background: url(../../img/UnderConstruction/page_bg_blue.jpg) no-repeat top center; }
+body.bw {background: url(../../img/UnderConstruction/page_bg_bw.jpg) no-repeat top center; }
+body.dark {background: url(../../img/UnderConstruction/page_bg_dark.jpg) no-repeat top center; }
+body.green {background: url(../../img/UnderConstruction/page_bg_green.jpg) no-repeat top center; }
+body.red {background: url(../../img/UnderConstruction/page_bg_red.jpg) no-repeat top center; }
+body.yellow {background: url(../../img/UnderConstruction/page_bg_yellow.jpg) no-repeat top center; }
+
+/* COUNTDOWN LAYOUT CONTROL */
+#countdown {background: none no-repeat left; width: 980px; height: 65px; margin: 0 auto 50px; padding: 170px 0 0 0;}
+#countdown div {float: left; width: 94px;}
+
+#countdown.true div.days {width: 141px; margin: 0 50px 0 158px;}
+#countdown.false div.days {width: 94px; margin: 0 75px 0 180px;}
+
+#countdown.false div.centos {display: none;}
+#countdown div.days div.false {display: none;}
+
+#countdown div.hours {margin: 0 73px 0 0px;}
+#countdown div.minutes {margin: 0 89px 0 0;}
+#countdown div.seconds {margin: 0;}
+
+#countdown div div {float: left; height: 65px; background: url(../../img/UnderConstruction/digits.png) no-repeat 0px 0px;} 
+#countdown div.image0 {background-position: -0px 0px; width: 47px;} 
+#countdown div.image1 {background-position: -47px 0px; width: 47px;} 
+#countdown div.image2 {background-position: -94px 0px; width: 47px;} 
+#countdown div.image3 {background-position: -141px 0px; width: 47px;} 
+#countdown div.image4 {background-position: -188px 0px; width: 47px;} 
+#countdown div.image5 {background-position: -235px 0px; width: 47px;} 
+#countdown div.image6 {background-position: -282px 0px; width: 47px;} 
+#countdown div.image7 {background-position: -329px 0px; width: 47px;} 
+#countdown div.image8 {background-position: -376px 0px; width: 47px;} 
+#countdown div.image9 {background-position: -423px 0px; width: 47px;} 
+
+/* PAGE CONTENT CLASSES */
+#page h2 {font-family: 'Georgia', Times New Roman, Helvetica, serif; font-style: normal; font-size: 24px; color: #4b4b4b; height: 60px; margin: 0 0 80px 0; text-align: center;}
+#page h2 a { color: #00d8ff }
+#page .content {width: 900px; margin: 0 auto;}
+#signup {margin: 0 auto 40px; text-align: center;}
+#tweet {background: url(../../img/UnderConstruction/ico_tweet.png) no-repeat left; margin: 0 0 15px 0; padding: 5px 0 0 40px; min-height: 27px; font-size: 12px;}
+#tweet span {width: 100%; display: block; color: #fff; font-size: 11px; font-style: italic;}
+#social { margin: 0 0 20px 0; height: 32px; display: block;}
+
+
+/* FOOTER SOCIAL ICONS */
+#social li a {float: left; width: 32px; height: 32px; margin: 0 10px 0px 0; background: url(../../img/UnderConstruction/social_icons.png) no-repeat top left;}
+
+#social li.youtube a {background-position: 0 0;}
+#social li.blogger a {background-position: -32px 0;}
+#social li.facebook a {background-position: -64px 0;}
+#social li.flickr a {background-position: -96px 0;}
+#social li.lastfm a {background-position: -128px 0;}
+#social li.linkedin a {background-position: -160px 0;}
+#social li.myspace a {background-position: -192px 0;}
+#social li.rss a {background-position: -224px 0;}
+#social li.skype a {background-position: -256px 0;}
+#social li.tumblr a {background-position: -288px 0;}
+#social li.twitter a {background-position: -320px 0;}
+#social li.vimeo a {background-position: -352px 0;}
+#social li.wordpress a {background-position: -384px 0;}
+#social li.digg a {background-position: -416px 0;}
+
+#social li.youtube a:hover {background-position: 0 -32px;}
+#social li.blogger a:hover {background-position: -32px -32px;}
+#social li.facebook a:hover {background-position: -64px -32px;}
+#social li.flickr a:hover {background-position: -96px -32px;}
+#social li.lastfm a:hover {background-position: -128px -32px;}
+#social li.linkedin a:hover {background-position: -160px -32px;}
+#social li.myspace a:hover {background-position: -192px -32px;}
+#social li.rss a:hover {background-position: -224px -32px;}
+#social li.skype a:hover {background-position: -256px -32px;}
+#social li.tumblr a:hover {background-position: -288px -32px;}
+#social li.twitter a:hover {background-position: -320px -32px;}
+#social li.vimeo a:hover {background-position: -352px -32px;}
+#social li.wordpress a:hover {background-position: -384px -32px;}
+#social li.digg a:hover {background-position: -416px -32px;}
+
+#social li.email a {background: url(../../img/UnderConstruction/email.png) no-repeat top; width: 32px; float: right;}
+#social li.email a:hover {background-position: 0px -32px;}
+
+/* NEWSLETTER SIGNUP */
+#newsletter {margin: 0 auto 0px; text-align: center; height: 55px;}
+
+#newsletter input.idleField {width: 362px; height: 55px; font-family: 'Georgia', Times New Roman, Helvetica, sans-serif; font-weight: bold; font-size: 21px; letter-spacing: -0.5px; color: #4b4b4b; text-align: center; border: none; -moz-border-radius: 5px 5px 5px 5px; background: url(../../img/UnderConstruction/input_text.png) no-repeat top left; margin: 0 10px 0 0; vertical-align: top;}
+#newsletter input {width: 362px; height: 55px; font-family: 'Georgia', Times New Roman, Helvetica, sans-serif; font-weight: bold; font-size: 21px; letter-spacing: -0.5px; color: #4b4b4b; text-align: center; border: none; -moz-border-radius: 5px 5px 5px 5px; background: url(../../img/UnderConstruction/input_text.png) no-repeat top left; margin: 0 10px 0 0; vertical-align: top;}
+#newsletter input.focusField {width: 362px; height: 55px; font-family: 'Georgia', Times New Roman, Helvetica, sans-serif; font-weight: bold; font-size: 21px; letter-spacing: -0.5px; color: #4b4b4b; text-align: center; border: none; -moz-border-radius: 5px 5px 5px 5px; background: url(../../img/UnderConstruction/input_text.png) no-repeat top left; background-position: 0 -55px; margin: 0 10px 0 0; vertical-align: top;}
+
+
+#newsletter input.submit {width: 125px; height: 55px; border: none; cursor: pointer; background: url(../../img/UnderConstruction/signup.png) no-repeat top; vertical-align: top;}
+
+#newsletter input.submit:hover {background-position: 0 -55px;}
+#feedback {height:20px;	margin: 10px auto 5px; display: block; width: 400px;}
+#feedback .info {width: 400px; height: 30px; text-align: center;}
+
+/* LOADING BARS WHICH APPEAR DURING AJAX CALLS */
+.bar {display:none; background:url(../../img/UnderConstruction/loading.gif) no-repeat center; margin-top:100px; height:40px; width:100%;}
+.signupbar{display:none; background:url(../../img/UnderConstruction/loadingsignup.gif) no-repeat center; height:20px; width:230px; margin: 0 auto; text-align: center;}	
+.signuploader {width: 400px; text-align: center; margin: 0 auto;}
+
+/* CONTACT US FORM */
+#contactus {color: #000;}
+#contactus p.intro {margin: 0 0 20px 0; font-size: 13px; color: #444; line-height: 21px; background: url(../../img/UnderConstruction/envelope.png) no-repeat left top; padding: 0 0 0 92px; min-height: 55px;}
+#contactus p.intro a {color: #444;}
+#contactus input {width: 400px; -moz-border-radius: 2px 2px 2px 2px; background: url(../../img/UnderConstruction/form_bg.png) repeat-x scroll left top #FFFFFF; border: 1px solid #DFDFDF; color: #333333; font-size: 20px; padding: 5px;}
+#contactus textarea {width:400px;height:100px; -moz-border-radius: 2px 2px 2px 2px;background:url(../../img/UnderConstruction/form_bg.png) repeat-x scroll left top #FFFFFF;border:1px solid #DFDFDF;color:#333333; font-size: 20px; padding: 5px;}
+#contactus_fields {font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 21px; color: #555555;}
+#contactus_fields li {padding: 0 0 5px 0;}
+#contactus_fields li.border {border-bottom: 1px solid #EFEFEF; color: #666666; font-size: 20px; padding: 0 0 15px 0; margin: 0 0 10px 0;}
+#contactus_fields .submit {width: 131px; height: 44px; border: none; margin: 0; padding: 0; background: url(../../img/UnderConstruction/sendit.gif) no-repeat top; cursor: pointer; text-indent: -9999px; font-size: 1px;}
+#contactus_fields .submit:hover {background-position: 0 -44px;}
+
+#confirmation h3 {font-size: 24px; font-style: italic; margin: 40px 0 10px 92px;}
+#confirmation p {margin: 0 0 0 92px; color: #444444; font-size: 16px; line-height: 24px;}
+
+/* ERROR MESSAGES */
+.contactUsForm span {display:none; font-size:12px; line-height:10px; padding-left:20px; color:#ff0000;}
+.signup_error {display: none; text-align: center;}
