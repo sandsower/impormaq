@@ -1,0 +1,24 @@
+#botonDelete{
+	background: url("../../img/backend/icon_tool_delete.png") no-repeat;
+	height: 28px;
+	width: 28px;
+}
+#botonDelete:hover{
+	background: url("../../img/backend/icon_tool_delete.png") no-repeat 0px -28px;
+}
+#botonView{
+	background: url("../../img/backend/icon_tool_view.png") no-repeat;
+	height: 28px;
+	width: 28px;
+}
+#botonView:hover{
+	background: url("../../img/backend/icon_tool_view.png") no-repeat 0px -28px;
+}
+#botonEdit{
+	background: url("../../img/backend/icon_tool_edit.png") no-repeat;
+	height: 28px;
+	width: 28px;
+}
+#botonEdit:hover{
+	background: url("../../img/backend/icon_tool_edit.png") no-repeat 0px -28px;
+}

@@ -22,6 +22,7 @@
 @import url(style.css); 		/* Custom CSS  */
 @import url(typography.css); 	/* Typography */
 @import url(forms.css); 		/* Forms */
+@import url(garrita.css);
 
 /* jQuery CSS */
 @import url(jquery/visualize/visualize.css); 
