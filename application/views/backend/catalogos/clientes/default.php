@@ -50,8 +50,8 @@
 							<td class="align_left "><a href="clientes/Domicilio/<?php echo $row->IdClientes; ?>" class="popup linkItem">Domicilio</a></td>
 							<td class="align_left "><a href="clientes/DatosFiscales/<?php echo $row->IdClientes; ?>" class="popup linkItem">Datos Fiscales</a></td>
 							<td class="align_left center tools">
-								<a href="clientes/editar/<?php echo $row->IdClientes;?>" class="edit tip popup linkItem" id="botonEdit" title="edit">edit</a>
-								<a href="marcas/eliminar/<?php echo $row->IdClientes; ?>" onClick="javascript: if(confirm('¿Esta seguro que desa borrar el registro?')){ return true; } else { return false;}" class="delete tip" id="botonDelete" title="delete">delete</a>
+								<a href="clientes/editar/<?php echo $row->IdClientes;?>" class="edit tip linkItem" id="botonEdit" title="edit">edit</a>
+								<a href="clientes/eliminar/<?php echo $row->IdClientes; ?>" onClick="javascript: if(confirm('¿Esta seguro que desa borrar el registro?')){ return true; } else { return false;}" class="delete tip" id="botonDelete" title="delete">delete</a>
 							</td>
 						</tr>
 						<?php endforeach; ?>

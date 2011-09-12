@@ -1,0 +1,63 @@
+**************************************************************************
+**************************************************************************
+*******                                                        ***********
+*******                       IMPORMAQ S.A.                    ***********
+*******                                                        ***********
+**************************************************************************
+**************************************************************************
+README FILE:
+--------------------------------------------------------------------------
+Coded By: Carlos Guillermo Bolaños López
+Framework: CodeIgniter v2.0.3
+Date of creation: 09/07/2011
+
+Actividades realizadas
+Login
+Sessiones
+
+Maquinaria
+	*Estilo
+Catalogos
+	Marcas:
+		*Create
+		*Read
+		*Update
+		*Delete
+		*Sort
+		*Find
+		*Paginated
+		*ChecarExistencia
+	Notas: Faltan mensajes de exito o error:
+	Tipos:
+		*Create
+		*Read
+		*Update
+		*Delete
+		*Sort
+		*Find
+		*Paginated
+		*ChecarExistencia
+	Notas: Faltan mensajes de exito o error:
+
+	Clientes:
+	*Estilo
+		*Create
+		*Read
+		*Update
+		*Delete
+		*Sort
+		*Find
+		*Paginated
+		
+	Notas: Faltan mensajes de exito o error:
+Modulos
+	Ventas:
+		*Estilo
+	Promociones:
+		*Estilo
+	Actividades:
+		*Estilo
+
+Reportes
+	Intividual
+	Multiple	

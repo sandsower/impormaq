@@ -54,18 +54,67 @@ class Clientes extends CI_Controller {
 			redirect('backend/clientes');
 		 //}	
 	}
+	
+	function eliminar(){
+		$id = $this->uri->segment(4,0);
+		if($this->clientes_model->delete($id))
+			$this->index();
+			// redirect('backend/clientes');
+	}
+
+	function editar(){
+		$id = $this->uri->segment(4,0);
+		$query = $this->clientes_model->getById($id);
+		$data['result'] = $query;
+		$data['main_content'] = 'backend/catalogos/clientes/edit';
+		$this->load->view('backend/template',$data);
+	}
+
+	function update(){
+
+		$data = array(
+			 'IdClientes' => $this->input->post('id'),
+			 'Nombres' => $this->input->post('nombre'),
+			 'APaterno' => $this->input->post('apellidoPat'),
+			 'AMaterno' => $this->input->post('apellidoMat'),
+			 'Empresa' => $this->input->post('empresa'),
+			 'CorreoElectronico' => $this->input->post('email'),
+			 'Oficina' => $this->input->post('oficina'),
+			 'Celular' => $this->input->post('celular'),
+			 'Radio' => $this->input->post('radio'),
+			 'Calle' => $this->input->post('calle'),
+			 'NumeroExt' => $this->input->post('numExterno'),
+			 'NumeroInt' => $this->input->post('numInterno'),
+			 'Colonia' => $this->input->post('colonia'),
+			 'CodigoPostal' => $this->input->post('cp'),
+			 'Municipio' => $this->input->post('municipio'),
+			 'Estado' => $this->input->post('estado'),
+			 'Pais' => $this->input->post('pais'),
+			 'RFC' => $this->input->post('rfc'),
+			 'RazonSocial' => $this->input->post('razonSocial')
+		 );
+		 
+		 //$query = $this->marcas_model->validateExistence($data);
+		 //if($query!=null)
+		 //	echo 'Marca existente';
+		// else{
+		 	$this->clientes_model->update($data);
+			redirect('backend/clientes');
+		 //}	
+	}
+
 	function Domicilio(){
 		$id = $this->uri->segment(4,0);
 		$query = $this->clientes_model->getById($id);
 		foreach($query->result() as $row) {
-			echo 'Domicilio: '.$row->Calle;
+			echo '<p><b>Domicilio:</b> '.$row->Calle;
 			echo ' #'.$row->NumeroExt;
-			echo ' Interior: '.$row->NumeroInt;
-			echo ' <br/>C.P.:'.$row->CodigoPostal;
-			echo ', Colonia: '.$row->Colonia;
+			echo ' <b>Interior:</b> '.$row->NumeroInt;
+			echo ' <br/><b>C.P.:</b>'.$row->CodigoPostal;
+			echo ', <b>Colonia:</b> '.$row->Colonia;
 			echo ', '.$row->Municipio;
 			echo ', '.$row->Estado;
-			echo ', '.$row->Pais.'.';
+			echo ', '.$row->Pais.'.</p>';
 		}
 	}
 
@@ -73,8 +122,8 @@ class Clientes extends CI_Controller {
 		$id = $this->uri->segment(4,0);
 		$query = $this->clientes_model->getById($id);
 		foreach($query->result() as $row) {
-			echo 'RFC: '.$row->RFC;
-			echo '<br/>Razon Social: '.$row->RazonSocial;
+			echo '<p><b>RFC:</b> '.$row->RFC;
+			echo '<br/><b>Razon Social:</b> '.$row->RazonSocial.'</p>';
 			
 		}
 

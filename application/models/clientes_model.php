@@ -16,12 +16,13 @@ class Clientes_model extends CI_Model {
 		$this->db->insert('Clientes', $data);
 	}
 
-	function delete(){
-		
+	function delete($id){
+		return $this->db->delete('Clientes', array('IdClientes' => $id));
 	}
 	
-	function update(){
-		
+	function update($data){
+		$this->db->where('IdClientes', $data['IdClientes']);
+		return $this->db->update('Clientes', $data);	
 	}
 
 	
