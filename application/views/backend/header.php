@@ -37,7 +37,7 @@
 					<ul class="subnav">  
 			            <li><a href="#" class="icon settings">Settings</a></li>  
 			            <li><a href="#messages" class="icon chatbubbles popup">Messages</a></li> 
-			            <li><a href="#" class="icon lock">Log out</a></li>  
+			            <li><a href="../login/close" class="icon lock">Log out</a></li>  
 			        </ul>  
 			        <!-- User Dropdown Content: End -->
 				</li>
@@ -147,6 +147,7 @@
 		<div id="breadcrumb">
 			<!-- Breadcrumb: Start -->
 			<ul class="left">
+				welcome <?php echo $this->session->userdata('username'); ?>
 			</ul>
 			<!-- Breadcrumb: End -->			
 		</div>

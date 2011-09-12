@@ -23,6 +23,11 @@ class Login extends CI_Controller {
 			$this->load->view('home');
 		}
 	}
+
+	function close(){
+		$this->session->sess_destroy();
+		redirect('home');
+	}
 }
 
 /* End of file login.php */
