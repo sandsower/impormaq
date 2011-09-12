@@ -15,7 +15,7 @@
 * { margin: 0;}
 
 body {
-	background-image:url(../img/bg.png);
+	background-image:url(../../img/backend/bg.png);
 	margin: 0;
 	padding: 0;
 }
@@ -51,7 +51,7 @@ body {
 #userpanel ul li a { color:#fff; }
 
 #userpanel ul {
-	background-image:url(../img/bg_light_top.png);
+	background-image:url(../../img/backend/bg_light_top.png);
 	border-width:1px;
 	border-bottom-width:0px;
 	border-style:solid;
@@ -109,7 +109,7 @@ body {
 
 /* v image dark & hover white */
 #userpanel ul span.v {
-	background-image:url(../img/v.png);
+	background-image:url(../../img/backend/v.png);
 	width:8px;
 	display:block;
 	margin-top:8px;
@@ -121,7 +121,7 @@ body {
 #userpanel ul span.v.active {background-position:0px 0px;}
 
 #userpanel ul li ul.subnav {
-	background-image:url(../img/bg_texture.png);
+	background-image:url(../../img/backend/bg_texture.png);
 	border-width:1px;
 	border-top-width:0px;
 	border-style:solid;
@@ -184,7 +184,7 @@ body {
 
 #userpanel ul.messages li a {
 
-	background-image:url(../img/icon_chatbubbles.png);
+	background-image:url(../../img/backend/icon_chatbubbles.png);
 	background-repeat:no-repeat;
 	background-position:left 0px;
 	min-width:55px;
@@ -196,7 +196,7 @@ body {
 #userpanel ul.messages li a.newmsg { background-position:left -60px; }
 
 #userpanel ul.messages li span {
-	background:url(../img/bg_gradient.png) repeat-x;
+	background:url(../../img/backend/bg_gradient.png) repeat-x;
 	height:14px;
 	display:inline-block;
 	margin-left:28px;
@@ -224,7 +224,7 @@ body {
 -------------------------------------------------------------- */
 
 #header {
-	background-image:url(../img/bg_header.png);
+	background-image:url(../../img/backend/bg_header.png);
 	border-width:1px;
 	border-style:solid;
 	height:49px;
@@ -243,7 +243,7 @@ body {
 }
 
 #logo {
-    background:url(../img/logo.png) no-repeat;
+    background:url(../../img/backend/logo.png) no-repeat;
     display:block;
     width:150px;
     height:33px;
@@ -316,7 +316,7 @@ ul#navigation li.topnav ul.subnav li.topnav:hover {
 
 /* v image dark & hover white */
 ul#navigation li span.v {
-	background-image:url(../img/v.png);
+	background-image:url(../../img/backend/v.png);
 	width:8px;
 	padding:0;
 	margin:8px 0 0 14px;
@@ -333,7 +333,7 @@ ul#navigation li.topnav ul.subnav li.topnav span.v {
 }
 
 ul#navigation li ul.subnav {
-	background-image:url(../img/bg_texture.png);
+	background-image:url(../../img/backend/bg_texture.png);
 	border-width:1px;
 	border-style:solid;
 	list-style: none;
@@ -407,7 +407,7 @@ ul#navigation a:hover, ul#navigation li a.active  { color:#fff; background-posit
 -------------------------------------------------------------- */
 
 #breadcrumb {
-	background-image:url(../img/bg_breadcrumb.png);
+	background-image:url(../../img/backend/bg_breadcrumb.png);
 	height:19px;
 	padding:10px 19px;
 	margin: 0 20px 10px 20px;
@@ -470,7 +470,7 @@ ul#navigation a:hover, ul#navigation li a.active  { color:#fff; background-posit
 -------------------------------------------------------------- */
 
 .box_top {
-	background-image:url(../img/bg_header.png);
+	background-image:url(../../img/backend/bg_header.png);
 	border-width:1px;
 	border-style:solid;
 	height:43px;
@@ -521,7 +521,7 @@ ul#navigation a:hover, ul#navigation li a.active  { color:#fff; background-posit
 	font-family: Verdana, "MS Trebuchet", sans-serif;
 	font-size:10px;
 	color:#787878;
-	background-image:url(../img/bg_darken.png);
+	background-image:url(../../img/backend/bg_darken.png);
 	background-repeat:repeat;
 	display:block;
 	text-align:center;
@@ -585,7 +585,7 @@ ul#navigation a:hover, ul#navigation li a.active  { color:#fff; background-posit
 .box_content.padding,
 .box_content .padding 	{ padding:15px 35px 20px 35px; }
 
-.box_content div.field { margin:15px 0 10px 0; padding:0px 0 20px 0; background:url(../img/line.png) bottom left repeat-x; overflow:hidden; }
+.box_content div.field { margin:15px 0 10px 0; padding:0px 0 20px 0; background:url(../../img/backend/line.png) bottom left repeat-x; overflow:hidden; }
 .box_content div.field.noline { background:none; }
 
 .box_content label.left 	{ width:130px; }
@@ -676,23 +676,23 @@ ul.gallery li a.view {
 }
 
 ul.gallery li a.edit {
-	background-image:url(../img/icon_round_big_edit.png);
+	background-image:url(../../img/backend/icon_round_big_edit.png);
 	left:22%;
 }
 
 ul.gallery.small li a.edit {
-	background-image:url(../img/icon_round_edit.png);
+	background-image:url(../../img/backend/icon_round_edit.png);
 	left:22%;
 }
 
 ul.gallery li a.view {
-	background-image:url(../img/icon_round_big_view.png);
+	background-image:url(../../img/backend/icon_round_big_view.png);
 	right:22%;
 	z-index:2;
 }
 
 ul.gallery.small li a.view {
-	background-image:url(../img/icon_round_view.png);
+	background-image:url(../../img/backend/icon_round_view.png);
 	right:22%;
 	z-index:2;
 }
@@ -708,7 +708,7 @@ ul.gallery.small li a.view:hover {
 }
 
 ul.gallery li a.delete {
-	background-image:url(../img/icon_round_big_delete.png);
+	background-image:url(../../img/backend/icon_round_big_delete.png);
 	width:33px;
 	height:33px;
 	right:-10px;
@@ -716,7 +716,7 @@ ul.gallery li a.delete {
 }
 
 ul.gallery.small li a.delete {
-	background-image:url(../img/icon_round_delete.png);
+	background-image:url(../../img/backend/icon_round_delete.png);
 	width:19px;
 	height:19px;
 	right:-5px;
@@ -755,7 +755,7 @@ ul.gallery li:hover {
 }
 	
 .accordion.ui-accordion.ui-widget h5 { 
-	background:url("../img/bg_table_top.png") repeat-x #D0D0D0; 
+	background:url("../../img/backend/bg_table_top.png") repeat-x #D0D0D0; 
 	margin:0; 
 	margin-bottom:1px; 
 	padding:10px 35px; 
@@ -803,7 +803,7 @@ ul.gallery li:hover {
 /* Data Tables
 -------------------------------------------------------------- */
 
-.dataTables_wrapper { background:url("../img/bg_table_light.png") repeat-x scroll 0 0 #ECECEC; }
+.dataTables_wrapper { background:url("../../img/backend/bg_table_light.png") repeat-x scroll 0 0 #ECECEC; }
 
 .dataTables_wrapper .dataTables_length,
 .dataTables_wrapper .dataTables_filter,
@@ -891,7 +891,7 @@ ul.gallery li:hover {
 .dataTables_wrapper th.sorting {
 	background-position:right center;
 	background-repeat:no-repeat;
-	background-image:url(../img/v_sorting.png);
+	background-image:url(../../img/backend/v_sorting.png);
 	cursor:pointer;
 }
 
@@ -909,8 +909,8 @@ tbody tr:hover { background: #f9f9f9; }
 tbody tr:nth-child(even):hover, 
 tbody tr.even:hover { background: #f9f9f9; }
 
-.dataTables_wrapper th.sorting_desc { background-image:url(../img/v_sorting_down.png); }
-.dataTables_wrapper th.sorting_asc  { background-image:url(../img/v_sorting_up.png); }
+.dataTables_wrapper th.sorting_desc { background-image:url(../../img/backend/v_sorting_down.png); }
+.dataTables_wrapper th.sorting_asc  { background-image:url(../../img/backend/v_sorting_up.png); }
 
 .table_actions { margin: 9px 0 0 40px; }
 
@@ -933,9 +933,9 @@ table td.tools, table th.tools { width:110px !important; }
 .sorting a.view:hover,
 .sorting a.delete:hover { background-position:center -28px; }
 
-.sorting a.edit 	{ background-image: url('../img/icon_tool_edit.png'); }
-.sorting a.view 	{ background-image: url('../img/icon_tool_view.png'); }
-.sorting a.delete 	{ background-image: url('../img/icon_tool_delete.png'); }
+.sorting a.edit 	{ background-image: url('../../img/backend/icon_tool_edit.png'); }
+.sorting a.view 	{ background-image: url('../../img/backend/icon_tool_view.png'); }
+.sorting a.delete 	{ background-image: url('../../img/backend/icon_tool_delete.png'); }
 
 /* Big buttons
 -------------------------------------------------------------- */
@@ -990,7 +990,7 @@ a.big_button span:hover {background-position:50% -98px;}
 -------------------------------------------------------------- */
 
 #footer {
-	background-image:url(../img/bg_header.png);
+	background-image:url(../../img/backend/bg_header.png);
 	border-width:1px;
 	border-style:solid;
 	height:39px;
@@ -1057,7 +1057,7 @@ a.big_button span:hover {background-position:50% -98px;}
 
 /* Big Warnings */
 .notice {
-	background-image:url(../img/bg_header.png);
+	background-image:url(../../img/backend/bg_header.png);
 	border:1px;
 	border-style:solid;
 	padding:17px 39px;
@@ -1099,22 +1099,22 @@ a.big_button span:hover {background-position:50% -98px;}
 .notice a:hover			{ /* CSS3 */ border-bottom:solid rgba(255, 255, 255, 0.2) 1px; }
 
 .notice.error 			{ background-color:#801c1c; border-color:#721d1d; }
-.notice.error p 		{ background-image:url(../img/icon_error.png); }
+.notice.error p 		{ background-image:url(../../img/backend/icon_error.png); }
 .notice.error a 		{ color:#ffb4b4; }
 .notice.error a:hover 	{ color:#ff9494; }
 
 .notice.warning 		{ background-color:#7b3700; border-color:#4b2b10; }
-.notice.warning p 		{ background-image:url(../img/icon_warning.png); }
+.notice.warning p 		{ background-image:url(../../img/backend/icon_warning.png); }
 .notice.warning a 		{ color:#ffbd88; }
 .notice.warning a:hover { color:#ffaf6f; }
 
 .notice.info 			{ background-color:#315862; border-color:#29363a; }
-.notice.info p 			{ background-image:url(../img/icon_info.png); }
+.notice.info p 			{ background-image:url(../../img/backend/icon_info.png); }
 .notice.info a 			{ color:#b5eefc; }
 .notice.info a:hover 	{ color:#74e3ff; }
 
 .notice.success 		{ background-color:#486231; border-color:#323e26; }
-.notice.success p 		{ background-image:url(../img/icon_success.png); }
+.notice.success p 		{ background-image:url(../../img/backend/icon_success.png); }
 .notice.success a 		{ color:#c0f68c; }
 .notice.success a:hover	{ color:#acf765; }
 
@@ -1310,56 +1310,56 @@ span.icon {
 }
 
 /* Images for big icon links */
-a.big_button.add_news span 	{background-image:url(../img/icon_big_pen.png);}
-a.big_button.upload span 	{background-image:url(../img/icon_big_pictures.png);}
-a.big_button.add_user span	{background-image:url(../img/icon_big_user_add.png);}
-a.big_button.add_event span {background-image:url(../img/icon_big_alarm.png);}
-a.big_button.new_pm span 	{background-image:url(../img/icon_big_chat.png);}
-a.big_button.support span	{background-image:url(../img/icon_big_support.png);}
+a.big_button.add_news span 	{background-image:url(../../img/backend/icon_big_pen.png);}
+a.big_button.upload span 	{background-image:url(../../img/backend/icon_big_pictures.png);}
+a.big_button.add_user span	{background-image:url(../../img/backend/icon_big_user_add.png);}
+a.big_button.add_event span {background-image:url(../../img/backend/icon_big_alarm.png);}
+a.big_button.new_pm span 	{background-image:url(../../img/backend/icon_big_chat.png);}
+a.big_button.support span	{background-image:url(../../img/backend/icon_big_support.png);}
 
 
 /* Small Icons 20x20 */
-ul#navigation a.news, .icon.news	 			{ background-image:url(../img/icon_pages.png); }
-ul#navigation a.about, .icon.about 				{ background-image:url(../img/icon_about.png); }
-ul#navigation a.contact, .icon.contact			{ background-image:url(../img/icon_phone.png); }
-ul#navigation a.dashboard, .icon.dashboard 		{ background-image:url(../img/icon_dashboard.png); }
-ul#navigation a.settings, .icon.settings 		{ background-image:url(../img/icon_settings.png); }
-ul#navigation a.support, .icon.support 			{ background-image:url(../img/icon_support.png); }
-ul#navigation a.home, .icon.home	 			{ background-image:url(../img/icon_house.png); }
-ul#navigation a.user, .icon.user				{ background-image:url(../img/icon_user.png); }
-ul#navigation a.users, .icon.users 				{ background-image:url(../img/icon_users.png); }
-ul#navigation a.pictures, .icon.pictures 		{ background-image:url(../img/icon_pictures.png); }
-ul#navigation a.pages, .icon.pages 				{ background-image:url(../img/icon_pages.png); }
-ul#navigation a.graph, .icon.graph 				{ background-image:url(../img/icon_graph.png); }
-ul#navigation a.time, .icon.time 				{ background-image:url(../img/icon_time.png); }
-ul#navigation a.chatbubbles, .icon.chatbubbles 	{ background-image:url(../img/icon_chatbubbles.png); }
-ul#navigation a.lock, .icon.lock 				{ background-image:url(../img/icon_lock.png); }
-ul#navigation a.cross, .icon.cross 				{ background-image:url(../img/icon_error.png); }
-ul#navigation a.error, .icon.error 				{ background-image:url(../img/icon_error.png); }
-ul#navigation a.success, .icon.success 			{ background-image:url(../img/icon_success.png); }
-ul#navigation a.info, .icon.info	 			{ background-image:url(../img/icon_info.png); }
-ul#navigation a.warning, .icon.warning 			{ background-image:url(../img/icon_warning.png); }
-ul#navigation a.typography, .icon.typography 	{ background-image:url(../img/icon_typography.png); }
-ul#navigation a.brush, .icon.brush 				{ background-image:url(../img/icon_brush.png); }
-ul#navigation a.computer, .icon.computer 		{ background-image:url(../img/icon_computer.png); }
-ul#navigation a.preview, .icon.preview 			{ background-image:url(../img/icon_preview.png); }
-ul#navigation a.blocks, .icon.blocks 			{ background-image:url(../img/icon_blocks.png); }
-ul#navigation a.list, .icon.list	 			{ background-image:url(../img/icon_list.png); }
-ul#navigation a.coverflow, .icon.coverflow 		{ background-image:url(../img/icon_coverflow.png); }
-ul#navigation a.frames, .icon.frames 			{ background-image:url(../img/icon_frames.png); }
-ul#navigation a.resize, .icon.resize 			{ background-image:url(../img/icon_resize.png); }
-ul#navigation a.circle, .icon.circle 			{ background-image:url(../img/icon_circle.png); }
-ul#navigation a.key, .icon.key		 			{ background-image:url(../img/icon_key.png); }
-ul#navigation a.point_right, .icon.point_right	{ background-image:url(../img/icon_point_right.png); }
+ul#navigation a.news, .icon.news	 			{ background-image:url(../../img/backend/icon_pages.png); }
+ul#navigation a.about, .icon.about 				{ background-image:url(../../img/backend/icon_about.png); }
+ul#navigation a.contact, .icon.contact			{ background-image:url(../../img/backend/icon_phone.png); }
+ul#navigation a.dashboard, .icon.dashboard 		{ background-image:url(../../img/backend/icon_dashboard.png); }
+ul#navigation a.settings, .icon.settings 		{ background-image:url(../../img/backend/icon_settings.png); }
+ul#navigation a.support, .icon.support 			{ background-image:url(../../img/backend/icon_support.png); }
+ul#navigation a.home, .icon.home	 			{ background-image:url(../../img/backend/icon_house.png); }
+ul#navigation a.user, .icon.user				{ background-image:url(../../img/backend/icon_user.png); }
+ul#navigation a.users, .icon.users 				{ background-image:url(../../img/backend/icon_users.png); }
+ul#navigation a.pictures, .icon.pictures 		{ background-image:url(../../img/backend/icon_pictures.png); }
+ul#navigation a.pages, .icon.pages 				{ background-image:url(../../img/backend/icon_pages.png); }
+ul#navigation a.graph, .icon.graph 				{ background-image:url(../../img/backend/icon_graph.png); }
+ul#navigation a.time, .icon.time 				{ background-image:url(../../img/backend/icon_time.png); }
+ul#navigation a.chatbubbles, .icon.chatbubbles 	{ background-image:url(../../img/backend/icon_chatbubbles.png); }
+ul#navigation a.lock, .icon.lock 				{ background-image:url(../../img/backend/icon_lock.png); }
+ul#navigation a.cross, .icon.cross 				{ background-image:url(../../img/backend/icon_error.png); }
+ul#navigation a.error, .icon.error 				{ background-image:url(../../img/backend/icon_error.png); }
+ul#navigation a.success, .icon.success 			{ background-image:url(../../img/backend/icon_success.png); }
+ul#navigation a.info, .icon.info	 			{ background-image:url(../../img/backend/icon_info.png); }
+ul#navigation a.warning, .icon.warning 			{ background-image:url(../../img/backend/icon_warning.png); }
+ul#navigation a.typography, .icon.typography 	{ background-image:url(../../img/backend/icon_typography.png); }
+ul#navigation a.brush, .icon.brush 				{ background-image:url(../../img/backend/icon_brush.png); }
+ul#navigation a.computer, .icon.computer 		{ background-image:url(../../img/backend/icon_computer.png); }
+ul#navigation a.preview, .icon.preview 			{ background-image:url(../../img/backend/icon_preview.png); }
+ul#navigation a.blocks, .icon.blocks 			{ background-image:url(../../img/backend/icon_blocks.png); }
+ul#navigation a.list, .icon.list	 			{ background-image:url(../../img/backend/icon_list.png); }
+ul#navigation a.coverflow, .icon.coverflow 		{ background-image:url(../../img/backend/icon_coverflow.png); }
+ul#navigation a.frames, .icon.frames 			{ background-image:url(../../img/backend/icon_frames.png); }
+ul#navigation a.resize, .icon.resize 			{ background-image:url(../../img/backend/icon_resize.png); }
+ul#navigation a.circle, .icon.circle 			{ background-image:url(../../img/backend/icon_circle.png); }
+ul#navigation a.key, .icon.key		 			{ background-image:url(../../img/backend/icon_key.png); }
+ul#navigation a.point_right, .icon.point_right	{ background-image:url(../../img/backend/icon_point_right.png); }
 
 /* Validation
 -------------------------------------------------------------- */
 
 .validate_success, .validate_error 	{ background-position:93% 48% !important; background-repeat: no-repeat !important; }
-.validate_success 					{ background-image:url('../img/icon_small_success.png') !important; }
-.validate_error 					{ background-image:url('../img/icon_small_error.png') !important; }
-.box_content .validate_success 		{ background-image:url('../img/icon_small_success2.png') !important; }
-.box_content .validate_error 		{ background-image:url('../img/icon_small_error2.png') !important; }
+.validate_success 					{ background-image:url('../../img/backend/icon_small_success.png') !important; }
+.validate_error 					{ background-image:url('../../img/backend/icon_small_error.png') !important; }
+.box_content .validate_success 		{ background-image:url('../../img/backend/icon_small_success2.png') !important; }
+.box_content .validate_error 		{ background-image:url('../../img/backend/icon_small_error2.png') !important; }
 
 /* Dialog (jQuery UI Customization)
 -------------------------------------------------------------- */
@@ -1368,7 +1368,7 @@ ul#navigation a.point_right, .icon.point_right	{ background-image:url(../img/ico
 #dialog-confirm p 	{ font-size:12px; margin:5px 0; }
 
 .ui-dialog .ui-dialog-titlebar {
-	background-image:url("../img/bg_header.png"); 
+	background-image:url("../../img/backend/bg_header.png"); 
 	background-repeat:repeat-x; 
 	background-position:0 0;
 	color:#FFFFFF;

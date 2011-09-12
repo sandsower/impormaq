@@ -93,12 +93,12 @@
 		<div id="header">
 				
 			<!-- Logo: Start -->
-			<a href="dashboard.html" id="logo">Simplpan - Admin Panel</a>
+			<a href="<?php echo base_url(); ?>backend/site"id="logo">Simplpan - Admin Panel</a>
 			<!-- Logo: End -->
 			
 			<!-- Navigation: Start -->
 			<ul id="navigation" class="dropdown">
-				<li><a class="dashboard active" href="site">Maquinaria</a></li>
+				<li><a class="dashboard active" href="<?php echo base_url(); ?>backend/site">Maquinaria</a></li>
 				
 				<!-- Navigation Dropdown Menu Item: Start -->
 				<li class="topnav">
@@ -106,9 +106,9 @@
 					
 					<!-- Navigation Dropdown Menu Item Content: Start -->
 					<ul class="subnav">
-						<li><a href="clientes" class="icon typography">Clientes</a></li> 
-			            <li><a href="marcas" class="icon blocks">Marcas</a></li>  
-			            <li><a href="tipos" class="icon blocks">Tipos</a></li> 
+						<li><a href="<?php echo base_url(); ?>backend/clientes" class="icon typography">Clientes</a></li> 
+			            <li><a href="<?php echo base_url(); ?>backend/marcas" class="icon blocks">Marcas</a></li>  
+			            <li><a href="<?php echo base_url(); ?>backend/tipos" class="icon blocks">Tipos</a></li> 
 			        </ul> 
 			        <!-- Navigation Dropdown Menu Item Content: End --> 
 				</li>
@@ -120,9 +120,9 @@
 					
 					<!-- Navigation Dropdown Menu Item Content: Start -->
 					<ul class="subnav">
-						<li><a href="ventas" class="icon list">Ventas</a></li>  
-			            <li><a href="promociones" class="icon pages">Promociones</a></li>  
-			            <li><a href="Actividad" class="icon pages">Actividad</a></li> 
+						<li><a href="<?php echo base_url(); ?>backend/ventas" class="icon list">Ventas</a></li>  
+			            <li><a href="<?php echo base_url(); ?>backend/promociones" class="icon pages">Promociones</a></li>  
+			            <li><a href="<?php echo base_url(); ?>backend/Actividad" class="icon pages">Actividad</a></li> 
 			        </ul>  
 			        <!-- Navigation Dropdown Menu Item Content: End --> 
 				</li>
@@ -133,8 +133,8 @@
 					<a class="pages" href="#">Reportes</a>
 					<!-- Navigation Dropdown Menu Item Content: Start -->
 					<ul class="subnav">
-						<li><a href="individual" class="icon list">Individual</a></li>  
-			            <li><a href="multiple" class="icon pages">Multiple</a></li>  
+						<li><a href="<?php echo base_url(); ?>backend/individual" class="icon list">Individual</a></li>  
+			            <li><a href="<?php echo base_url(); ?>backend/multiple" class="icon pages">Multiple</a></li>  
 			        </ul>  
 			        <!-- Navigation Dropdown Menu Item Content: End --> 
 				</li>

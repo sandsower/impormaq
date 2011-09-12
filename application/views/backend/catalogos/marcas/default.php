@@ -5,7 +5,8 @@
 	<div class="box_top">
 		
 		<a name="news"></a>
-		<h2 class="icon pages">Marcas<span>232</span></h2>
+		<h2 class="icon pages">Marcas<span><a href="#crear" class="popup linkItem">Crear</a></span></h2>			
+
 		
 		<!-- Tab Select: Start -->
 		<ul class="sorting">
@@ -30,62 +31,57 @@
 					<thead>
 						<tr>
 							<th class="align_left">Id</th>
-							<th class="align_left center">Descripcion</th>
-							<th class="align_left center tools">Tools</th>
+							<th class="align_left ">Descripci&oacute;n Esp</th>
+							<th class="align_left ">Descripci&oacute;n Ing</th>
+							<th class="align_left center tools">Acciones</th>
 						</tr>
 					</thead>
 					<tbody>
-						
+						<?php if(isset($records)) : foreach($records as $row) : ?>
 						<tr>
-							<td class="align_left"><a href="#">1</a></td>
-							<td class="align_left center"><a href="#messages" class="popup">John Deer</a></td>
+							<td class="align_left"><?php echo $row->IdMarca; ?></td>
+							<td class="align_left "><?php echo $row->Marca; ?></td>
+							<td class="align_left "><?php echo $row->Brand; ?></td>
 							<td class="align_left center tools">
-								<a href="#" class="edit tip" id="botonEdit" title="edit">edit</a>
-								<a href="#" class="view tip" id="botonView" title="view">view</a>
-								<a href="#" class="delete tip" id="botonDelete" title="delete">delete</a>
+								<a href="marcas/editar/<?php echo $row->IdMarca; ?>/<?php echo $row->Marca; ?>/<?php echo $row->Brand; ?>" class="edit tip popup linkItem" id="botonEdit" title="edit">edit</a>
+								<a href="marcas/eliminar/<?php echo $row->IdMarca; ?>" onClick="javascript: if(confirm('¿Esta seguro que desa borrar el registro?')){ return true; } else { return false;}" class="delete tip" id="botonDelete" title="delete">delete</a>
 							</td>
 						</tr>
-						
-						<tr>
-							<td class="align_left"><a href="#">2</a></td>
-							<td class="align_left center"><a href="#messages" class="popup">CaterPillar</a></td>
-							<td class="align_left center tools">
-								<a href="#" class="edit tip" id="botonEdit" title="edit">edit</a>
-								<a href="#" class="view tip" id="botonView" title="view">view</a>
-								<a href="#" class="delete tip" id="botonDelete" title="delete">delete</a>
-							</td>
-						</tr>
-						<tr>
-							<td class="align_left"><a href="#">3</a></td>
-							<td class="align_left center"><a href="#messages" class="popup">Case</a></td>
-							<td class="align_left center tools">
-								<a href="#" class="edit tip" id="botonEdit" title="edit">edit</a>
-								<a href="#" class="view tip" id="botonView" title="view">view</a>
-								<a href="#" class="delete tip" id="botonDelete" title="delete">delete</a>
-							</td>
-						</tr>
-						<tr>
-							<td class="align_left"><a href="#">1</a></td>
-							<td class="align_left center"><a href="#messages" class="popup">New Holland</a></td>
-							<td class="align_left center tools">
-								<a href="#" class="edit tip" id="botonEdit" title="edit">edit</a>
-								<a href="#" class="view tip" id="botonView" title="view">view</a>
-								<a href="#" class="delete tip" id="botonDelete" title="delete">delete</a>
-							</td>
-						</tr>
-						
-
+						<?php endforeach; ?>
+						<?php endif; ?>
 					</tbody>
 				</table> 
 				
 			</div>
+
+			<div id="crear" class="box_content padding hide">
+				<div class="field">
+					<form action="marcas/crear" method="post">
+					<table>
+					<tr>
+						<td><label class="left">Marca:</label></td>
+						<td><input type="text" name="marca" class="validate"/></td>
+					</tr>
+					<tr>
+						<td><label class="left">Brand:</label></td>
+						<td><input type="text" name="brand" class="validate"/></td>
+					</tr>	
+					<tr style="display:none;">
+						<td colspan="2"><button type="submit"> crear</button></input></td>
+					</tr>
+					</table>	
+					</form>
+				</div>
+			</div>
+
+			<div id="editar" class="box_content padding hide">
+				marca
+			</div>
 			<!-- News Sorting Table: End -->
 		</div>
 		<!-- News Table Tabs: End -->
-
 	</div>
 	<!-- Box Content: End -->
-	
 </div>
 <!-- 100% Box Grid Container: End -->
 
