@@ -6,12 +6,12 @@
 #botonDelete:hover{
 	background: url("../../img/backend/icon_tool_delete.png") no-repeat 0px -28px;
 }
-#botonView{
+#botonPromote{
 	background: url("../../img/backend/icon_tool_view.png") no-repeat;
 	height: 28px;
 	width: 28px;
 }
-#botonView:hover{
+#botonPromote:hover{
 	background: url("../../img/backend/icon_tool_view.png") no-repeat 0px -28px;
 }
 #botonEdit{
@@ -21,4 +21,20 @@
 }
 #botonEdit:hover{
 	background: url("../../img/backend/icon_tool_edit.png") no-repeat 0px -28px;
+}
+#botonImages{
+	background: url("../../img/backend/icon_tool_picture.png") no-repeat;
+	height: 40px;
+	width: 28px;
+}
+#botonImages:hover{
+	background: url("../../img/backend/icon_tool_picture.png") no-repeat 0px -53px;
+}
+#botonSell{
+	background: url("../../img/backend/icon_tool_sell.png") no-repeat;
+	height: 40px;
+	width: 28px;
+}
+#botonSell:hover{
+	background: url("../../img/backend/icon_tool_sell.png") no-repeat 0px -54px;
 }

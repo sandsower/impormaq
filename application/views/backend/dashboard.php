@@ -5,7 +5,8 @@
 	<div class="box_top">
 		
 		<a name="news"></a>
-		<h2 class="icon pages">Maquinaria<span>232</span></h2>
+		<h2 class="icon pages">Maquinaria</h2>
+		<span><a href="site/crear">Crear</a></span>
 		
 		<!-- Tab Select: Start -->
 		<ul class="sorting">
@@ -28,48 +29,36 @@
 				
 				<table class="sorting">
 					<thead>
-						<tr>
-							<th class="align_left">Id</th>
-							<th class="align_left center">Maquina</th>
-							<th class="align_left center">Tipo</th>
-							<th class="align_left center">Marca</th>
-							<th class="align_left center">Modelo</th>
-							<th class="align_left center">Especificaciones</th>
-							<th class="align_left center">Fotos</th>
-							<th class="align_left center tools">Tools</th>
+						<tr>				
+							<th class="align_left ">Maquina</th>
+							<th class="align_left ">Tipo</th>
+							<th class="align_left ">Marca</th>
+							<th class="align_left ">Modelo</th>
+							<th class="align_left ">Fotos</th>
+							<th class="align_left  tools">Tools</th>
 						</tr>
 					</thead>
 					<tbody>
 						
+						<?php if(isset($maquinas)) : foreach($maquinas as $row) : ?>
 						<tr>
-							<td class="align_left"><a href="#">1</a></td>
-							<td class="align_left center"><a href="#messages" class="popup">Kasper</a></td>
-							<td class="align_left center">Grua</td>
-							<td class="align_left center">Caterpillar</td>
-							<td class="align_left center">2010</td>
-							<td class="align_left center"><a href="#messages" class="popup">Detalles</a></td>
-							<td class="align_left center"><a href="#messages" class="popup">Fotos</a></td>
+							
+							<td class="align_left "><?php echo $row->Maquina; ?></td>
+							<td class="align_left "><?php printType($row->IdTipos); ?></td>
+							<td class="align_left "><?php printBrand($row->IdMarcas); ?></td>
+							<td class="align_left "><?php echo $row->Modelo; ?></td>
+							<td class="align_left "><a href="#" class="popup">Fotos</a></td>
 							<td class="align_left center tools">
-								<a href="#" class="edit tip" id="botonEdit" title="edit">edit</a>
-								<a href="#" class="view tip" id="botonView" title="view">view</a>
-								<a href="#" class="delete tip" id="botonDelete" title="delete">delete</a>
+								
+								<a href="editar/<?php echo $row->IdMaquina; ?>" class="edit tip" id="botonPromote" title="promote">Promote</a>
+								<a href="editar/<?php echo $row->IdMaquina; ?>" class="edit" id="botonEdit" title="edit">edit</a>
+								<a href="site/eliminar/<?php echo $row->IdMaquina; ?>" onClick="javascript: if(confirm('¿Esta seguro que desa borrar el registro?')){ return true; } else { return false;}" class="delete tip" id="botonDelete" title="delete">delete</a>
+								<a href="imagenes/<?php echo $row->IdMaquina; ?>" class="edit tip" id="botonImages" title="images">Images</a>
+								<a href="editar/<?php echo $row->IdMaquina; ?>" class="edit tip" id="botonSell" title="sell">Sell</a>
 							</td>
 						</tr>
-						
-						<tr>
-							<td class="align_left"><a href="#">2</a></td>
-							<td class="align_left center"><a href="#messages" class="popup">h45k</a></td>
-							<td class="align_left center">Tractor</td>
-							<td class="align_left center">Jhon Deer</td>
-							<td class="align_left center">2008</td>
-							<td class="align_left center"><a href="#messages" class="popup">Detalles</a></td>
-							<td class="align_left center"><a href="#messages" class="popup">Fotos</a></td>
-							<td class="align_left center tools">
-								<a href="#" class="edit tip" id="botonEdit" title="edit">edit</a>
-								<a href="#" class="view tip" id="botonView" title="view">view</a>
-								<a href="#" class="delete tip" id="botonDelete" title="delete">delete</a>
-							</td>
-						</tr>
+						<?php endforeach; ?>
+						<?php endif; ?>
 
 					</tbody>
 				</table> 
