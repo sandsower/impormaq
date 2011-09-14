@@ -17,6 +17,15 @@ Sessiones
 
 Maquinaria
 	*Estilo
+	*Create
+	*Read
+	*Update
+	*Delete
+	*Sort
+	*Find
+	*Paginated
+	*Images
+
 Catalogos
 	Marcas:
 		*Create
