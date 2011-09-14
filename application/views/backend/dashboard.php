@@ -34,6 +34,7 @@
 							<th class="align_left ">Tipo</th>
 							<th class="align_left ">Marca</th>
 							<th class="align_left ">Modelo</th>
+							<th class="align_left ">Precio</th>
 							<th class="align_left ">Fotos</th>
 							<th class="align_left  tools">Tools</th>
 						</tr>
@@ -43,18 +44,19 @@
 						<?php if(isset($maquinas)) : foreach($maquinas as $row) : ?>
 						<tr>
 							
-							<td class="align_left "><?php echo $row->Maquina; ?></td>
-							<td class="align_left "><?php printType($row->IdTipos); ?></td>
-							<td class="align_left "><?php printBrand($row->IdMarcas); ?></td>
+							<td class="align_left "><a href="site/getEspecifications/<?php echo $row->IdMaquina; ?>" class="popup"><?php echo $row->Maquina; ?></a></td>
+							<td class="align_left "><?php echo $row->Tipo; ?></td>
+							<td class="align_left "><?php echo $row->Marca; ?></td>
 							<td class="align_left "><?php echo $row->Modelo; ?></td>
+							<td class="align_left "><?php echo $row->Precio; ?></td>
 							<td class="align_left "><a href="#" class="popup">Fotos</a></td>
 							<td class="align_left center tools">
 								
-								<a href="editar/<?php echo $row->IdMaquina; ?>" class="edit tip" id="botonPromote" title="promote">Promote</a>
-								<a href="editar/<?php echo $row->IdMaquina; ?>" class="edit" id="botonEdit" title="edit">edit</a>
+								<a href="site/promote/<?php echo $row->IdMaquina; ?>" class="edit tip" id="botonPromote" title="promote">Promote</a>
+								<a href="site/editar/<?php echo $row->IdMaquina; ?>" class="edit" id="botonEdit" title="edit">edit</a>
 								<a href="site/eliminar/<?php echo $row->IdMaquina; ?>" onClick="javascript: if(confirm('¿Esta seguro que desa borrar el registro?')){ return true; } else { return false;}" class="delete tip" id="botonDelete" title="delete">delete</a>
-								<a href="imagenes/<?php echo $row->IdMaquina; ?>" class="edit tip" id="botonImages" title="images">Images</a>
-								<a href="editar/<?php echo $row->IdMaquina; ?>" class="edit tip" id="botonSell" title="sell">Sell</a>
+								<a href="site/imagenes/<?php echo $row->IdMaquina; ?>" class="edit tip" id="botonImages" title="images">Images</a>
+								<a href="site/vender/<?php echo $row->IdMaquina; ?>" class="edit tip" id="botonSell" title="sell">Sell</a>
 							</td>
 						</tr>
 						<?php endforeach; ?>

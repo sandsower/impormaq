@@ -26,12 +26,66 @@ class Site extends CI_Controller {
 		$data['main_content'] = 'backend/maquinaria/new';
 		$this->load->view('backend/template',$data);
 	} 
+	
+	function editar(){
+		$id = $this->uri->segment(4,0);
+		$data['maquina']= $this->maquinaria_model->getById($id);
+		$data['tipos'] = $this->maquinaria_model->getAllTypes();
+		$data['marcas'] = $this->maquinaria_model->getAllBrands();
+		$data['main_content'] = 'backend/maquinaria/edit';
+		$this->load->view('backend/template',$data);
+	} 
+
 
 	function eliminar(){
 		$id = $this->uri->segment(4,0);
 		if($this->maquinaria_model->delete($id))
 			redirect('backend/site');
 	}
+	
+	function getEspecifications(){
+		$id = $this->uri->segment(4,0);
+		$data['maquina']= $this->maquinaria_model->getById($id)->result();
+		foreach($data['maquina'] as $row){
+			echo '<b>Especificaciones: </b>'.$row->Especificaciones;
+		}
+	}
+
+	function vender(){
+		
+	}
+
+	function imagenes(){
+		$id = $this->uri->segment(4,0);
+		$data['maquina']= $this->maquinaria_model->getById($id);
+		$this->load->model('gallery_model');
+		$data['images']= $this->gallery_model->get_images($id);
+		// print_r($data['images']);
+		$data['id']=$id;
+		$data['main_content']='backend/maquinaria/imagenes';
+		$this->load->view('backend/template',$data);
+	}
+
+	function promover(){
+		
+	}
+
+	function update(){
+		$data = array(
+			 'IdMaquina'=> $this->input->post('id'),
+			 'Maquina' => $this->input->post('maquina'),
+			 'IdMarcas' => $this->input->post('marca'),
+			 'IdTipos' => $this->input->post('tipo'),
+			 'Modelo' => $this->input->post('modelo'),
+			 'Precio' => $this->input->post('precio'),
+			 'Especificaciones' => $this->input->post('especificaciones'),
+			 'VideoUrl' => $this->input->post('urlVideo')
+		 );
+		 	$this->maquinaria_model->update($data);
+
+			redirect('backend/site');
+	}
+
 	function newMachine(){
 		
 		$data = array(
@@ -44,9 +98,8 @@ class Site extends CI_Controller {
 			 'VideoUrl' => $this->input->post('urlVideo')
 		 );
 		 	$this->maquinaria_model->insert($data);
-		 	
-			$this->index();
-		 
+
+			redirect('backend/site');
 	}
 
 	function is_logged_in()

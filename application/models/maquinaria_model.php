@@ -3,12 +3,12 @@
 class Maquinaria_model extends CI_Model {
 
 	function getAll(){
-		$this->db->select('*');
-		$this->db->from('Maquinas');
-			$this->db->join('Tipos', 'Maquinas.IdTipos = Tipos.idTipos');
-			$this->db->join('Marcas', 'Maquinas.IdMarcas = Marcas.IdMarca');
-		$query = $this->db->get();
-		print_r($query);
+		 $this->db->select('*');
+		 $this->db->from('Maquinas');
+			 $this->db->join('Tipos', 'Maquinas.IdTipos = Tipos.idTipos');
+			 $this->db->join('Marcas', 'Maquinas.IdMarcas = Marcas.IdMarca');
+		 $query = $this->db->get();
+		 return $query->result();
 	}
 	
 	function getAllTypes(){
@@ -21,8 +21,14 @@ class Maquinaria_model extends CI_Model {
 		return $query->result();
 	}
 
-	function getById(){
-		$query = $this->db->get_where('Maquinas', array('IdMaquina' => $id));
+	function getById($id){
+		//$query = $this->db->get_where('Maquinas', array('IdMaquina' => $id));
+		$this->db->select('*');
+		 $this->db->from('Maquinas');
+			 $this->db->join('Tipos', 'Maquinas.IdTipos = Tipos.idTipos');
+			 $this->db->join('Marcas', 'Maquinas.IdMarcas = Marcas.IdMarca');
+			 $this->db->where('IdMaquina',$id);
+		 $query = $this->db->get();
 		return $query;
 	}
 

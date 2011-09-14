@@ -15,14 +15,12 @@ class Marcas extends CI_Controller {
 		{
 			$data['records'] = $query;
 		}
-
 		$data['main_content'] = 'backend/catalogos/marcas/default';
 		$this->load->view('backend/template',$data);
 
 	} 
 
 	function crear(){
-		
 		$data = array(
 			 'Marca' => $this->input->post('marca'),
 			 'Brand' => $this->input->post('brand')
