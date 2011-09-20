@@ -14,6 +14,11 @@ class Membership_model extends CI_Model {
 		}
 		
 	}
+
+	function getUser($username){
+		$query = $this->db->get_where('Usuarios', array('Username' => $username));
+		return $query->result();
+	}
 	
 	function create_member()
 	{

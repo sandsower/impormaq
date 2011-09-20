@@ -22,9 +22,7 @@ class Marcas extends CI_Controller {
 
 	function crear(){
 		$data = array(
-			 'Marca' => $this->input->post('marca'),
-			 'Brand' => $this->input->post('brand')
-		 );
+			 'Marca' => $this->input->post('marca')		 );
 		 
 		 $query = $this->marcas_model->validateExistence($data);
 
@@ -46,9 +44,7 @@ class Marcas extends CI_Controller {
 	function editar(){
 		 $data = array(
 			'IdMarca'=>$id = $this->uri->segment(4,0),
-			'Marca' => $marca = $this->uri->segment(5,0),
-			'Brand' => $brand = $this->uri->segment(6,0),
-		  );
+			'Marca' => $marca = $this->uri->segment(5,0)		  );
 		  echo "<form method='post' action='marcas/actualizar' id='formItem'>";
 		  echo "<fieldset><legend>Editar Marca</legend>";
 		  echo "<input type='hidden' value=".$data['IdMarca']." name='id' />";
@@ -56,9 +52,7 @@ class Marcas extends CI_Controller {
 		  echo "<tr>";
 		  echo "<td><label class='left'>Marca:</label></td>"; 
 		  echo "<td><input type='text' name='marca' value=".$data['Marca']." class='validate'/></td>";
-		  echo "</tr><tr>";
-		  echo "<td><label class='left'>Brand:</label>"; 
-		  echo "<td><input type='text' name='brand' value=".$data['Brand']." class='validate'/></td></tr>";
+		  echo "</tr>";
 		  echo "<tr style='display:none;'><td></td><td><button style='display:hidden;'>Enviar</button></td></tr>";
 		  echo "</table></fieldset>";
 		  echo "</form>";
@@ -89,10 +83,6 @@ class Marcas extends CI_Controller {
 			//$this->load->view('login_form');
 		}		
 	}
-
-
-
-	
 }
 
 /* End of file marcas.php */

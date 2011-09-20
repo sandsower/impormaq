@@ -24,6 +24,7 @@ class Upload extends CI_Controller {
 		if(!file_exists($uploadPath)){
 			mkdir($uploadPath,0750,true);
 			mkdir($uploadPath.'thumbs/',0750,true);	
+			mkdir($uploadPath.'promo/',0750,true);	
 		}
 		
 		$config['upload_path'] = $uploadPath;
@@ -43,6 +44,8 @@ class Upload extends CI_Controller {
 		{
 			$data['upload_data'] =  $this->upload->data();												//Sube la imagen
 			$data['upload_data']['idMaquina']= $data['id'];
+			$data['upload_data']['promo']= false;
+
 			$this->gallery_model->insert($data['upload_data']);											//registra la imagen en la bd
 			$config = array(																			
 				'source_image' => $data['upload_data']['full_path'],
@@ -73,8 +76,5 @@ class Upload extends CI_Controller {
 		}
 		redirect('backend/site/imagenes/'.$idMaquina);
 	}
-
-
-	
 }
 ?>

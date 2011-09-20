@@ -140,7 +140,4 @@ class Clientes extends CI_Controller {
 		}		
 	}
 
-	
-
-	
 }

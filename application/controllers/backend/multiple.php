@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class multiple extends CI_Controller {
+class Multiple extends CI_Controller {
 
 	function __construct()
 	{

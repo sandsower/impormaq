@@ -106,7 +106,7 @@
 					
 					<!-- Navigation Dropdown Menu Item Content: Start -->
 					<ul class="subnav">
-						<li><a href="<?php echo base_url(); ?>backend/clientes" class="icon typography">Clientes</a></li> 
+						<li><a href="<?php echo base_url(); ?>backend/clientes" class="icon blocks">Clientes</a></li> 
 			            <li><a href="<?php echo base_url(); ?>backend/marcas" class="icon blocks">Marcas</a></li>  
 			            <li><a href="<?php echo base_url(); ?>backend/tipos" class="icon blocks">Tipos</a></li> 
 			        </ul> 
@@ -120,7 +120,8 @@
 					
 					<!-- Navigation Dropdown Menu Item Content: Start -->
 					<ul class="subnav">
-						<li><a href="<?php echo base_url(); ?>backend/ventas" class="icon list">Ventas</a></li>  
+						<li><a href="<?php echo base_url(); ?>backend/Contenido" class="icon pages">Contenido</a></li>  	
+						<li><a href="<?php echo base_url(); ?>backend/ventas" class="icon pages">Ventas</a></li>  
 			            <li><a href="<?php echo base_url(); ?>backend/promociones" class="icon pages">Promociones</a></li>  
 			            <li><a href="<?php echo base_url(); ?>backend/Actividad" class="icon pages">Actividad</a></li> 
 			        </ul>  

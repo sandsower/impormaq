@@ -7,6 +7,8 @@ class Maquinaria_model extends CI_Model {
 		 $this->db->from('Maquinas');
 			 $this->db->join('Tipos', 'Maquinas.IdTipos = Tipos.idTipos');
 			 $this->db->join('Marcas', 'Maquinas.IdMarcas = Marcas.IdMarca');
+			 //$this->db->where('promo',false);
+			 $this->db->where('venta',false);
 		 $query = $this->db->get();
 		 return $query->result();
 	}
@@ -48,6 +50,4 @@ class Maquinaria_model extends CI_Model {
 		$query = $this->db->get_where('Marcas', array('Marca' => $marca['Marca']));
 		return $query->result();
 	}
-
-	
 }

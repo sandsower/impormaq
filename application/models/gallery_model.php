@@ -7,7 +7,11 @@ class Gallery_model extends CI_Model {
 	}
 
 	function get_images($id) {
-		$query = $this->db->get_where('Imagenes', array('IdMaquina' => $id));
+		$query = $this->db->get_where('Imagenes', array('IdMaquina' => $id,'promo'=>false));
+		return $query;
+	}
+	function get_imagesPromo($id) {
+		$query = $this->db->get_where('Imagenes', array('IdMaquina' => $id,'promo'=>true));
 		return $query;
 	}
 	function delete($id){
@@ -17,14 +21,4 @@ class Gallery_model extends CI_Model {
 		$query = $this->db->get_where('Imagenes', array('IdImagenes' => $id));
 		return $query;
 	}
-
-	
-	
-	
-
-	
-	
-	
-
-	
 }

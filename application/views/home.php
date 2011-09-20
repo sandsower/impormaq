@@ -61,8 +61,8 @@
 		<div class="content">
 			<div id="newsletter">
             <form method="post" action="login/validate">
-				<input  name="username"  value="garrison" type="text" />
-				<input  name="password"  value="gameover" type="password" />
+				<input  name="username"  value="username" type="text" />
+				<input  name="password"  value="password" type="password" />
 				<input class="submit" type="submit" value="" name="submit" id="submit" />
             </form>
 			</div><!-- end #newsletter -->

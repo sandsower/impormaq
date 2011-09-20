@@ -25,5 +25,4 @@ class Clientes_model extends CI_Model {
 		return $this->db->update('Clientes', $data);	
 	}
 
-	
 }
