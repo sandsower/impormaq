@@ -40,13 +40,16 @@ class Promociones_model extends CI_Model {
 		return $this->db->update('Maquinas', $data); 
 	}
 	
-	
-	
-	
+	function deleteImage($id){
+		$data = array (
+				'IdImagenes' => null,
+			);
+		$this->db->select('*');
+		$this->db->from('Promociones');
+		$this->db->where('IdImagenes', $id);
+		$query = $this->db->get();
+		$this->db->update('Promociones', $data);
+		return $query->result();
+	}
 
-	
-	
-	
-
-	
 }

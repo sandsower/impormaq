@@ -5,7 +5,7 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Welcome to Impormac</title>
+<title>Welcome to GetIt</title>
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/UnderConstruction/reset.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/UnderConstruction/sketcher.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/UnderConstruction/colorbox.css" type="text/css" />
@@ -67,7 +67,7 @@
             </form>
 			</div><!-- end #newsletter -->
 			
-			<h2>Impormaq is  under construction.</h2>
+			<h2>GetIt is  under construction.</h2>
 			
 		</div><!-- end #content -->
 

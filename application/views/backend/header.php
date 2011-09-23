@@ -2,7 +2,7 @@
 <head>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Impormaq - Admin Panel</title>
+	<title>GetIt - Admin Panel</title>
 	
 	<!-- Imports General CSS and jQuery CSS -->
 	<link href="<?php echo base_url(); ?>css/backend/screen.css" rel="stylesheet" media="screen" type="text/css" />
