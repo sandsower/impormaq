@@ -65,16 +65,22 @@ class Upload extends CI_Controller {
 
 	function delete(){
 		$id= $this->uri->segment(3,0);
+		$this->load->model('promociones_model');
 		$imagen = $this->gallery_model->getById($id);
 		//print_r($imagen);
 			foreach($imagen->result() as $row){
+				if($result = $this->promociones_model->deleteImage($id)){
+					$texto = 'promociones/'.$result->id;
+				}
+
 				if($this->gallery_model->delete($id)){	
-					 unlink($row->full_path);
-					 unlink($row->file_path.'thumbs/'.$row->file_name);
-					 $idMaquina = $row->idMaquina;	
-			 }	
+					 	unlink($row->full_path);/*
+						 unlink($row->file_path.'thumbs/'.$row->file_name);*/
+						 $idMaquina = $row->idMaquina;	
+						 $texto = 'backend/site/imagenes/'.$idMaquina;
+			 	}
 		}
-		redirect('backend/site/imagenes/'.$idMaquina);
+		redirect($texto);
 	}
 }
 ?>
