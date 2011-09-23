@@ -6,7 +6,7 @@
 	<div id="footer">
 		
 		<p class="left">
-			Copyright &#169; 2011 <a href="#">Impormaq</a>. 
+			Copyright &#169; 2011 <a href="#">GetIt</a>. 
 			Powered by <a href="http://www.carlos.bolan0s.com">Garrison</a>.
 		</p>
 	</div>
