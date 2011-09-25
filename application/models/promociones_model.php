@@ -18,6 +18,10 @@ class Promociones_model extends CI_Model {
 		return $query->result();
 	}
 
+	function delete($id){
+		return $this->db->delete('Promociones', array('IdPromociones' => $id));
+	}
+
 	function getMachineById($id){
 		$this->db->select('*');
 		 $this->db->from('Maquinas');

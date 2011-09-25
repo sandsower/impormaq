@@ -1,0 +1,324 @@
+* {
+	margin:0;
+	padding:0;
+}
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+	color:#666;
+}
+img {
+	border:0;
+}
+a{
+	color:#f5f989;
+	text-decoration:none;
+}
+a:hover{
+	color:#ffffff;
+}
+
+#container {
+	padding:15px;
+	margin:auto;
+	width:318px;
+}
+
+
+/*Forms defaults*/
+input, textarea {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+	color:#999;
+
+}
+label {
+	color:#999;
+	cursor:pointer;
+	padding-left:2px;
+	line-height:15px;
+	vertical-align:top;
+}
+label.chosen {
+	color:#333;
+}
+
+.info{
+	padding-top:6px;
+	padding-bottom:5px;
+	font-weight:bold;
+}
+
+/*Transparent items*/
+.outtaHere {
+	filter:alpha(opacity=0);
+	-moz-opacity:0;
+	opacity: 0;
+	border:0px solid #FFF;
+	background:#FFF;
+	z-index:10;
+	cursor:pointer;
+}
+.transparentFake {
+	background:none;
+	border:none;
+}
+
+
+
+
+/*Text inputs*/
+.textinput, .textinputHovered {
+	width:305px;
+	height:24px;
+	border:none;
+	padding:4px 8px;
+	padding-right:15px;
+}
+.textinput{
+	background: url(images/sprite.png) no-repeat -10px -6px;	
+}
+
+.textinputHovered {
+	background: url(images/sprite.png) no-repeat -10px -37px;	
+}
+
+.smallinput, .smallinputHovered {
+	width:145px;
+	height:24px;
+	border:none;
+	padding:4px 8px;
+	padding-right:15px;
+}
+
+
+.smallinput{
+	background: url(images/sprite.png) no-repeat -10px -80px;
+}
+.smallinputHovered {
+	background: url(images/sprite.png) no-repeat -10px -113px;
+}
+
+/*Text areas*/
+.textarea, .textareaHovered {
+	width:310px;
+	height:125px;
+	border:none;
+	padding:4px 8px;
+	padding-left:10px;
+}
+
+.textarea{
+	background: url(images/sprite.png) no-repeat -11px -155px;
+}
+.textareaHovered {
+	background: url(images/sprite.png) no-repeat -11px -288px;
+}
+
+/*Selects*/
+.selectArea {
+	cursor: pointer;
+	width:318px;
+	height:30px;
+	background:url(images/sprite.png) no-repeat 0px -430px;
+}
+.selectArea .left {
+	width:8px;
+	height:30px;
+	float:left;
+	background: url(images/sprite.png) no-repeat -242px -80px;	
+}
+.selectArea .right {
+	width:25px;
+	height:30px;
+	float:right;
+	background: url(images/sprite.png) no-repeat -198px -79px;	
+}
+.selectArea .right a {
+	display:block;
+	width:21px;
+	height:21px;
+}
+.selectArea .right i {
+	display:none;
+}
+.selectArea .center {
+	width:160px;
+	margin-left:5px;
+	margin-right:20px;
+	color:#666;
+	padding-top:7px;
+	font-size: 14px;
+}
+
+/*Selects drop-down*/
+.optionsDivInvisible, .optionsDivVisible {
+	position:absolute;
+	margin-top:0px;
+	margin-left:3px;
+	width:290px;
+	background:#fff;
+	padding:2px;
+	font-size:12px;
+	z-index:20;
+	border: solid 1px #ccc;
+	border-top:0px;
+}
+.optionsDivInvisible {
+	display:none;
+}
+.optionsDivVisible {
+	display:block;
+}
+.optionsDivVisible p {
+	margin:0;
+	padding:0;
+}
+.optionsDivVisible a {
+	color:#666;
+	text-decoration:none;
+	display:block;
+	padding:5px 4px;
+}
+.optionsDivVisible a:hover {
+	color:#FFF;
+	background:#3582C4;
+}
+
+/*Button*/
+.buttonSubmit, .buttonSubmitHovered {
+	width: 318px;
+	height:30px;
+	color:#666;
+	padding:2px 5px;
+	margin-left:3px;
+	cursor:pointer;
+	border:solid 1px #ccc;
+	border-bottom:solid 1px #999;
+	border-right:solid 1px #999;
+}
+.buttonSubmitHovered {
+	border:solid 1px #e4e4e4;
+	border-bottom:solid 1px #ccc;
+	border-right:solid 1px #ccc;
+}
+
+/*Test div - testing if stylesheets are enabled*/
+#stylesheetTest {
+	position:absolute;
+	left:-999px;
+	width:10px;
+	height:10px;
+}
+
+.titleform{
+	font-size:19px;
+	font-weight: bold;
+	color:#828282;
+	margin-bottom: 25px;
+}
+
+.subtitleform{
+	font-size:12px;
+	color:#828282;
+}
+
+.redstar{
+	content:"*";
+	color:blue;
+}
+
+.title{
+	font-size: 12px;
+	line-height: 25px;
+	color:#999;
+	font-weight: bold;
+}
+
+.success{
+	width:96%;
+	padding:10px;
+	background:#eff4df;
+	border:1px solid #a6c43d;
+	color:#64781d;
+	font-weight:bold;
+	font-size:13px;
+	margin-bottom:10px;
+}
+
+.tst{
+	display: block;	
+	height:22px;
+}
+
+/* Checkboxes */
+label.checkbox_checked {
+	background: url(images/sprite.png) no-repeat -290px -133px;
+	display: block;
+	height:19px;
+	margin: 2px 0;
+	padding-left: 25px;
+}
+label.checkbox_unchecked  {
+	background: url(images/sprite.png) no-repeat -290px -114px;
+	display: block;
+	height:19px;
+	margin: 2px 0;
+	padding-left: 25px;
+}
+
+/* Radio Buttons */
+label.radio_checked {
+	background: url(images/sprite.png) no-repeat -290px -94px;
+	display: block;
+	height:19px;
+	margin: 2px 0;
+	padding-left: 25px;
+}
+label.radio_unchecked  {
+	background: url(images/sprite.png) no-repeat -290px -75px;
+	display: block;
+	height:19px;	
+	margin: 2px 0;
+	padding-left: 25px;
+}
+
+
+/* Hover State */
+label:hover{
+	color: #575B60;
+}
+
+label.highlighted {
+	border: 1px solid #333;
+}
+.crirHidden {
+	position: absolute;
+	left: -1000px;
+}
+
+.error{
+	color:#dd0010;
+}
+
+
+.btn { display: block; position: relative; background: #aaa; padding: 5px; float: left; color: #fff; text-decoration: none; cursor: pointer; }
+.btn * { font-style: normal; background-image: url(images/btn2.png); background-repeat: no-repeat; display: block; position: relative; }
+.btn i { background-position: top left; position: absolute; margin-bottom: -5px;  top: 0; left: 0; width: 5px; height: 5px; }
+.btn span { background-position: bottom left; left: -5px; padding: 0 0 5px 10px; margin-bottom: -5px; }
+.btn span i { background-position: bottom right; margin-bottom: 0; position: absolute; left: 100%; width: 10px; height: 100%; top: 0; }
+.btn span span { background-position: top right; position: absolute; right: -10px; margin-left: 10px; top: -5px; height: 0; }
+
+* html .btn span,
+* html .btn i { float: left; width: auto; background-image: none; cursor: pointer; }
+
+.btn.blue { background: #2ae; }
+.btn:hover { background-color: #a00; }
+.btn:active { background-color: #444; }
+.btn[class] {  background-image: url(images/shade.png); background-position: bottom; }
+
+* html .btn { border: 3px double #aaa; }
+* html .btn.blue { border-color: #2ae; }
+* html .btn:hover { border-color: #a00; }
+
+p { clear: both; padding-bottom: 2em; }

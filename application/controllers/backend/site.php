@@ -43,6 +43,9 @@ class Site extends CI_Controller {
 	//elimina una maquina de la base de datos
 	function eliminar(){
 		$id = $this->uri->segment(4,0);
+		$this->load->model('gallery_model');
+		$this->load->model('promociones_model');
+		
 		if($this->maquinaria_model->delete($id))
 			redirect('backend/site');
 	}
