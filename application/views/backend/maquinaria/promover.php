@@ -1,7 +1,7 @@
 <!-- 100% Box Grid Container: Start -->
 <div class="grid_24">
 	<!-- Box Header: Start -->
-		<form method="post" action="../../../backend/promociones/crear" class="formItem">
+		<form method="post" action="<? echo base_url('backend/promociones/crear'); ?>" class="formItem">
 		<!-- Simple Sorting Table: Start -->
 		<div class="box_top">
 		<h2 class="icon frames">Promover Maquinaria</h2>

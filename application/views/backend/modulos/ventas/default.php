@@ -24,8 +24,40 @@
 		<div class="tabs">
 		
 			<!-- News Sorting Table: Start -->
+			Selecciona el producto a vender:
 			<div id="listing">
-				ventas default
+				<table class="sorting">
+					<thead>
+						<tr>				
+							<th class="align_left ">Maquina</th>
+							<th class="align_left ">Tipo</th>
+							<th class="align_left ">Marca</th>
+							<th class="align_left ">Modelo</th>
+							<th class="align_left ">Precio</th>
+							<th class="align_left ">Fotos</th>
+							<th class="align_left  tools">Tools</th>
+						</tr>
+					</thead>
+					<tbody>
+						
+						<?php if(isset($maquinas)) : foreach($maquinas as $row) : ?>
+						<tr>
+							
+							<td class="align_left "><a href="site/getEspecifications/<?php echo $row->IdMaquina; ?>" class="popup"><?php echo $row->Maquina; ?></a></td>
+							<td class="align_left "><?php echo $row->Tipo; ?></td>
+							<td class="align_left "><?php echo $row->Marca; ?></td>
+							<td class="align_left "><?php echo $row->Modelo; ?></td>
+							<td class="align_left "><?php echo $row->Precio; ?></td>
+							<td class="align_left "><a href="#" class="popup">Fotos</a></td>
+							<td class="align_left center tools">
+								<a href="<?php echo base_url('backend/ventas/agregar/'.$row->IdMaquina);  ?>" class="edit tip" id="botonSell" title="sell">Sell</a>
+							</td>
+						</tr>
+						<?php endforeach; ?>
+						<?php endif; ?>
+
+					</tbody>
+				</table> 
 			</div>
 		</div>
 	</div>

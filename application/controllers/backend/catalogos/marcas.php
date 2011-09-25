@@ -11,6 +11,8 @@ class Marcas extends CI_Controller {
 	function index(){
 		$data['main_content'] = 'backend/catalogos/marcas/default';
 		$this->load->view('backend/template',$data);
+		$this->load->library('session');
+		$this->load->library('cart');
 	} 
 
 	function is_logged_in()

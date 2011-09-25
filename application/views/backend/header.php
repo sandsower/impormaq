@@ -22,6 +22,13 @@
 </head>
 
 <body>
+<!-- Start: Cart -->
+<div id="cart" class="cart">
+	<?php if($this->cart->total() > 0){ ?>
+	<a href="#">Carrito con <? echo $this->cart->total();  ?> items.</a>
+	<?}?>
+</div>
+<!-- Cart: End -->
 <!-- Start: Page Wrap -->
 <div id="wrap" class="container_24">
 	<!-- Header Grid Container: Start -->

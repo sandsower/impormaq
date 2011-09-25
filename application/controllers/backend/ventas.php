@@ -6,10 +6,14 @@ class Ventas extends CI_Controller {
 	{
 		parent::__construct();
 		$this->is_logged_in();
+		$this->load->model('maquinaria_model');
+		$this->load->library('session');
+		$this->load->library('cart');
 	}
 	
 	function index(){
 		$data['main_content'] = 'backend/modulos/ventas/default';
+		$data['maquinas'] = $this->maquinaria_model->getAll();
 		$this->load->view('backend/template',$data);
 	} 
 
@@ -23,10 +27,9 @@ class Ventas extends CI_Controller {
 			//$this->load->view('login_form');
 		}		
 	}
-
-
-
 	
+
+		
 }
 
 /* End of file marcas.php */

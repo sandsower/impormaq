@@ -8,6 +8,8 @@ class Tipos extends CI_Controller {
 		parent::__construct();
 		$this->is_logged_in();
 		$this->load->model('tipos_model');
+		$this->load->library('session');
+		$this->load->library('cart');
 	}
 	
 	function index(){
