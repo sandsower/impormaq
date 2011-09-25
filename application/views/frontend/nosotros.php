@@ -5,11 +5,18 @@
 
     <div class="grid_12">
       <h2>Acerca de GetIt</h2>
-      <h3>Mision</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ipsum dolor, blandit ac imperdiet vel, viverra in sapien. Praesent dignissim elementum semper. Pellentesque pharetra mi eget leo sodales elementum. Fusce ut dolor elit, in cursus nisl. Aliquam et ante enim. Phasellus lobortis tristique nibh, vel varius ligula luctus vitae. Phasellus tincidunt malesuada nunc quis ullamcorper. Aliquam rutrum est ut lectus laoreet ultricies. Proin sollicitudin ante vel libero mattis fringilla. Donec lacinia dapibus lorem, eu adipiscing dui mollis et. Etiam id luctus mauris. Nam nulla lectus, dictum sed gravida ac, ultricies interdum magna. Quisque ac leo diam. Nulla libero erat, aliquam varius adipiscing id, varius pharetra enim. Maecenas urna enim, tincidunt ac tristique nec, porttitor eu eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum pharetra mauris, in faucibus nibh pharetra eu. Sed sed porttitor nunc.</p>
-      <h3>Vision</h3>
+      <h3>Introducci&oacute;n</h3>
+      <p>GetIt está desarrollado pensado en las pymes mexicanas las cuales necesiten
+tener presencia en internet para mejorar sus ventas y aumentar su cartera de
+clientes. Pensamos que cualquier sector industrial puede ser beneficiado con este
+producto, ya que es un sistema flexible, el cual se adapta a las necesidades de
+todas y cada una de las empresas.</p>
+      <h3>Mercado potencial</h3>
       <img class="wrap_left" width="200" src="<?php echo base_url(); ?>img/frontend/product_300x300.jpg" alt="" />
-      <p>Praesent ornare rutrum sapien. Phasellus et massa eget turpis suscipit volutpat. Donec hendrerit leo sed tellus venenatis tristique. Integer volutpat, ante non vestibulum vestibulum, erat dolor pulvinar dolor, et congue augue nisi non massa. Morbi vehicula malesuada magna sit amet congue. Quisque commodo tristique nisi, et tristique sapien vehicula a. Fusce et fermentum neque. Nullam nibh augue, euismod a semper at, elementum nec nisi. Mauris dignissim erat nec erat sollicitudin porta eu volutpat ante. Suspendisse id mi non erat laoreet porta. Morbi pharetra, nisi ut vulputate ultrices, massa velit mollis lectus, et aliquet sem ipsum quis metus. Praesent sollicitudin sapien sit amet nunc commodo vulputate interdum elit suscipit. Sed pellentesque libero in odio vulputate ut euismod purus posuere. Curabitur tincidunt tortor et purus accumsan gravida. Aenean eleifend, enim sed porta tincidunt, augue ligula euismod quam, tincidunt varius justo tortor quis risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut ut sollicitudin nisl. </p>
+      <p>GetIt está dirigido a todas las pequeñas y medianas empresas mexicanas que no
+cuenten con una infraestructura tecnológica necesaria para administrar el contacto
+con sus clientes, publicitar y vender sus productos y/o servicios haciendo uso de
+internet y la tecnología de plataformas móviles. </p>
       <br/>
       <h3>Politicas de calidad</h3>
       <img class="wrap_right" width="200" src="<?php echo base_url(); ?>img/frontend/product_300x300.jpg" alt="" />

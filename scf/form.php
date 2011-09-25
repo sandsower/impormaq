@@ -81,7 +81,7 @@ if (!eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})
  
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
 <head>
-	<title>Contact Us</title>
+	<title>Contacto</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<script language="javascript" type="text/javascript" src="js/jquery.js"></script>
 	<script language="javascript" type="text/javascript" src="js/jquery-ui.js"></script>
@@ -103,19 +103,19 @@ if (!eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})
 		<form action="" method="post" id='myForm' class="niceform">
 <table cellspacing='0' cellpadding='0' style='width:100%;'>	
 			<tr>
-				<td class='info <?=$errors['name']?>'>Your Name</td>
+				<td class='info <?=$errors['name']?>'>Nombre</td>
 			</tr>				
 			<tr>
 				<td style='padding:2px;' colspan='2'><input type='text' name='name' class='textinput' value='<?=$_POST['name']?>'></td>
 			</tr>	
 			<tr>
-				<td  class='info <?=$errors['email']?>'>Your Email</td>
+				<td  class='info <?=$errors['email']?>'>Correo Electronico</td>
 			</tr>				
 			<tr>
 				<td style='padding:2px;'><input type='text' name='email' class='textinput' value='<?=$_POST['email']?>'></td>
 			</tr>				
 			<tr>
-				<td class='info <?=$errors['reason']?>'>Reason</td>
+				<td class='info <?=$errors['reason']?>'>Motivo</td>
 			</tr>				
 			<tr>
 				<td style='padding:2px;'>
@@ -128,7 +128,7 @@ if (!eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})
 				</td>
 			</tr>	
 			<tr>
-				<td class='info <?=$errors['message']?>'>Message</td>
+				<td class='info <?=$errors['message']?>'>Mensaje</td>
 			</tr>		
 			<tr>
 				<td style='padding:2px;'><textarea name='message' class='textarea'><?=$_POST['message']?></textarea></td>

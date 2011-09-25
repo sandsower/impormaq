@@ -1,22 +1,22 @@
 <?
-	$usesmtp	=	0; 							//ENABLE SMTP? 0 or 1
+	$usesmtp	=	1; 							//ENABLE SMTP? 0 or 1
 	$captcha	=	1; 							//ENABLE CAPTCHA? 0 or 1
-	$to			=	'test@test.com'; 			//Email where you recieve all the enquiries.
+	$to			=	'garrisonx@gmail.com'; 			//Email where you recieve all the enquiries.
 	if(isset($_SESSION['reciever'])) $to=$_SESSION['reciever'];
 
 	$reason	=array();
 //Edit the reasons here, according to your needs!
-	$reason[]	='Report a Bug';
-	$reason[]	='Support';
-	$reason[]	='Public Relations';
-	$reason[]	='Services';
+	$reason[]	='Reportar un error';
+	$reason[]	='Soporte';
+	$reason[]	='Relaciones publicas';
+	$reason[]	='Sservicios';
 
 	
 //Configuration for GMAIL; ONLY IF SMTP ENABLED
 	
 	$smtphost	=	'smtp.gmail.com';
-	$smtpuser	=	'user@gmail.com';
-	$smtppass	=	'password';
+	$smtpuser	=	'garrisonx@gmail.com';
+	$smtppass	=	'15096731';
 	$smtpport	=	'465';
 	$smtpsecure	=	'ssl';
 	

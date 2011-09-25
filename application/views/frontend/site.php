@@ -1,6 +1,4 @@
 
-<script type="text/javascript" src="<?php echo base_url(); ?>scf/js/jquery.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>scf/scf.js"></script>
   <!-- ********************** --> 
   <!--     I N T R O          --> 
   <!-- ********************** --> 
@@ -156,5 +154,6 @@
     
   </div>
   <!-- end of content --> 
+
   
   
