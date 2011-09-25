@@ -196,6 +196,10 @@ span.clear {
   font-size: 0;
 }
 
+img.wrap_center
+{
+	margin-left: 200px;
+}
 img.wrap_left {
 	float: left;
 	margin: 0 20px 10px 0;
