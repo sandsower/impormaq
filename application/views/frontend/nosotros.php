@@ -4,17 +4,27 @@
   <div id="content" class="container_12">
 
     <div class="grid_12">
-      <h2>Acerca de GetIt</h2>
-      <h3>Mision</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ipsum dolor, blandit ac imperdiet vel, viverra in sapien. Praesent dignissim elementum semper. Pellentesque pharetra mi eget leo sodales elementum. Fusce ut dolor elit, in cursus nisl. Aliquam et ante enim. Phasellus lobortis tristique nibh, vel varius ligula luctus vitae. Phasellus tincidunt malesuada nunc quis ullamcorper. Aliquam rutrum est ut lectus laoreet ultricies. Proin sollicitudin ante vel libero mattis fringilla. Donec lacinia dapibus lorem, eu adipiscing dui mollis et. Etiam id luctus mauris. Nam nulla lectus, dictum sed gravida ac, ultricies interdum magna. Quisque ac leo diam. Nulla libero erat, aliquam varius adipiscing id, varius pharetra enim. Maecenas urna enim, tincidunt ac tristique nec, porttitor eu eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum pharetra mauris, in faucibus nibh pharetra eu. Sed sed porttitor nunc.</p>
-      <h3>Vision</h3>
-      <img class="wrap_left" width="200" src="<?php echo base_url(); ?>img/frontend/product_300x300.jpg" alt="" />
-      <p>Praesent ornare rutrum sapien. Phasellus et massa eget turpis suscipit volutpat. Donec hendrerit leo sed tellus venenatis tristique. Integer volutpat, ante non vestibulum vestibulum, erat dolor pulvinar dolor, et congue augue nisi non massa. Morbi vehicula malesuada magna sit amet congue. Quisque commodo tristique nisi, et tristique sapien vehicula a. Fusce et fermentum neque. Nullam nibh augue, euismod a semper at, elementum nec nisi. Mauris dignissim erat nec erat sollicitudin porta eu volutpat ante. Suspendisse id mi non erat laoreet porta. Morbi pharetra, nisi ut vulputate ultrices, massa velit mollis lectus, et aliquet sem ipsum quis metus. Praesent sollicitudin sapien sit amet nunc commodo vulputate interdum elit suscipit. Sed pellentesque libero in odio vulputate ut euismod purus posuere. Curabitur tincidunt tortor et purus accumsan gravida. Aenean eleifend, enim sed porta tincidunt, augue ligula euismod quam, tincidunt varius justo tortor quis risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut ut sollicitudin nisl. </p>
-      <br/>
-      <h3>Politicas de calidad</h3>
-      <img class="wrap_right" width="200" src="<?php echo base_url(); ?>img/frontend/product_300x300.jpg" alt="" />
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam mauris mauris, pulvinar eu placerat sit amet, venenatis vitae odio. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi quam ipsum, sagittis sed feugiat et, tincidunt nec urna. Praesent bibendum cursus eros, ut tristique ante ornare ac. Nulla ut dolor eros. Aliquam a nisi eget justo posuere interdum. Praesent quis elit a lectus pulvinar semper. Fusce sed sapien at enim vestibulum vehicula. Vestibulum et massa mauris. Praesent in metus ligula, non consequat turpis. Aenean turpis orci, mollis sed commodo vel, vehicula id ante. Donec enim est, vehicula ac ornare eget, faucibus nec dui. Donec nisl dolor, congue in volutpat id, tincidunt at massa. Nulla vel gravida dolor. Aliquam vulputate, risus et lacinia lacinia, est tellus venenatis nisl, id rhoncus risus sem sed felis. Praesent varius mattis velit, sit amet sodales erat congue ut. Quisque vel est justo, ac convallis tortor. Cras scelerisque sollicitudin sem, id lacinia lacus rutrum at. Aliquam porta purus vel enim consequat porttitor. In non augue id metus viverra dictum facilisis non nibh. </p>
-    </div>
+      <h2>Nosotros</h2>
+	   <img class="wrap_center" width="400" src="<?php echo base_url(); ?>img/frontend/nosotros.jpg" alt="" />
+	  <p>
+	  GetIt está desarrollado pensado en las pymes mexicanas las cuales necesiten tener presencia en internet para mejorar sus ventas y aumentar su cartera de clientes. Pensamos que cualquier sector industrial puede ser beneficiado con este producto, ya que es un sistema flexible, el cual se adapta a las necesidades de todas y cada una de las empresas
+	  </p>
+	  <h3>Objetivo</h3>
+	  <p>
+		Ofrecerá sistemas que se adecuen a las necesidades de pequeñas y medianas empresas, lo suficientemente flexibles los cuales permitirán agregar funcionalidades extras por un precio accesible.
+	  </p>
+      <h3 style = "padding-top:30px;">Mision</h3>
+	  <img class="wrap_right" width="200" src="<?php echo base_url(); ?>img/frontend/Mision.jpg" alt="" />
+      <p>
+	  GetIt es una empresa comprometida con las PYMES mexicanas, ayudándolas a sobresalir entre sus competidores a través de productos y servicios vanguardistas y de alta calidad que les permite publicitarse y vender sus productos por medio de internet.
+	  </p>
+      <h3 style = "padding-top:30px;" >Vision</h3>
+      <img class="wrap_left"   width="200" src="<?php echo base_url(); ?>img/frontend/Vision.jpeg" alt="" />
+      <p>
+	  Ser una empresa que en 10 años sea reconocida a nivel nacional, con el  respaldo de las pequeñas y medianas empresas, buscando una mejora continua para elevar la calidad y vanguardia de sus servicios y productos, cumpliendo con las necesidades tecnológicas que cada empresa requiera.
+	   </p>
+      
+	  </div>
   </div>  
   <div id="shop_info">
     <div id="shop_info_wrap">
