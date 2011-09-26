@@ -61,7 +61,7 @@
 
 		<div class="content">
 			<div id="newsletter">
-            <form method="post" action="<? echo base_url('login/validate'); ?>">
+            <form method="post" action="<? echo base_url('login/validateAdmin'); ?>">
 				<input  name="username"  value="username" type="text" />
 				<input  name="password"  value="password" type="password" />
 				<input class="submit" type="submit" value="" name="submit" id="submit" />

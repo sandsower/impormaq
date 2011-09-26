@@ -56,4 +56,13 @@ class Promociones_model extends CI_Model {
 		return $query->result();
 	}
 
+	function getPromoMachine($id){
+		print_r($id);
+		$this->db->select('PrecioPromocional');
+		$this->db->from('Promociones');
+		$this->db->where('IdMaquina',$id);
+		$query = $this->db->get();
+		return $query->result();
+	}
+
 }

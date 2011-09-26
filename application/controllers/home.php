@@ -2,10 +2,6 @@
 
 class Home extends CI_Controller {
 
-	function __construct(){
-		$this->load->library('session');
-		$this->load->library('cart');
-	}
 	/**
 	 * Index Page for this controller.
 	 *

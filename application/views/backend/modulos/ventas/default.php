@@ -5,7 +5,7 @@
 	<div class="box_top">
 		
 		<a name="news"></a>
-		<h2 class="icon pages">Marcas<span>232</span></h2>
+		<h2 class="icon pages">Productos a vender<span>232</span></h2>
 		
 		<!-- Tab Select: Start -->
 		<ul class="sorting">
@@ -24,40 +24,36 @@
 		<div class="tabs">
 		
 			<!-- News Sorting Table: Start -->
-			Selecciona el producto a vender:
 			<div id="listing">
+			<form action="ventas/completar" method="POST"  >
 				<table class="sorting">
 					<thead>
 						<tr>				
 							<th class="align_left ">Maquina</th>
-							<th class="align_left ">Tipo</th>
-							<th class="align_left ">Marca</th>
-							<th class="align_left ">Modelo</th>
-							<th class="align_left ">Precio</th>
-							<th class="align_left ">Fotos</th>
-							<th class="align_left  tools">Tools</th>
+							<th class="align_left ">Precio original</th>
+							<th class="align_left ">Precio de venta</th>
+							<th class="align_left ">Movimientos</th>
 						</tr>
 					</thead>
 					<tbody>
 						
 						<?php if(isset($maquinas)) : foreach($maquinas as $row) : ?>
 						<tr>
-							
-							<td class="align_left "><a href="site/getEspecifications/<?php echo $row->IdMaquina; ?>" class="popup"><?php echo $row->Maquina; ?></a></td>
-							<td class="align_left "><?php echo $row->Tipo; ?></td>
-							<td class="align_left "><?php echo $row->Marca; ?></td>
-							<td class="align_left "><?php echo $row->Modelo; ?></td>
-							<td class="align_left "><?php echo $row->Precio; ?></td>
-							<td class="align_left "><a href="#" class="popup">Fotos</a></td>
-							<td class="align_left center tools">
-								<a href="<?php echo base_url('backend/ventas/agregar/'.$row->IdMaquina);  ?>" class="edit tip" id="botonSell" title="sell">Sell</a>
-							</td>
+							<td class="align_left "><a href="site/getEspecifications/<?php echo $row['id']; ?>" class="popup"><?php echo $row['name']; ?></a></td>
+							<td class="align_left "><?php echo $row['price']; ?></td>
+							<td class="align_left "><input type="text" value="<? echo $row['price']; ?>" id="<? echo $row['price']; ?>" name="<? echo $row['id']; ?>" /></td>
+							<td class="align_left "><a href="ventas/eliminar/<? echo $row['rowid'] ?>">Eliminar producto</a></td>
 						</tr>
 						<?php endforeach; ?>
 						<?php endif; ?>
-
 					</tbody>
-				</table> 
+				</table>
+				<?php if(isset($clientes)): ?>
+				<?php echo form_dropdown('cliente', $clientes); ?>
+				<?php endif; ?>
+
+				<input type="submit" value="Realizar venta">
+			</form>
 			</div>
 		</div>
 	</div>
