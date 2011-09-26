@@ -7,6 +7,8 @@ class Promociones extends CI_Controller {
 		parent::__construct();
 		$this->is_logged_in();
 		$this->load->model('promociones_model');
+		$this->load->library('session');
+		$this->load->library('cart');
 	}
 	
 	function index(){
@@ -33,10 +35,9 @@ class Promociones extends CI_Controller {
 			'TextoPromocional' => $this->input->post('TextoPromocional'),
 			'PrecioPromocional' => $this->input->post('PrecioPromocional')	
 		);
-		print_r($data);
 		$this->promociones_model->insert($data);
-		//$this->promociones_model->turnPromo($this->input->post('idMaquina'));
-		//redirect('backend/site');
+		$this->promociones_model->turnPromo($this->input->post('idMaquina'));
+		redirect('backend/site');
 	}
 
 	function Maquina(){

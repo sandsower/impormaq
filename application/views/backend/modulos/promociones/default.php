@@ -1,5 +1,5 @@
 <!-- 100% Box Grid Container: Start -->
-<?php print_r($promociones); ?>
+<?php //print_r($promociones); ?>
 <div class="grid_24">
 
 	<!-- Box Header: Start -->

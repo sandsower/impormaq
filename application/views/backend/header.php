@@ -22,9 +22,16 @@
 </head>
 
 <body>
+<!-- Start: Cart -->
+<!-- Cart: End -->
 <!-- Start: Page Wrap -->
 <div id="wrap" class="container_24">
 	<!-- Header Grid Container: Start -->
+<div id="cart" class="cart">
+	<?php if($this->cart->total() > 0){ ?>
+	<a href="<?php echo base_url('backend/ventas');?>">Carrito con <? echo $this->cart->total_items();  ?> items.</a>
+	<?}?>
+</div>
 	<div class="grid_24">	
 		<!-- User Panel: Start -->
 		<div id="userpanel">

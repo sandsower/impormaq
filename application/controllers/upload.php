@@ -8,6 +8,8 @@ class Upload extends CI_Controller {
 		$this->gallery_path = realpath(APPPATH . '../images');
 		$this->gallery_path_url = base_url().'images/';
 		$this->load->model('gallery_model');
+		$this->load->library('session');
+		$this->load->library('cart');
 	}
 
 	function index()

@@ -1,4 +1,5 @@
  
+<?php $this->load->helper('url'); ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -60,7 +61,7 @@
 
 		<div class="content">
 			<div id="newsletter">
-            <form method="post" action="login/validate">
+            <form method="post" action="<? echo base_url('login/validateAdmin'); ?>">
 				<input  name="username"  value="username" type="text" />
 				<input  name="password"  value="password" type="password" />
 				<input class="submit" type="submit" value="" name="submit" id="submit" />

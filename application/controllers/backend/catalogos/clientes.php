@@ -8,6 +8,8 @@ class Clientes extends CI_Controller {
 		
 		$data['main_content'] = 'backend/catalogos/clientes/default';
 		$this->load->view('backend/template',$data);
+		$this->load->library('session');
+		$this->load->library('cart');
 	} 
 
 	
