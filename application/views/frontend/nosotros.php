@@ -4,24 +4,28 @@
   <div id="content" class="container_12">
 
     <div class="grid_12">
-      <h2>Acerca de GetIt</h2>
-      <h3>Introducci&oacute;n</h3>
-      <p>GetIt está desarrollado pensado en las pymes mexicanas las cuales necesiten
-tener presencia en internet para mejorar sus ventas y aumentar su cartera de
-clientes. Pensamos que cualquier sector industrial puede ser beneficiado con este
-producto, ya que es un sistema flexible, el cual se adapta a las necesidades de
-todas y cada una de las empresas.</p>
-      <h3>Mercado potencial</h3>
-      <img class="wrap_left" width="200" src="<?php echo base_url(); ?>img/frontend/product_300x300.jpg" alt="" />
-      <p>GetIt está dirigido a todas las pequeñas y medianas empresas mexicanas que no
-cuenten con una infraestructura tecnológica necesaria para administrar el contacto
-con sus clientes, publicitar y vender sus productos y/o servicios haciendo uso de
-internet y la tecnología de plataformas móviles. </p>
-      <br/>
-      <h3>Politicas de calidad</h3>
-      <img class="wrap_right" width="200" src="<?php echo base_url(); ?>img/frontend/product_300x300.jpg" alt="" />
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam mauris mauris, pulvinar eu placerat sit amet, venenatis vitae odio. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi quam ipsum, sagittis sed feugiat et, tincidunt nec urna. Praesent bibendum cursus eros, ut tristique ante ornare ac. Nulla ut dolor eros. Aliquam a nisi eget justo posuere interdum. Praesent quis elit a lectus pulvinar semper. Fusce sed sapien at enim vestibulum vehicula. Vestibulum et massa mauris. Praesent in metus ligula, non consequat turpis. Aenean turpis orci, mollis sed commodo vel, vehicula id ante. Donec enim est, vehicula ac ornare eget, faucibus nec dui. Donec nisl dolor, congue in volutpat id, tincidunt at massa. Nulla vel gravida dolor. Aliquam vulputate, risus et lacinia lacinia, est tellus venenatis nisl, id rhoncus risus sem sed felis. Praesent varius mattis velit, sit amet sodales erat congue ut. Quisque vel est justo, ac convallis tortor. Cras scelerisque sollicitudin sem, id lacinia lacus rutrum at. Aliquam porta purus vel enim consequat porttitor. In non augue id metus viverra dictum facilisis non nibh. </p>
-    </div>
+
+      <h2>Nosotros</h2>
+	   <img class="wrap_center" width="400" src="<?php echo base_url(); ?>img/frontend/nosotros.jpg" alt="" />
+	  <p>
+	  GetIt está desarrollado pensado en las pymes mexicanas las cuales necesiten tener presencia en internet para mejorar sus ventas y aumentar su cartera de clientes. Pensamos que cualquier sector industrial puede ser beneficiado con este producto, ya que es un sistema flexible, el cual se adapta a las necesidades de todas y cada una de las empresas
+	  </p>
+	  <h3>Objetivo</h3>
+	  <p>
+		Ofrecerá sistemas que se adecuen a las necesidades de pequeñas y medianas empresas, lo suficientemente flexibles los cuales permitirán agregar funcionalidades extras por un precio accesible.
+	  </p>
+      <h3 style = "padding-top:30px;">Mision</h3>
+	  <img class="wrap_right" width="200" src="<?php echo base_url(); ?>img/frontend/Mision.jpg" alt="" />
+      <p>
+	  GetIt es una empresa comprometida con las PYMES mexicanas, ayudándolas a sobresalir entre sus competidores a través de productos y servicios vanguardistas y de alta calidad que les permite publicitarse y vender sus productos por medio de internet.
+	  </p>
+      <h3 style = "padding-top:30px;" >Vision</h3>
+      <img class="wrap_left"   width="200" src="<?php echo base_url(); ?>img/frontend/Vision.jpeg" alt="" />
+      <p>
+	  Ser una empresa que en 10 años sea reconocida a nivel nacional, con el  respaldo de las pequeñas y medianas empresas, buscando una mejora continua para elevar la calidad y vanguardia de sus servicios y productos, cumpliendo con las necesidades tecnológicas que cada empresa requiera.
+	   </p>
+      
+	  </div>
   </div>  
   <div id="shop_info">
     <div id="shop_info_wrap">
