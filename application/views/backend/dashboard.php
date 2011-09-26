@@ -56,7 +56,7 @@
 								<a href="site/editar/<?php echo $row->IdMaquina; ?>" class="edit" id="botonEdit" title="edit">edit</a>
 								<a href="site/eliminar/<?php echo $row->IdMaquina; ?>" onClick="javascript: if(confirm('¿Esta seguro que desa borrar el registro?')){ return true; } else { return false;}" class="delete tip" id="botonDelete" title="delete">delete</a>
 								<a href="site/imagenes/<?php echo $row->IdMaquina; ?>" class="edit tip" id="botonImages" title="images">Images</a>
-								<a href="site/vender/<?php echo $row->IdMaquina; ?>" class="edit tip" id="botonSell" title="sell">Sell</a>
+								<a href="ventas/agregar/<?php echo $row->IdMaquina; ?>" class="edit tip" id="botonSell" title="Add to sale list">Sell</a>
 							</td>
 						</tr>
 						<?php endforeach; ?>
