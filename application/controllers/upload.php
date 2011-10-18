@@ -60,8 +60,8 @@ class Upload extends CI_Controller {
 			$this->image_lib->resize();																	//crea thumbnail
 			$data['images'] = $this->gallery_model->get_images($data['id']);	
 			redirect('backend/site/imagenes/'.$data['id']);
-			//$data['main_content'] = 'backend/maquinaria/imagenes';
-			//$this->load->view('backend/template',$data);
+			$data['main_content'] = 'backend/maquinaria/imagenes';
+			$this->load->view('backend/template',$data);
 			
 		}
 	}
