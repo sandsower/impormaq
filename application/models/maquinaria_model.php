@@ -38,21 +38,7 @@ class Maquinaria_model extends CI_Model {
 	function insert($data){
 		$this->db->insert('maquinas', $data);
 	}
-	function delete($id){
-		$this->db->delete('imagenes', array('IdMaquina'=>$id));
-		//$url = base_url().'images/'.$id;
-		//$this->load->helper('file'); 
-		
-		//$this->deleteDir( realpath(APPPATH . '../images/'.$id);
-		//$this->deleteDir('/Users/Garrison/Sites/impormaq/images/'.$id.'/promo');
-		//$this->deleteDir('/Users/Garrison/Sites/impormaq/images/'.$id.'/thumbs');
-
-		//rmdir('/Users/Garrison/Sites/impormaq/images/'.$id);
-		//unlink($url);
-		//unlink($url);
-		return $this->db->delete('maquinas', array('IdMaquina' => $id));
-	}
-
+	
 	function update($data){
 		$this->db->where('IdMaquina', $data['IdMaquina']);
 		return $this->db->update('maquinas', $data);	
@@ -62,40 +48,20 @@ class Maquinaria_model extends CI_Model {
 		$query = $this->db->get_where('Marcas', array('Marca' => $marca['Marca']));
 		return $query->result();
 	}
-
-	function deleteDir($dir) 
-	{ 
-	   if (substr($dir, strlen($dir)-1, 1) != '/') 
-	       $dir .= '/'; 
-	   echo '<br/>'.$dir; 
-	   if ($handle = opendir($dir)) 
-	   { 
-	       while ($obj = readdir($handle)) 
-	       { 
-	           if ($obj != '.' && $obj != '..') 
-	           { 
-	               if (is_dir($dir.$obj)) 
-	               { 
-	                   if (!deleteDir($dir.$obj)) {
-	         			    echo $dir.$obj; 
-	         			    return false; 
-	                   }
-	               } 
-	               elseif (is_file($dir.$obj)) 
-	               { 
-	                   if (!unlink($dir.$obj)) 
-	                       return false; 
-	               } 
-	           } 
-	       } 
-	       closedir($handle); 
-
-	       if (!@rmdir($dir)) 
-	           return false; 
-	       return true; 
-	   } 
-	   return false; 
-	}  
-
 	
+	function deleteDir($path) 
+	{ 
+		$dir = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path), RecursiveIteratorIterator::CHILD_FIRST);
+		for ($dir->rewind(); $dir->valid(); $dir->next()) 
+		{
+			if ($dir->isDir()) {
+			rmdir($dir->getPathname());
+			} 
+			else 
+			{
+				unlink($dir->getPathname());
+			}
+		}
+		rmdir($path);
+	}  
 }
