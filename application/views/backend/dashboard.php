@@ -49,7 +49,7 @@
 							<td class="align_left "><?php echo $row->Marca; ?></td>
 							<td class="align_left "><?php echo $row->Modelo; ?></td>
 							<td class="align_left "><?php echo $row->Precio; ?></td>
-							<td class="align_left "><a href="#" class="popup">Fotos</a></td>
+							<td class="align_left "><a href="site/fotos/<?php echo $row->IdMaquina; ?>" class="popup">Fotos</a></td>
 							<td class="align_left center tools">
 								
 								<a href="site/promote/<?php echo $row->IdMaquina; ?>" class="edit tip" id="botonPromote" title="promote">Promote</a>

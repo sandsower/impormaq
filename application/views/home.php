@@ -61,14 +61,14 @@
 
 		<div class="content">
 			<div id="newsletter">
-            <form method="post" action="<? echo base_url('login/validateAdmin'); ?>">
+            <form method="post" action="<? echo base_url('login/validate'); ?>">
 				<input  name="username"  value="username" type="text" />
 				<input  name="password"  value="password" type="password" />
 				<input class="submit" type="submit" value="" name="submit" id="submit" />
             </form>
 			</div><!-- end #newsletter -->
 			
-			<h2>GetIt is  under construction.</h2>
+			<h2>Impormaq is  under construction.</h2>
 			
 		</div><!-- end #content -->
 

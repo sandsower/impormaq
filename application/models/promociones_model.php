@@ -14,7 +14,7 @@ class Promociones_model extends CI_Model {
 	}
 
 	function getById($id){
-		$query = $this->db->get_where('oromociones', array('IdPromociones' => $id));
+		$query = $this->db->get_where('promociones', array('IdPromociones' => $id));
 		return $query->result();
 	}
 
@@ -36,12 +36,16 @@ class Promociones_model extends CI_Model {
 		$this->db->insert('promociones', $data);
 	}
 
-	function turnPromo($idMachine){
-		$data = array(
-               'promo' => true,
-            );
+	function turnPromoOn($idMachine){
+		$data = array('promo' => true);
 		$this->db->where('IdMaquina', $idMachine);
 		return $this->db->update('maquinas', $data); 
+	}
+
+	function turnPromoOff($idMachine){
+		$data = array('promo' => false);
+		$this->db->where('IdMaquina', $idMachine);	
+		return $this->db->update('maquinas', $data);
 	}
 	
 	function deleteImage($id){

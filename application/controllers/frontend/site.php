@@ -7,10 +7,15 @@ class Site extends CI_Controller {
 		parent::__construct();
 		$this->is_logged_in();
 		$this->load->model('maquinaria_model');
+		$this->load->model('promociones_model');
+		$this->load->model('tipos_model');
+		$this->load->model('marcas_model');
 	}
 
 	function index(){
-		//echo 'frontned';
+		$data['marcas'] = $this->marcas_model->getAll();
+		$data['tipos'] = $this->tipos_model->getAll();
+		$data['promociones'] = $this->promociones_model->getAll();
 		$data['main_content'] = 'frontend/site';
 		$this->load->view('frontend/template',$data);
 	}

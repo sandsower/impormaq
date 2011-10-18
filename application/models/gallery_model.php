@@ -10,6 +10,12 @@ class Gallery_model extends CI_Model {
 		$query = $this->db->get_where('imagenes', array('IdMaquina' => $id,'promo'=>false));
 		return $query;
 	}
+
+	function get_PromoImages($id) {
+		$query = $this->db->get_where('imagenes', array('IdMaquina' => $id,'promo'=>true));
+		return $query;
+	}
+
 	function get_imagesPromo($id) {
 		$query = $this->db->get_where('imagenes', array('IdMaquina' => $id,'promo'=>true));
 		return $query;

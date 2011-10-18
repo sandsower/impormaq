@@ -72,11 +72,9 @@
       <div id="categories" class="s_nav">
         <ul>
           <li id="menu_home"> <a href="<?php echo base_url(); ?>frontend/site">Home</a> </li>
-          <li> <a href="#">Gruas</a></li>
-          <li> <a href="#">Retro Excavadoras</a></li>
-          <li> <a href="#">Martillos Hidraulicos</a></li>
-          <li> <a href="#">Tractores</a></li>
-          
+          <?php if(isset($tipos)) : foreach($tipos as $row) : ?>
+            <li> <a href="#"><?php echo $row->Tipo; ?></a></li>
+          <?php endforeach; endif; ?>
         </ul>
       </div>
 

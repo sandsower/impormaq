@@ -29,6 +29,10 @@
 							<input type="text" name="PrecioPromocional" class="validate"/></td>
 						</tr>
 						<tr>
+							<td><label class="left">Titulo Promocional:</label></td>
+							<td><input type="text" name="TituloPromocional" class="validate"/></td>
+						</tr>
+						<tr>
 							<td><label class="left">Texto promocional:</label></td>
 							<td><textarea class="wysiwyg" name="TextoPromocional"></textarea></td>
 						</tr>
@@ -37,14 +41,17 @@
 				
 				<div id="gallery">
 					<?php if(isset($images)) : foreach($images->result() as $row2) : ?>	
-				<div >
-				<input type="hidden" name="IdImagenes" value="<?php echo $row2->IdImagenes; ?>">
+				<div>
+					<input type="hidden" name="IdImagenes" value="<?php echo $row2->IdImagenes; ?>">
 					<a href="<?php echo base_url().'images/'.$id.'/promo/'.$row2->file_name; ?>" class="popup">
-					<img src="<?php echo base_url().'images/'.$id.'/promo/'.$row2->file_name; ?>"></a>
-					<a href="<?php echo base_url(); ?>upload/delete/<?php echo $row2->IdImagenes; ?>" onClick="javascript: if(confirm('¿Esta seguro que desa borrar el registro?')){ return true; } else { return false;}" class="delete tip"  title="delete"><img src="<?php echo base_url() ?>img/backend/icon_small_error2.png"></a>
+						<img src="<?php echo base_url().'images/'.$id.'/promo/'.$row2->file_name; ?>">
+					</a>
+					<a href="<?php echo base_url(); ?>upload/delete/<?php echo $row2->IdImagenes; ?>" onClick="javascript: if(confirm('¿Esta seguro que desa borrar el registro?')){ return true; } else { return false;}" class="delete tip"  title="delete">
+						<img src="<?php echo base_url() ?>img/backend/icon_small_error2.png">
+					</a>
 				</div>
 			<?php endforeach; else: ?>
-				<div id="blank_gallery">Por favor subir una imagen.</div>
+				<div >Por favor subir una imagen.</div>
 			<?php endif; ?>
 				</div>
 				<button>Crear</button>

@@ -13,6 +13,7 @@ class Promociones extends CI_Controller {
 	
 	function index(){
 		$data['promociones'] =$this->promociones_model->getAll();
+		//print_r($data['promociones']);
 		$data['main_content'] = 'backend/modulos/promociones/default';
 		$this->load->view('backend/template',$data);
 	} 
@@ -33,11 +34,34 @@ class Promociones extends CI_Controller {
 			'IdMaquina' => $this->input->post('idMaquina'),
 			'IdUsuarios' => $this->input->post('idUser'),
 			'TextoPromocional' => $this->input->post('TextoPromocional'),
+			'TituloPromocional' => $this->input->post('TituloPromocional'),
 			'PrecioPromocional' => $this->input->post('PrecioPromocional')	
 		);
 		$this->promociones_model->insert($data);
-		$this->promociones_model->turnPromo($this->input->post('idMaquina'));
-		redirect('backend/site');
+		$this->promociones_model->turnPromoOn($this->input->post('idMaquina'));
+		redirect('backend/promociones');
+	}
+
+	function eliminar(){
+		$id = $this->uri->segment(4,0);
+		$promo = $this->promociones_model->getById($id);
+		$IdMachine = $promo[0]->IdMaquina;
+		$IdImagenes = $promo[0]->IdImagenes;
+		$this->load->model('gallery_model');
+		$image = $this->gallery_model->getById($IdImagenes)->result();
+
+		
+		if($this->promociones_model->delete($id)){
+			$this->promociones_model->turnPromoOff($IdMachine);
+			$this->gallery_model->delete($IdImagenes);
+			unlink($image[0]->full_path);
+			redirect('backend/promociones');
+		}
+	}
+
+	function editar(){
+		$id = $this->uri->segment(4,0);
+		echo $id;
 	}
 
 	function Maquina(){
@@ -67,7 +91,10 @@ class Promociones extends CI_Controller {
 		$id = $this->uri->segment(4,0);
 		$this->load->model('gallery_model');
 		$query = $this->gallery_model->get_images($id)->result();
-		print_r($query);
+		foreach ($query as $row) {
+			echo '<img src="'.base_url().'images/'.$id.'/'.$row->file_name.'"/>';
+		}
+		
 	}
 
 }

@@ -12,9 +12,7 @@ class Site extends CI_Controller {
 	
 	function index(){
 		$data['tipos'] = $this->maquinaria_model->getAllTypes();
-		//print_r($data['tipos']);
 		$data['marcas'] = $this->maquinaria_model->getAllBrands();
-		//print_r($data['marcas']);
 		$data['maquinas'] =$this->maquinaria_model->getAll();
 		$data['main_content'] = 'backend/dashboard';
 		$this->load->view('backend/template',$data);
@@ -45,8 +43,9 @@ class Site extends CI_Controller {
 		$this->load->model('gallery_model');
 		$this->load->model('promociones_model');
 		
-		if($this->maquinaria_model->delete($id))
+		if($this->maquinaria_model->delete($id)){
 			redirect('backend/site');
+		}
 	}
 	//obtiene las especificaciones de una maquina y las imprime en un popup
 	function getEspecifications(){
@@ -57,6 +56,14 @@ class Site extends CI_Controller {
 		}
 	}
 
+	function fotos(){
+		$id = $this->uri->segment(4,0);
+		$this->load->model('gallery_model');
+		$query = $this->gallery_model->get_images($id)->result();
+		foreach ($query as $row) {
+			echo '<img src="'.base_url().'images/'.$id.'/'.$row->file_name.'"/>';
+		}
+	}
 	//Abre la vista vender
 	function vender(){
 		
