@@ -7,8 +7,9 @@ class Maquinaria_model extends CI_Model {
 		 $this->db->from('maquinas');
 			 $this->db->join('tipos', 'maquinas.IdTipos = tipos.idTipos');
 			 $this->db->join('marcas', 'maquinas.IdMarcas = marcas.IdMarca');
-			 $this->db->where('promo',false);
-			 $this->db->where('venta',false);
+			 $this->db->join('imagenes', 'maquinas.IdMaquina = imagenes.idMaquina');
+			 $this->db->where('maquinas.promo',false);
+			 $this->db->where('maquinas.venta',false);
 		 $query = $this->db->get();
 		 return $query->result();
 	}
@@ -38,7 +39,7 @@ class Maquinaria_model extends CI_Model {
 		$this->db->insert('maquinas', $data);
 	}
 	function delete($id){
-		//$this->db->delete('imagenes', array('IdMaquina'=>$id));
+		$this->db->delete('imagenes', array('IdMaquina'=>$id));
 		//$url = base_url().'images/'.$id;
 		//$this->load->helper('file'); 
 		
@@ -49,7 +50,7 @@ class Maquinaria_model extends CI_Model {
 		//rmdir('/Users/Garrison/Sites/impormaq/images/'.$id);
 		//unlink($url);
 		//unlink($url);
-		//return $this->db->delete('maquinas', array('IdMaquina' => $id));
+		return $this->db->delete('maquinas', array('IdMaquina' => $id));
 	}
 
 	function update($data){

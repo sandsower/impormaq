@@ -33,7 +33,7 @@ body.s_layout_fixed {
 	color: #395218;
 }
 #intro h1, #intro h1 *, #intro h2, #intro h2 * {
-	color: #fff;
+	color: #000;
 	text-shadow:0.1em 0.1em 0.2em black;
  	~background-color: #def5d0;
 }

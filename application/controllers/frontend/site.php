@@ -16,6 +16,7 @@ class Site extends CI_Controller {
 		$data['marcas'] = $this->marcas_model->getAll();
 		$data['tipos'] = $this->tipos_model->getAll();
 		$data['promociones'] = $this->promociones_model->getAll();
+		$data['maquinas']=$this->maquinaria_model->getAll();
 		$data['main_content'] = 'frontend/site';
 		$this->load->view('frontend/template',$data);
 	}
