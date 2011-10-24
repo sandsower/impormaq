@@ -3,11 +3,13 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 26, 2011 at 03:19 a.m.
+-- Generation Time: Oct 24, 2011 at 05:05 a.m.
 -- Server version: 5.5.8
 -- PHP Version: 5.3.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT=0;
+START TRANSACTION;
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -25,6 +27,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- Table structure for table `ci_sessions`
 --
 
+DROP TABLE IF EXISTS `ci_sessions`;
 CREATE TABLE IF NOT EXISTS `ci_sessions` (
   `session_id` varchar(40) NOT NULL DEFAULT '0',
   `ip_address` varchar(16) NOT NULL DEFAULT '0',
@@ -40,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `ci_sessions` (
 --
 
 INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
-('bbfe1b71a67ecfc4b4c063660e73c820', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:6.0.2) Gecko/20100101 Firefox/6.0.2', 1316999728, 'a:3:{s:8:"username";s:8:"garrison";s:6:"UserId";s:1:"1";s:12:"is_logged_in";b:1;}');
+('e5d6ffdd4a8c8094e9456b9c6bfa23fb', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1', 1319425233, 'a:3:{s:8:"username";s:8:"garrison";s:6:"UserId";s:1:"1";s:12:"is_logged_in";b:1;}');
 
 -- --------------------------------------------------------
 
@@ -48,6 +51,7 @@ INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activ
 -- Table structure for table `clientes`
 --
 
+DROP TABLE IF EXISTS `clientes`;
 CREATE TABLE IF NOT EXISTS `clientes` (
   `IdClientes` int(11) NOT NULL AUTO_INCREMENT,
   `Nombres` varchar(255) DEFAULT NULL,
@@ -85,18 +89,23 @@ INSERT INTO `clientes` (`IdClientes`, `Nombres`, `APaterno`, `AMaterno`, `Empres
 -- Table structure for table `contenido`
 --
 
+DROP TABLE IF EXISTS `contenido`;
 CREATE TABLE IF NOT EXISTS `contenido` (
-  `IdContenido` int(11) NOT NULL,
-  `Mision` varchar(45) DEFAULT NULL,
-  `Vision` varchar(45) DEFAULT NULL,
-  `Politicas` varchar(45) DEFAULT NULL,
+  `IdContenido` int(11) NOT NULL AUTO_INCREMENT,
+  `Mision` varchar(500) DEFAULT NULL,
+  `Vision` varchar(500) DEFAULT NULL,
+  `Politicas` varchar(500) DEFAULT NULL,
+  `Nosotros` varchar(500) NOT NULL,
+  `Objetivo` varchar(500) NOT NULL,
   PRIMARY KEY (`IdContenido`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `contenido`
 --
 
+INSERT INTO `contenido` (`IdContenido`, `Mision`, `Vision`, `Politicas`, `Nosotros`, `Objetivo`) VALUES
+(1, 'GetIt es una empresa comprometida con las PYMES mexicanas, ayudándolas a sobresalir entre sus competidores a través de productos y servicios vanguardistas y de alta calidad que les permite publicitarse y vender sus productos por medio de internet. 	Asi es.', 'Ser una empresa que en 10 años sea reconocida a nivel nacional, con el respaldo de las pequeñas y medianas empresas, buscando una mejora continua para elevar la calidad y vanguardia de sus servicios y productos, cumpliendo con las necesidades tecnológicas que cada empresa requiera. 								', 'Bla bla bla bla bla bla Bla bla bla bla bla bla Bla bla bla bla bla bla Bla bla bla bla bla bla Bla bla bla bla bla bla Bla bla bla bla bla bla.								', 'GetIt está desarrollado pensado en las pymes mexicanas las cuales necesiten tener presencia en internet para mejorar sus ventas y aumentar su cartera de clientes. Pensamos que cualquier sector industrial puede ser beneficiado con este producto, ya que es un sistema flexible, el cual se adapta a las necesidades de todas y cada una de las empresas.								', 'Ofrecerá sistemas que se adecuen a las necesidades de pequeñas y medianas empresas, lo suficientemente flexibles los cuales permitirán agregar funcionalidades extras por un precio accesible. 								');
 
 -- --------------------------------------------------------
 
@@ -104,6 +113,7 @@ CREATE TABLE IF NOT EXISTS `contenido` (
 -- Table structure for table `idiomas`
 --
 
+DROP TABLE IF EXISTS `idiomas`;
 CREATE TABLE IF NOT EXISTS `idiomas` (
   `IdIdiomas` int(11) NOT NULL,
   `Idioma` varchar(45) DEFAULT NULL,
@@ -124,6 +134,7 @@ INSERT INTO `idiomas` (`IdIdiomas`, `Idioma`) VALUES
 -- Table structure for table `imagenes`
 --
 
+DROP TABLE IF EXISTS `imagenes`;
 CREATE TABLE IF NOT EXISTS `imagenes` (
   `IdImagenes` int(11) NOT NULL AUTO_INCREMENT,
   `idMaquina` int(11) NOT NULL,
@@ -144,14 +155,15 @@ CREATE TABLE IF NOT EXISTS `imagenes` (
   `promo` bit(1) DEFAULT NULL,
   PRIMARY KEY (`IdImagenes`),
   KEY `fk_Imagenes_Maquinas` (`idMaquina`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=131 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=132 ;
 
 --
 -- Dumping data for table `imagenes`
 --
 
 INSERT INTO `imagenes` (`IdImagenes`, `idMaquina`, `file_name`, `file_type`, `file_path`, `full_path`, `raw_name`, `orig_name`, `client_name`, `file_ext`, `file_size`, `is_image`, `image_width`, `image_height`, `image_type`, `image_size_str`, `promo`) VALUES
-(128, 26, 'images.jpg', 'image/jpeg', '/Users/Garrison/Sites/impormaq/images/26/', '/Users/Garrison/Sites/impormaq/images/26/images.jpg', 'images', 'images.jpg', 'images.jpg', '.jpg', '8.33', '1', '242', '208', 'jpeg', 'width="242" height="208"', '0');
+(128, 26, 'images.jpg', 'image/jpeg', '/Users/Garrison/Sites/impormaq/images/26/', '/Users/Garrison/Sites/impormaq/images/26/images.jpg', 'images', 'images.jpg', 'images.jpg', '.jpg', '8.33', '1', '242', '208', 'jpeg', 'width="242" height="208"', '0'),
+(131, 28, 'Foto1.png', 'image/png', 'C:/xampp/htdocs/getit/images/28/promo/', 'C:/xampp/htdocs/getit/images/28/promo/Foto1.png', 'Foto1', 'Foto1.png', 'Foto1.png', '.png', '1265.77', '1', '846', '1112', 'png', 'width="846" height="1112"', '1');
 
 -- --------------------------------------------------------
 
@@ -159,6 +171,7 @@ INSERT INTO `imagenes` (`IdImagenes`, `idMaquina`, `file_name`, `file_type`, `fi
 -- Table structure for table `maquinas`
 --
 
+DROP TABLE IF EXISTS `maquinas`;
 CREATE TABLE IF NOT EXISTS `maquinas` (
   `IdMaquina` int(11) NOT NULL AUTO_INCREMENT,
   `Maquina` varchar(45) NOT NULL,
@@ -181,8 +194,8 @@ CREATE TABLE IF NOT EXISTS `maquinas` (
 
 INSERT INTO `maquinas` (`IdMaquina`, `Maquina`, `Modelo`, `Especificaciones`, `Precio`, `VideoUrl`, `IdTipos`, `IdMarcas`, `promo`, `venta`) VALUES
 (26, 'Grua Case', '2011', '1000 horas de uso, seminueva de paquete.', 35000, 'http://localhost', 13, 53, '0', '0'),
-(27, 'Tractor Case', '2005', 'whatever', 2005, 'http://google.com', 16, 53, '0', '1'),
-(28, 'Breaker Case', '2008', 'Whatever 2', 1000, 'http://youtube.com', 15, 53, '1', '0');
+(27, 'Tractor Case', '2005', 'whatever', 2005, 'http://google.com', 16, 53, '0', '0'),
+(28, 'Breaker Case', '2008', 'Whatever 2', 1000, 'http://youtube.com', 15, 53, '1', '1');
 
 -- --------------------------------------------------------
 
@@ -190,11 +203,12 @@ INSERT INTO `maquinas` (`IdMaquina`, `Maquina`, `Modelo`, `Especificaciones`, `P
 -- Table structure for table `marcas`
 --
 
+DROP TABLE IF EXISTS `marcas`;
 CREATE TABLE IF NOT EXISTS `marcas` (
   `IdMarca` int(11) NOT NULL AUTO_INCREMENT,
   `Marca` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`IdMarca`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=57 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=56 ;
 
 --
 -- Dumping data for table `marcas`
@@ -211,6 +225,7 @@ INSERT INTO `marcas` (`IdMarca`, `Marca`) VALUES
 -- Table structure for table `movimientos`
 --
 
+DROP TABLE IF EXISTS `movimientos`;
 CREATE TABLE IF NOT EXISTS `movimientos` (
   `IdMovimientos` int(11) NOT NULL AUTO_INCREMENT,
   `Movimiento` varchar(45) DEFAULT NULL,
@@ -230,6 +245,7 @@ CREATE TABLE IF NOT EXISTS `movimientos` (
 -- Table structure for table `promociones`
 --
 
+DROP TABLE IF EXISTS `promociones`;
 CREATE TABLE IF NOT EXISTS `promociones` (
   `IdPromociones` int(11) NOT NULL AUTO_INCREMENT,
   `TextoPromocional` varchar(45) DEFAULT NULL,
@@ -241,14 +257,14 @@ CREATE TABLE IF NOT EXISTS `promociones` (
   KEY `fk_Promociones_Maquinas1` (`IdMaquina`),
   KEY `fk_Promociones_Imagenes1` (`IdImagenes`),
   KEY `fk_Promociones_Usuarios1` (`IdUsuarios`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Dumping data for table `promociones`
 --
 
 INSERT INTO `promociones` (`IdPromociones`, `TextoPromocional`, `IdMaquina`, `IdImagenes`, `PrecioPromocional`, `IdUsuarios`) VALUES
-(5, 'asdasd', 28, NULL, 13132, 1);
+(8, 'asdasdas', 28, 131, 123123, 1);
 
 -- --------------------------------------------------------
 
@@ -256,6 +272,7 @@ INSERT INTO `promociones` (`IdPromociones`, `TextoPromocional`, `IdMaquina`, `Id
 -- Table structure for table `tipos`
 --
 
+DROP TABLE IF EXISTS `tipos`;
 CREATE TABLE IF NOT EXISTS `tipos` (
   `idTipos` int(11) NOT NULL AUTO_INCREMENT,
   `Tipo` varchar(45) DEFAULT NULL,
@@ -279,6 +296,7 @@ INSERT INTO `tipos` (`idTipos`, `Tipo`, `Type`) VALUES
 -- Table structure for table `usuarios`
 --
 
+DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE IF NOT EXISTS `usuarios` (
   `IdUsuarios` int(11) NOT NULL AUTO_INCREMENT,
   `Username` varchar(45) DEFAULT NULL COMMENT '		',
@@ -300,6 +318,7 @@ INSERT INTO `usuarios` (`IdUsuarios`, `Username`, `Password`, `Nombre`) VALUES
 -- Table structure for table `ventas`
 --
 
+DROP TABLE IF EXISTS `ventas`;
 CREATE TABLE IF NOT EXISTS `ventas` (
   `IdVentas` int(11) NOT NULL AUTO_INCREMENT,
   `Fecha` datetime DEFAULT NULL,
@@ -311,14 +330,14 @@ CREATE TABLE IF NOT EXISTS `ventas` (
   KEY `fk_Ventas_Maquinas1` (`IdMaquina`),
   KEY `fk_Ventas_Clientes1` (`IdClientes`),
   KEY `fk_Ventas_Usuarios1` (`IdUsuarios`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `ventas`
 --
 
 INSERT INTO `ventas` (`IdVentas`, `Fecha`, `Monto`, `IdMaquina`, `IdClientes`, `IdUsuarios`) VALUES
-(2, '2011-09-26 00:00:00', 10, 27, 2, 1);
+(7, '2011-09-26 00:00:00', 123123, 28, 1, 1);
 
 --
 -- Constraints for dumped tables
@@ -358,3 +377,4 @@ ALTER TABLE `ventas`
   ADD CONSTRAINT `fk_Ventas_Clientes1` FOREIGN KEY (`IdClientes`) REFERENCES `clientes` (`IdClientes`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_Ventas_Maquinas1` FOREIGN KEY (`IdMaquina`) REFERENCES `maquinas` (`IdMaquina`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_Ventas_Usuarios1` FOREIGN KEY (`IdUsuarios`) REFERENCES `usuarios` (`IdUsuarios`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+COMMIT;
