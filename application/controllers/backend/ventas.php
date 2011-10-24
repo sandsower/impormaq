@@ -25,7 +25,6 @@ class Ventas extends CI_Controller {
 		}
 		$data['maquinas'] = $this->cart->contents();
 		$data['clientes'] = $info;
-		print_r($data['clientes']);
 		$this->load->view('backend/template',$data);
 	} 
 

@@ -6,7 +6,7 @@ class Membership_model extends CI_Model {
 	{
 		$this->db->where('username', $this->input->post('username'));
 		$this->db->where('password', $this->input->post('password'));
-		$query = $this->db->get('Usuarios');
+		$query = $this->db->get('usuarios');
 		
 		if($query->num_rows == 1)
 		{
@@ -16,7 +16,7 @@ class Membership_model extends CI_Model {
 	}
 
 	function getUser($username){
-		$query = $this->db->get_where('Usuarios', array('Username' => $username));
+		$query = $this->db->get_where('usuarios', array('username' => $username));
 		return $query->result();
 	}
 	

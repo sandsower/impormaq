@@ -1,6 +1,4 @@
-
-<script type="text/javascript" src="<?php echo base_url(); ?>scf/js/jquery.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>scf/scf.js"></script>
+<?php //print_r($promociones); ?>
   <!-- ********************** --> 
   <!--     I N T R O          --> 
   <!-- ********************** --> 
@@ -9,7 +7,7 @@
       <div id="product_intro" class="container_12">
         <div id="product_intro_info" class="grid_5">
           <div style="position: relative;">
-            <h2><a href="product.html">Archivo de promoci&oacute;n</a></h2>
+            <h2><a href="#">Archivo de promoci&oacute;n</a></h2>
             <div class="s_rating_holder">
               <p class="s_rating s_rating_big s_rating_5"> <span style="width: 60%;" class="s_percent"></span> </p>
               <span class="s_average">3 out of 5</span> </div>
@@ -18,20 +16,24 @@
               <p class="s_price"> <span class="s_currency s_before">$</span>384.67 </p>
             </div>
           </div>
-          <div style="position: relative; display: none;">
-            <h2><a href="product.html">Archivo de promocion 2</a></h2>
-            <p class="s_desc"> Texto promocional 2</p>
+          <?php if(isset($promociones)) : foreach($promociones as $row) : ?>
+            <div style="position: relative; display: none;">
+            <h2><a href="#"><?php echo $row->TituloPromocional; ?></a></h2>
+            <p class="s_desc"><?php echo $row->TextoPromocional; ?></p>
             <div class="s_price_holder">
-              <p class="s_price"> <span class="s_currency s_before">$</span>192.34 </p>
+              <p class="s_price"> <span class="s_currency s_before">$</span><?php echo $row->PrecioPromocional; ?> </p>
             </div>
           </div>
-
+          <?php endforeach; ?>
+            <?php endif; ?>
         </div>
         <div id="product_intro_preview">
           <div class="slides_container">
-            <div class="slideItem" style="display: none"><a href="product.html"><img src="<?php echo base_url(); ?>img/frontend/product_300x300.jpg" alt="" /></a></div>
-            <div class="slideItem" style="display: none"><a href="product.html"><img src="<?php echo base_url(); ?>img/frontend/product_300x300.jpg" alt="" /></a></div>
-            
+          <div class="slideItem" style="display: none"><a href="#"><img src="<?php echo base_url(); ?>img/frontend/product_300x300.jpg" alt="" /></a></div>
+          <?php if(isset($promociones)) : foreach($promociones as $row) : ?>
+            <div class="slideItem" style="display: none"><a href="#"><img src="<?php echo base_url().'images/'. $row->IdMaquina.'/promo/'.$row->file_name; ?>" alt="" /></a></div>
+            <?php endforeach; ?>
+            <?php endif; ?>
           </div>
           <a class="s_button_prev" href="javascript:;"></a>
           <a class="s_button_next" href="javascript:;"></a>
@@ -63,50 +65,7 @@
     
     <div class="clear"></div>
     
-    <div id="special_home" class="grid_12">
-      <h2 class="s_title_1"><span class="s_main_color">Productos</span> Especiales</h2>
-      <div class="clear"></div>
-      <div class="s_listing s_grid_view clearfix">
-        <div class="s_item grid_2"> <a class="s_thumb" href="product.html"><img src="<?php echo base_url(); ?>img/frontend/product_140x140.jpg" title="Armani Acqua di Gioia" alt="Armani Acqua di Gioia" /></a>
-          <h3><a href="product.html">Armani Acqua di Gioia</a></h3>
-          <p class="s_model">Product 4</p>
-          <p class="s_price s_promo_price"><span class="s_old_price"><span class="s_currency s_before">$</span>1,538.69</span><span class="s_currency s_before">$</span>1,346.35</p>
-          <a class="s_button_add_to_cart" href="product.html"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
-        <div class="s_item grid_2"> <a class="s_thumb" href="product.html"><img src="<?php echo base_url(); ?>img/frontend/product_140x140.jpg" title="Hennesy Paradis Extra" alt="Hennesy Paradis Extra" /></a>
-          <h3><a href="product.html">Hennesy Paradis Extra</a></h3>
-          <p class="s_model">Product 19</p>
-          <p class="s_price s_promo_price"><span class="s_old_price"><span class="s_currency s_before">$</span>1,923.36</span><span class="s_currency s_before">$</span>1,731.02</p>
-          <a class="s_button_add_to_cart" href="product.html"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
-        <div class="s_item grid_2"> <a class="s_thumb" href="product.html"><img src="<?php echo base_url(); ?>img/frontend/product_140x140.jpg" title="Leica M7" alt="Leica M7" /></a>
-          <h3><a href="product.html">Leica M7</a></h3>
-          <p class="s_model">Product 4</p>
-          <p class="s_price s_promo_price"><span class="s_old_price"><span class="s_currency s_before">$</span>1,538.69</span><span class="s_currency s_before">$</span>1,346.35</p>
-          <a class="s_button_add_to_cart" href="product.html"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
-        <div class="s_item grid_2"> <a class="s_thumb" href="product.html"><img src="<?php echo base_url(); ?>img/frontend/product_140x140.jpg" title="Sony VAIO" alt="Sony VAIO" /></a>
-          <h3><a href="product.html">Sony VAIO</a></h3>
-          <p class="s_model">Product 19</p>
-          <p class="s_price s_promo_price"><span class="s_old_price"><span class="s_currency s_before">$</span>899.99</span><span class="s_currency s_before">$</span>1,731.02</p>
-          <p class="s_rating s_rating_5"><span style="width: 100%;" class="s_percent"></span></p>
-          <a class="s_button_add_to_cart" href="product.html"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
-        <div class="s_item grid_2"> <a class="s_thumb" href="product.html"><img src="<?php echo base_url(); ?>img/frontend/product_140x140.jpg" title="Sony Cyber Shot S1000" alt="Sony Cyber Shot S1000" /></a>
-          <h3><a href="product.html">Sony Cyber Shot S1000</a></h3>
-          <p class="s_model">Product 8</p>
-          <p class="s_price s_promo_price"><span class="s_old_price"><span class="s_currency s_before">$</span>99,999.99</span><span class="s_currency s_before">$</span>9,999.99</p>
-          <a class="s_button_add_to_cart" href="product.html"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
-        <div class="s_item grid_2"> <a class="s_thumb" href="product.html"><img src="<?php echo base_url(); ?>img/frontend/product_140x140.jpg" title="Panasonic Lumix" alt="Panasonic Lumix" /></a>
-          <h3><a href="product.html">Panasonic Lumix</a></h3>
-          <p class="s_model">Product 4</p>
-          <p class="s_price s_promo_price"><span class="s_old_price"><span class="s_currency s_before">$</span>1,923.36</span><span class="s_currency s_before">$</span>500.00</p>
-          <a class="s_button_add_to_cart" href="product.html"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
-        <div class="clear"></div>
-      </div>
-    </div>
+
     
     
     
@@ -144,10 +103,10 @@
           <p class="s_price"><span class="s_currency s_before">$</span>192.34</p>
           <a class="s_button_add_to_cart" href="product.html"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
         </div>
-        <div class="s_item grid_2"> <a class="s_thumb" href="product.html"><img src="<?php echo base_url(); ?>img/frontend/product_140x140.jpg" title="Hennesy Paradis Extra" alt="Hennesy Paradis Extra" /></a>
-          <h3><a href="product.html">Hennesy Paradis Extra</a></h3>
-          <p class="s_model">Product 19</p>
-          <p class="s_price s_promo_price"><span class="s_old_price"><span class="s_currency s_before">$</span>1,923.36</span><span class="s_currency s_before">$</span>1,731.02</p>
+        <div class="s_item grid_2"> <a class="s_thumb" href="product.html"><img src="<?php echo base_url(); ?>img/frontend/product_140x140.jpg" title="Canon Digital Ixus 200 IS" alt="Canon Digital Ixus 200 IS" /></a>
+          <h3><a href="product.html">Canon Digital Ixus 200 IS</a></h3>
+          <p class="s_model">Product 7</p>
+          <p class="s_price"><span class="s_currency s_before">$</span>192.34</p>
           <a class="s_button_add_to_cart" href="product.html"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
         </div>
         <div class="clear"></div>
@@ -156,5 +115,6 @@
     
   </div>
   <!-- end of content --> 
+
   
   

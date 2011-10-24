@@ -17,28 +17,7 @@ img {display: block;}
 a img {border: none;}
 button, a {cursor: pointer;}
 
-@font-face {
-    font-family: 'Ubuntu Regular';
-    src: url('../fonts/Ubuntu/Ubuntu-R-webfont.eot');
-    src: local('Ubuntu Regular'),
-         url('../fonts/Ubuntu/Ubuntu-R-webfont.eot?iefix') format('eot'),
-         url('../fonts/Ubuntu/Ubuntu-R-webfont.woff') format('woff'),
-         url('../fonts/Ubuntu/Ubuntu-R-webfont.ttf') format('truetype'),
-         url('../fonts/Ubuntu/Ubuntu-R-webfont.svg#webfontGZB3fjCF') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Babel Sans';
-    src: url('../fonts/Babel/BabelSans.eot');
-    src: local('Babel Sans'),
-         url('../fonts/Babel/BabelSans.eot?iefix') format('eot'),
-         url('../fonts/Babel/BabelSans.woff') format('woff'),
-         url('../fonts/Babel/BabelSans.ttf') format('truetype'),
-         url('../fonts/Babel/BabelSans.svg#BabelSans') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+
 
 
 
@@ -50,7 +29,7 @@ button, a {cursor: pointer;}
 h1, h2, h1 *, h2 * {
   letter-spacing: -1px;
   word-spacing: 2px;
-  font-family: "Ubuntu Regular", sans-serif;
+  font-family: sans-serif;
   font-weight: normal;
 }
 h1, h2 {
@@ -75,7 +54,7 @@ h3 {
   font-weight: normal;
 }
 h3, h3 * {
-  font-family: "Ubuntu Regular", sans-serif;
+  font-family: sans-serif;
 }
 
 h4 {
@@ -1727,12 +1706,12 @@ body.s_layout_fixed #wrapper {
   clear: both;
   margin-bottom: 24px;
   padding-top: 30px;
-  background: url(../../img/frontend/intro.png) top left repeat-x;
-  background: url(../../img/frontend/intro.png) top left repeat-x, url(../../img/frontend/intro_texture.png) center no-repeat;
+  /*background: url(../../img/frontend/intro.png) top left repeat-x;*/
+  background: url(../../img/frontend/intro_texture.png) center no-repeat;
   background-color: #f2eddc;
 }
 #intro_wrap {
-  background: url(../../img/frontend/intro.png) bottom left repeat-x;
+  /*background: url(../../img/frontend/intro.png) bottom left repeat-x;*/
 }
 #intro_wrap .container_12 {
   z-index: 5;
@@ -1767,6 +1746,8 @@ body.s_layout_fixed #wrapper {
 #product_intro_info p.s_desc {
   font-size: 14px;
   line-height: 1.5em;
+  color:#000;
+  text-shadow:0.1em 0.1em 0.2em white;
 }
 #product_intro_info .s_rating_holder .s_average {
   height: 24px;
@@ -1965,7 +1946,7 @@ body.s_layout_fixed #wrapper {
   position: relative;
 }
 #product h2,
-#product h2 *
+#product h2 /*
 {
 }
 #product_info .s_price {

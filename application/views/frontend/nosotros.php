@@ -4,6 +4,7 @@
   <div id="content" class="container_12">
 
     <div class="grid_12">
+
       <h2>Nosotros</h2>
 	   <img class="wrap_center" width="400" src="<?php echo base_url(); ?>img/frontend/nosotros.jpg" alt="" />
 	  <p>

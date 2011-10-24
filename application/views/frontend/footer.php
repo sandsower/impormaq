@@ -10,7 +10,7 @@
   <!-- end of FOOTER --> 
   
 </div>
-i
+
 <div id="fb-root"></div>
 <script type="text/javascript">
   window.fbAsyncInit = function() {

@@ -14,6 +14,8 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>js/frontend/shoppica.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>scf/js/jquery.js"></script>
+
 
 </head>
 
@@ -70,13 +72,12 @@
       <div id="categories" class="s_nav">
         <ul>
           <li id="menu_home"> <a href="<?php echo base_url(); ?>frontend/site">Home</a> </li>
-          <li> <a href="#">Gruas</a></li>
-          <li> <a href="#">Retro Excavadoras</a></li>
-          <li> <a href="#">Martillos Hidraulicos</a></li>
-          <li> <a href="#">Tractores</a></li>
-          
+          <?php if(isset($tipos)) : foreach($tipos as $row) : ?>
+            <li> <a href="#"><?php echo $row->Tipo; ?></a></li>
+          <?php endforeach; endif; ?>
         </ul>
       </div>
+
       <!--
       <div id="cart_menu" class="s_nav">
         <a href="cart.html"><span class="s_icon"></span> <small class="s_text">Cart</small><span class="s_grand_total s_main_color">$0.00</span></a>
@@ -89,3 +90,4 @@
     </div>
   </div>
   <!-- end of header --> 
+  

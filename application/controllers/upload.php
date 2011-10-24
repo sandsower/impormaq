@@ -24,9 +24,9 @@ class Upload extends CI_Controller {
 		$uploadPath = $this->gallery_path=$this->gallery_path .'/'.  $data['id'].'/';
 		// echo $uploadPath;
 		if(!file_exists($uploadPath)){
-			mkdir($uploadPath,0750,true);
-			mkdir($uploadPath.'thumbs/',0750,true);	
-			mkdir($uploadPath.'promo/',0750,true);	
+			mkdir($uploadPath,0777,true);
+			mkdir($uploadPath.'thumbs/',0777,true);	
+			mkdir($uploadPath.'promo/',0777,true);	
 		}
 		
 		$config['upload_path'] = $uploadPath;
@@ -59,6 +59,7 @@ class Upload extends CI_Controller {
 			$this->load->library('image_lib', $config);
 			$this->image_lib->resize();																	//crea thumbnail
 			$data['images'] = $this->gallery_model->get_images($data['id']);	
+			redirect('backend/site/imagenes/'.$data['id']);
 			$data['main_content'] = 'backend/maquinaria/imagenes';
 			$this->load->view('backend/template',$data);
 			
@@ -69,9 +70,10 @@ class Upload extends CI_Controller {
 		$id= $this->uri->segment(3,0);
 		$this->load->model('promociones_model');
 		$imagen = $this->gallery_model->getById($id);
-		//print_r($imagen);
+		
 			foreach($imagen->result() as $row){
 				if($result = $this->promociones_model->deleteImage($id)){
+					unlink($row->full_path);
 					$texto = 'promociones/'.$result->id;
 				}
 

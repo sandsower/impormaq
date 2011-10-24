@@ -29,7 +29,12 @@
 	<!-- Header Grid Container: Start -->
 <div id="cart" class="cart">
 	<?php if($this->cart->total() > 0){ ?>
-	<a href="<?php echo base_url('backend/ventas');?>">Carrito con <? echo $this->cart->total_items();  ?> items.</a>
+	<div id="addnews" class="padding">
+		<p class="note">
+			<span class="icon info"></span> 
+				<a href="<?php echo base_url('backend/ventas');?>">Carrito con <? echo $this->cart->total_items();  ?> items.</a>
+		</p>
+	</div>
 	<?}?>
 </div>
 	<div class="grid_24">	

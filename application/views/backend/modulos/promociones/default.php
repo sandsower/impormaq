@@ -1,5 +1,5 @@
 <!-- 100% Box Grid Container: Start -->
-<?php print_r($promociones); ?>
+<?php //print_r($promociones); ?>
 <div class="grid_24">
 
 	<!-- Box Header: Start -->
@@ -29,7 +29,8 @@
 				<table class="sorting">
 					<thead>
 						<tr>	
-							<th class="align_left ">Maquina</th>			
+							<th class="align_left ">Maquina</th>
+							<th class="align_left ">Titulo</th>			
 							<th class="align_left ">TextoPromocional</th>
 							<th class="align_left ">PrecioPromocional</th>
 							<th class="align_left ">Fotos</th>
@@ -45,13 +46,15 @@
 							<a href="promociones/Maquina/<?php echo $row->IdMaquina; ?>" class="popup"><?php echo $row->Maquina ?></a>
 							</td>
 							<td class="align_left ">
+							<?php echo $row->TituloPromocional; ?></td>
+							<td class="align_left ">
 							<a href="promociones/textoPromocional/<?php echo $row->IdPromociones; ?>" class="popup">TextoPromocional</a></td>
 							<td class="align_left "><?php echo $row->PrecioPromocional; ?></td>
 							<td class="align_left "><a href="promociones/fotos/<?php echo $row->IdMaquina; ?>" class="popup">Fotos</a></td>
 							<td class="align_left "><a href="<?php echo base_url().'images/'.$row->IdMaquina.'/promo/'.$row->file_name; ?>" class="popup">Imagen</a></td>
 							<td class="align_left center tools">
-								<a href="#" class="edit" id="botonEdit" title="edit">edit</a>
-								<a href="#" onClick="javascript: if(confirm('¿Esta seguro que desa borrar el registro?')){ return true; } else { return false;}" class="delete tip" id="botonDelete" title="delete">delete</a>
+								<a href="promociones/editar/<?php echo $row->IdPromociones; ?>" class="edit" id="botonEdit" title="edit">edit</a>
+								<a href="promociones/eliminar/<?php echo $row->IdPromociones; ?>" onClick="javascript: if(confirm('¿Esta seguro que desa borrar el registro?')){ return true; } else { return false;}" class="delete tip" id="botonDelete" title="delete">delete</a>
 								
 							</td>
 						</tr>

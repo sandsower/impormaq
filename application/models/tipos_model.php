@@ -8,12 +8,12 @@ class Tipos_model extends CI_Model {
     }
     
 	function getAll(){
-		$query = $this->db->get('Tipos');
+		$query = $this->db->get('tipos');
 		return $query->result();
 	}
 
 	function insert($data){
-		$this->db->insert('Tipos', $data);
+		$this->db->insert('tipos', $data);
 	}
 
 	function delete($id){
@@ -22,11 +22,11 @@ class Tipos_model extends CI_Model {
 
 	function update($data){
 		$this->db->where('idTipos', $data['IdTipos']);
-		return $this->db->update('Tipos', $data);	
+		return $this->db->update('tipos', $data);	
 	}
 
 	function validateExistence($tipo){
-		$query = $this->db->get_where('Tipos', array('Tipo' => $tipo['Tipo']));
+		$query = $this->db->get_where('tipos', array('Tipo' => $tipo['Tipo']));
 		return $query->result();
 	}
 

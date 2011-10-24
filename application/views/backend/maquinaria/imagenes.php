@@ -21,10 +21,7 @@
 			<?php endforeach; else: ?>
 				<div id="blank_gallery">Por favor subir una imagen.</div>
 			<?php endif; ?>
-
 		</div>
-
-
 		<div id="upload" class="box_content padding">
 			<?php if(isset($error)) : echo $error; endif;?>
 			<?php echo form_open_multipart('upload/do_upload');?>

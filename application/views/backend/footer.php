@@ -9,6 +9,14 @@
 			Copyright &#169; 2011 <a href="#">GetIt</a>. 
 			Powered by <a href="http://www.carlos.bolan0s.com">Garrison</a>.
 		</p>
+		<ul class="right">
+			<li><a href="#" class="icon dashboard tip active" title="Dashboard">Dashboard</a></li>
+			<li><a href="#" class="icon pages tip" title="Pages">Pages</a></li>
+			<li><a href="#" class="icon users tip" title="Users">Users</a></li>
+			<li><a href="#" class="icon settings tip" title="Settings">Settings</a></li>
+			<li><a href="#" class="icon support tip" title="Support">Support</a></li>
+			<li><a href="#" class="icon home tip" title="Home">Home</a></li>
+		</ul>
 	</div>
 	<!-- Footer: End -->
 	
