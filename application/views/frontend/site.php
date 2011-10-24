@@ -19,6 +19,9 @@
           <?php if(isset($promociones)) : foreach($promociones as $row) : ?>
             <div style="position: relative; display: none;">
             <h2><a href="#"><?php echo $row->TituloPromocional; ?></a></h2>
+            <div class="s_rating_holder">
+              <p class="s_rating s_rating_big s_rating_5"> <span style="width: 60%;" class="s_percent"></span> </p>
+              <span class="s_average">3 out of 5</span> </div>
             <p class="s_desc"><?php echo $row->TextoPromocional; ?></p>
             <div class="s_price_holder">
               <p class="s_price"> <span class="s_currency s_before">$</span><?php echo $row->PrecioPromocional; ?> </p>

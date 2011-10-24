@@ -7,6 +7,16 @@ class Maquinaria_model extends CI_Model {
 		 $this->db->from('maquinas');
 			 $this->db->join('tipos', 'maquinas.IdTipos = tipos.idTipos');
 			 $this->db->join('marcas', 'maquinas.IdMarcas = marcas.IdMarca');
+			 $this->db->where('maquinas.promo',false);
+			 $this->db->where('maquinas.venta',false);
+		 $query = $this->db->get();
+		 return $query->result();
+	}
+	function getAllWithImages(){
+		 $this->db->select('*');
+		 $this->db->from('maquinas');
+			 $this->db->join('tipos', 'maquinas.IdTipos = tipos.idTipos');
+			 $this->db->join('marcas', 'maquinas.IdMarcas = marcas.IdMarca');
 			 $this->db->join('imagenes', 'maquinas.IdMaquina = imagenes.idMaquina');
 			 $this->db->where('maquinas.promo',false);
 			 $this->db->where('maquinas.venta',false);
