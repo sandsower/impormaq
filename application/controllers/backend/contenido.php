@@ -29,6 +29,6 @@ class Contenido extends CI_Controller {
 				'Objetivo' => $this->input->post('objetivo')
 			);
 		if($this->contenidos_model->update($data))
-			redirect('backend/Contenido');
+			redirect('backend/contenido');
 	}
 }

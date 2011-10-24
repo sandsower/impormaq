@@ -1,6 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
-
+body{
+	background-color:#fff;
+}
 body.s_layout_fixed {
 	background-color: #fffbe5;
 	background-image: url(../../img/frontend/texture_1.png);
@@ -27,13 +29,13 @@ body.s_layout_fixed {
 	background-color: #000;
 }
 #intro, #contact_form_icon {
-	background-color: #FFF;
+	background-color: #cdcdcd;
 }
 #intro, #breadcrumbs a {
 	color: #395218;
 }
 #intro h1, #intro h1 *, #intro h2, #intro h2 * {
-	color: #fff;
+	color: #000;
 	text-shadow:0.1em 0.1em 0.2em black;
  	~background-color: #def5d0;
 }

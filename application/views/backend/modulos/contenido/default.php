@@ -11,7 +11,7 @@
 	<!-- Box Header: End -->
 	
 	<div class="box_content">
-		<form method="post" action="Contenido/modify" class="formItem">
+		<form method="post" action="contenido/modify" class="formItem">
 		<!-- Simple Sorting Table: Start -->
 		<div class="accordion">
 		

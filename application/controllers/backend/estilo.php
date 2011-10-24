@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Site extends CI_Controller {
+class Estilo extends CI_Controller {
 
 	function __construct()
 	{
@@ -10,6 +10,7 @@ class Site extends CI_Controller {
 		$this->load->model('promociones_model');
 		$this->load->model('tipos_model');
 		$this->load->model('marcas_model');
+	
 	}
 
 	function index(){
@@ -17,17 +18,19 @@ class Site extends CI_Controller {
 		$data['tipos'] = $this->tipos_model->getAll();
 		$data['promociones'] = $this->promociones_model->getAll();
 		$data['maquinas']=$this->maquinaria_model->getAllWithImages();
-		$data['main_content'] = 'frontend/site';
-		$this->load->view('frontend/template',$data);
-	}
+		$this->load->view('backend/estilo',$data);
+	} 
+
 
 	function is_logged_in()
 	{
 		$is_logged_in = $this->session->userdata('is_logged_in');
 		if(!isset($is_logged_in) || $is_logged_in != true)
 		{
-			echo 'You don\'t have permission to access this page. <a href="'.base_url().'">Login</a>';		
+			echo 'You don\'t have permission to access this page. <a href="'.base_url().'">Login</a>';	
 			die();		
+			//$this->load->view('login_form');
 		}		
 	}
+
 }
