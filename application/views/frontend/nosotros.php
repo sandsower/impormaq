@@ -4,27 +4,43 @@
   <div id="content" class="container_12">
 
     <div class="grid_12">
-
+    <? if(isset($nosotros)) :?>
       <h2>Nosotros</h2>
 	   <img class="wrap_center" width="400" src="<?php echo base_url(); ?>img/frontend/nosotros.jpg" alt="" />
 	  <p>
-	  GetIt está desarrollado pensado en las pymes mexicanas las cuales necesiten tener presencia en internet para mejorar sus ventas y aumentar su cartera de clientes. Pensamos que cualquier sector industrial puede ser beneficiado con este producto, ya que es un sistema flexible, el cual se adapta a las necesidades de todas y cada una de las empresas
+    <? echo $nosotros;?>
 	  </p>
+    <? endif; ?>
+
+    <? if(isset($objetivo)) :?>
 	  <h3>Objetivo</h3>
 	  <p>
-		Ofrecerá sistemas que se adecuen a las necesidades de pequeñas y medianas empresas, lo suficientemente flexibles los cuales permitirán agregar funcionalidades extras por un precio accesible.
+    <? echo $objetivo; ?>
 	  </p>
+    <? endif; ?>
+
+    <? if(isset($mision)) :?>
       <h3 style = "padding-top:30px;">Mision</h3>
 	  <img class="wrap_right" width="200" src="<?php echo base_url(); ?>img/frontend/Mision.jpg" alt="" />
-      <p>
-	  GetIt es una empresa comprometida con las PYMES mexicanas, ayudándolas a sobresalir entre sus competidores a través de productos y servicios vanguardistas y de alta calidad que les permite publicitarse y vender sus productos por medio de internet.
+    <p>
+    <? echo $mision; ?>
 	  </p>
+    <? endif; ?>
+
+    <? if(isset($vision)) :?>
       <h3 style = "padding-top:30px;" >Vision</h3>
       <img class="wrap_left"   width="200" src="<?php echo base_url(); ?>img/frontend/Vision.jpeg" alt="" />
       <p>
-	  Ser una empresa que en 10 años sea reconocida a nivel nacional, con el  respaldo de las pequeñas y medianas empresas, buscando una mejora continua para elevar la calidad y vanguardia de sus servicios y productos, cumpliendo con las necesidades tecnológicas que cada empresa requiera.
-	   </p>
-      
+      <? echo $vision; ?>
+      </p>
+    <? endif; ?>
+
+    <? if(isset($politicas)) :?>
+      <h3 style = "padding-top:30px;" >Politicas</h3>
+      <p>
+      <? echo $politicas; ?>
+      </p>
+    <? endif; ?>
 	  </div>
   </div>  
   <div id="shop_info">

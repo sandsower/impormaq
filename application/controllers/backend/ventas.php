@@ -99,11 +99,11 @@ class Ventas extends CI_Controller {
 						'IdUsuarios' => $userID
 						);
 					$this->ventas_model->insert($data);
-					$this->cart->destroy();
-					redirect('backend/site');
 				}
 			}
 		}
+		$this->cart->destroy();
+		redirect('backend/site');
 	}
 		
 }
