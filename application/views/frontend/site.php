@@ -1,4 +1,7 @@
-<?php //print_r($promociones); ?>
+<pre>
+<?php //print_r($maquinas); ?>
+</pre>
+
   <!-- ********************** --> 
   <!--     I N T R O          --> 
   <!-- ********************** --> 

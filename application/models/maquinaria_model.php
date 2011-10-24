@@ -20,6 +20,7 @@ class Maquinaria_model extends CI_Model {
 			 $this->db->join('imagenes', 'maquinas.IdMaquina = imagenes.idMaquina');
 			 $this->db->where('maquinas.promo',false);
 			 $this->db->where('maquinas.venta',false);
+			 $this->db->where('imagenes.default',true);
 		 $query = $this->db->get();
 		 return $query->result();
 	}
