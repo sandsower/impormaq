@@ -10,12 +10,15 @@ class Site extends CI_Controller {
 		$this->load->model('promociones_model');
 		$this->load->model('tipos_model');
 		$this->load->model('marcas_model');
+		$this->load->model('contenidos_model');
 	}
 
 	function index(){
+	   $result = $this->contenidos_model->getAll();
 		$data['marcas'] = $this->marcas_model->getAll();
 		$data['tipos'] = $this->tipos_model->getAll();
 		$data['promociones'] = $this->promociones_model->getAll();
+		$data['bienvenido'] = $result[0]->Bienvenido;
 		$data['main_content'] = 'frontend/site';
 		$this->load->view('frontend/template',$data);
 	}

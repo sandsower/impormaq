@@ -11,7 +11,6 @@
 	<!-- Box Header: End -->
 	
 	<div class="box_content">
-		<form method="post" action="Contenido/modify" class="formItem">
 		<!-- Simple Sorting Table: Start -->
 		<div class="accordion">
 		
@@ -19,6 +18,7 @@
 			<h5><a href="#">Información</a></h5>
 			
 				<div>
+		         <form method="post" action="contenido/modify" class="formItem">
 					<table>
 						<tr>
 							<td><label class="left">Mision:</label></td>
@@ -52,13 +52,44 @@
 									echo $nosotros;?>
 								<? endif; ?></textarea></td>
 						</tr>
+						<tr>
+							<td><label class="left">Bienvenido:</label></td>
+							<td><textarea name="bienvenido" rows="5" cols="100"><? if(isset($bienvenido)) :
+									echo $bienvenido;?>
+								<? endif; ?></textarea></td>
+						</tr>
 					</table>
+					
+		            <button>Modificar</button>
+		         </form>	
+				</div>
+				
+				<h5><a href="#">Imagenes</a></h5>l
+			
+				<div>
+				   <table>
+				      <tr>
+				      <td><label class="left">Imagen:</label></td>
+				      <td>
+				      <div id="upload" class="box_content padding">
+            			<?php if(isset($error)) : echo $error; endif;?>
+         	   		<?php echo form_open_multipart('backend/contenido/do_upload');?>
+                     <input type="radio" name="type" value="1" /> Logo<br />
+                     <input type="radio" name="type" value="2" /> Imagen Izquierda<br />
+                     <input type="radio" name="type" value="3" /> Imagen Derecha<br />
+                     <input type="radio" name="type" value="4" /> Imagen Central<br />
+            			<input type="file" name="userfile" size="20" />
+            			<br /><br />
+            			<input type="submit" value="upload" />
+      			      </form>
+		            </div>
+		            </td>
+				      <tr>
+				   </table>
 				</div>
 		
 		</div>
 		<!-- Simple Sorting Table: End -->
-		<button>Modificar</button>
-		</form>	
 	</div>
 	
 </div>

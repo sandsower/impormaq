@@ -6,7 +6,7 @@
     <div class="grid_12">
     <? if(isset($nosotros)) :?>
       <h2>Nosotros</h2>
-	   <img class="wrap_center" width="400" src="<?php echo base_url(); ?>img/frontend/nosotros.jpg" alt="" />
+	   <img class="wrap_center" width="400" src="<?php echo base_url(); ?>img/frontend/contenido/imgcen.jpg" alt="" />
 	  <p>
     <? echo $nosotros;?>
 	  </p>
@@ -21,7 +21,7 @@
 
     <? if(isset($mision)) :?>
       <h3 style = "padding-top:30px;">Mision</h3>
-	  <img class="wrap_right" width="200" src="<?php echo base_url(); ?>img/frontend/Mision.jpg" alt="" />
+	  <img class="wrap_right" width="200" src="<?php echo base_url(); ?>img/frontend/contenido/imgder.jpg" alt="" />
     <p>
     <? echo $mision; ?>
 	  </p>
@@ -29,7 +29,7 @@
 
     <? if(isset($vision)) :?>
       <h3 style = "padding-top:30px;" >Vision</h3>
-      <img class="wrap_left"   width="200" src="<?php echo base_url(); ?>img/frontend/Vision.jpeg" alt="" />
+      <img class="wrap_left"   width="200" src="<?php echo base_url(); ?>img/frontend/contenido/imgizq.jpg" alt="" />
       <p>
       <? echo $vision; ?>
       </p>
