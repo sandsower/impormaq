@@ -1,6 +1,9 @@
 <pre>
-<?php //print_r($maquinas); ?>
+<?php //print_r($maquinas);?>
+
+
 </pre>
+
 
   <!-- ********************** --> 
   <!--     I N T R O          --> 
@@ -80,7 +83,7 @@
       </pre>
       <?php if(isset($maquinas)) : foreach($maquinas as $row) : ?>
  
-        <div class="s_item grid_2"> <a class="s_thumb" href="#"><img src="<?php echo base_url().'images/'. $row->IdMaquina.'/thumbs/'.$row->file_name ;?>" /></a>
+        <div class="s_item grid_2"> <a class="s_thumb" id ="showpop" href = "#29" ><img src="<?php echo base_url().'images/'. $row->IdMaquina.'/thumbs/'.$row->file_name ;?>" /></a>
           <h3><a href="product.html"><?php echo $row->Maquina; ?></a></h3>
           <p class="s_model"><?php echo $row->Modelo; ?></p>
           <p class="s_price"><span class="s_currency s_before">$</span><?php echo $row->Precio; ?></p>
@@ -90,10 +93,54 @@
         <?php endif; ?>
         
         <div class="clear"></div>
+		
+
       </div>
     </div>
-    
+    	
   </div>
+  
+  <?php if(isset($popups)): foreach($popups as $popup):?>	
+  <div class = "popup" id = "<?php echo $popup["maquina"]->IdMaquina; ?>"> 
+	<div id = "cerrar">X</div>
+		<div class = 'image_main'>
+			<img id ="main"  width = "258"  height = "250"  src="<?php echo base_url().'images/'. $popup["maquina"]->IdMaquina.'/'.$popup["main"]->file_name;?>" title="Leica M7" alt="Leica M7" />
+		</div>
+		
+		<div class = 'detail'>
+		<?php if(isset($popup["detail"])) : foreach($popup["detail"] as $image) :?>
+			<div class="image" >
+			<img  class = "img" width = "50"  height = "50" src = "<?php echo base_url().'images/'. $popup["maquina"]->IdMaquina.'/thumbs/'.$image->file_name ;?>" />
+			</div>
+		<?php endforeach; endif;?>
+		</div>
+		<div class = "info">
+			
+			<p class="s_price">
+				<span class="s_old_price"></span><br/>
+				</span><?php echo '$'.$popup["maquina"]->Precio; ?>
+				<span class="s_currency s_after"> pesos</span>
+			</p>
+        
+			<h2><?php echo $popup["maquina"]->Maquina; ?></h2>
+			<dl class="infofix">
+			  <dt>Tipo:</dt>
+			  <dd><?php echo $popup["maquina"]->Type; ?></dd>
+			  <dt>Marca:</dt>
+			  <dd><?php echo $popup["maquina"]->Marca; ?></dd>
+			  <dt>Modelo</dt>
+			  <dd><?php echo $popup["maquina"]->Modelo; ?></dd>
+			  <dt>Average Rating</dt>
+			  <dd>
+				<p class="s_rating s_rating_5"><span style="width: 100%;" class="s_percent"></span></p>
+			  </dd>
+			  <dt>Especificaciones:</dt>
+			  <p class="s_short_desc"><?php echo $popup["maquina"]->Especificaciones; ?></p>
+			</dl>
+		</div>
+  </div>
+  <?php endforeach; endif;?>
+ 
   <!-- end of content --> 
 
   

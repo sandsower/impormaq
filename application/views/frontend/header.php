@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/frontend/960.css" media="all" />
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/frontend/screen.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/frontend/color.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/frontend/report.css" media="screen" />
 <!--[if lt IE 9]>
 <link rel="stylesheet" type="text/css" href="stylesheet/ie.css" media="screen" />
 <![endif]-->
@@ -15,12 +16,13 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>js/frontend/shoppica.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>scf/js/jquery.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>scf/js/popup.js"></script>
 
 
 </head>
 
 <body>
-
+<div id="mask"></div>
 <div id="wrapper"> 
   
   <!-- ********************** --> 
