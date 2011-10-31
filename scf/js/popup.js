@@ -1,5 +1,5 @@
 function mostrar() { 
-   $("#showpop").click(function(){
+   $(".showpop").click(function(){
 		var maskHeight = $(document).height();
         var maskWidth = $(window).width();
 		var id = $(this).attr('href');
@@ -14,8 +14,8 @@ function mostrar() {
 			
 			var value = $(this).attr('src');
 			value = value.replace("/thumbs/","/");
-			$("#link").attr('href',value);
-			$("#main").attr('src',value);
+			$(".link").attr('href',value);
+			$(".main").attr('src',value);
 		
 		});
 } //checkHover
@@ -30,7 +30,7 @@ $(document).ready(function (){
 			$(this).hide();
 			$('.popup').hide();
 		});
-	$("#cerrar").click(function () {
+	$(".cerrar").click(function () {
 			$('.popup').hide();
 			$("#mask").hide();
 		});

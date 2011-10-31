@@ -40,7 +40,6 @@ class Site extends CI_Controller {
 	
 	function popupsInfo($maquinas)
 	{
-	
 		for ($i = 0;$i < sizeof($maquinas); ++$i)
 		{
 			

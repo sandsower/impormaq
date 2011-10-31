@@ -4,7 +4,7 @@
 	text-shadow: 0.1em 0.1em 0.2em black;
 }
 
-#cerrar
+.cerrar
 {
 	margin-top: 5px;
 	margin-left: 670px;
@@ -14,7 +14,7 @@
 	text-shadow: 0.1em 0.1em 0.2em black;
 	
 }
-#cerrar:hover
+.cerrar:hover
 {
 	color: #E2ED15 !important;
 	font-size:120%;

@@ -1,5 +1,6 @@
 <pre>
-<?php //print_r($maquinas);?>
+<?php //print_r($maquinas);
+?>
 
 
 </pre>
@@ -83,7 +84,7 @@
       </pre>
       <?php if(isset($maquinas)) : foreach($maquinas as $row) : ?>
  
-        <div class="s_item grid_2"> <a class="s_thumb" id ="showpop" href = "#29" ><img src="<?php echo base_url().'images/'. $row->IdMaquina.'/thumbs/'.$row->file_name ;?>" /></a>
+        <div class="s_item grid_2"> <a class="s_thumb showpop"  href = "#<?php echo $row->IdMaquina; ?>" ><img src="<?php echo base_url().'images/'. $row->IdMaquina.'/thumbs/'.$row->file_name ;?>" /></a>
           <h3><a href="product.html"><?php echo $row->Maquina; ?></a></h3>
           <p class="s_model"><?php echo $row->Modelo; ?></p>
           <p class="s_price"><span class="s_currency s_before">$</span><?php echo $row->Precio; ?></p>
@@ -102,9 +103,9 @@
   
   <?php if(isset($popups)): foreach($popups as $popup):?>	
   <div class = "popup" id = "<?php echo $popup["maquina"]->IdMaquina; ?>"> 
-	<div id = "cerrar">X</div>
+	<div class = "cerrar">X</div>
 		<div class = 'image_main'>
-			<img id ="main"  width = "258"  height = "250"  src="<?php echo base_url().'images/'. $popup["maquina"]->IdMaquina.'/'.$popup["main"]->file_name;?>" title="Leica M7" alt="Leica M7" />
+			<img class ="main"  width = "258"  height = "250"  src="<?php echo base_url().'images/'. $popup["maquina"]->IdMaquina.'/'.$popup["main"]->file_name;?>" title="Leica M7" alt="Leica M7" />
 		</div>
 		
 		<div class = 'detail'>
