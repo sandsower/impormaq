@@ -105,7 +105,7 @@
   <div class = "popup" id = "<?php echo $popup["maquina"]->IdMaquina; ?>"> 
 	<div class = "cerrar">X</div>
 		<div class = 'image_main'>
-			<img class ="main"  width = "258"  height = "250"  src="<?php echo base_url().'images/'. $popup["maquina"]->IdMaquina.'/'.$popup["main"]->file_name;?>" title="Leica M7" alt="Leica M7" />
+    <img class ="main<?php  echo   $popup["maquina"]->IdMaquina; ?> " width = "258"  height = "250"  src="<?php echo base_url().'images/'. $popup["maquina"]->IdMaquina.'/'.$popup["main"]->file_name;?>" title="Leica M7" alt="Leica M7" />
 		</div>
 		
 		<div class = 'detail'>
