@@ -14,8 +14,8 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/impormaq';
 
+$config['base_url']	= 'http://localhost:81/impormaq';
 /*
 |--------------------------------------------------------------------------
 | Index File
