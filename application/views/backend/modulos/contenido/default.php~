@@ -11,6 +11,10 @@
 	<!-- Box Header: End -->
 	
 	<div class="box_content">
+<<<<<<< HEAD
+=======
+		<form method="post" action="contenido/modify" class="formItem">
+>>>>>>> d6d0691d6dbe04d924541f52378b563dfc1469a0
 		<!-- Simple Sorting Table: Start -->
 		<div class="accordion">
 		
@@ -78,7 +82,7 @@
                      <input type="radio" name="type" value="2" /> Imagen Izquierda<br />
                      <input type="radio" name="type" value="3" /> Imagen Derecha<br />
                      <input type="radio" name="type" value="4" /> Imagen Central<br />
-            			<input type="file" name="userfile1" size="20" />
+            			<input type="file" name="userfile" size="20" />
             			<br /><br />
             			<input type="submit" value="upload" />
       			      </form>

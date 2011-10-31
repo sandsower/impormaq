@@ -1,4 +1,11 @@
-<?php //print_r($promociones); ?>
+<pre>
+<?php //print_r($maquinas);
+?>
+
+
+</pre>
+
+
   <!-- ********************** --> 
   <!--     I N T R O          --> 
   <!-- ********************** --> 
@@ -19,6 +26,9 @@
           <?php if(isset($promociones)) : foreach($promociones as $row) : ?>
             <div style="position: relative; display: none;">
             <h2><a href="#"><?php echo $row->TituloPromocional; ?></a></h2>
+            <div class="s_rating_holder">
+              <p class="s_rating s_rating_big s_rating_5"> <span style="width: 60%;" class="s_percent"></span> </p>
+              <span class="s_average">3 out of 5</span> </div>
             <p class="s_desc"><?php echo $row->TextoPromocional; ?></p>
             <div class="s_price_holder">
               <p class="s_price"> <span class="s_currency s_before">$</span><?php echo $row->PrecioPromocional; ?> </p>
@@ -55,7 +65,6 @@
   <!--      C O N T E N T     --> 
   <!-- ********************** --> 
   <div id="content" class="container_12">
-  
     <? if(isset($bienvenido)) :?>
     <div id="welcome" class="grid_12">
       <h2>Bienvenido a Getit </h2>
@@ -65,56 +74,75 @@
     <? endif; ?>
     
     <div class="clear"></div>
-    
 
-    
-    
     
     <div id="latest_home" class="grid_12">
       <h2 class="s_title_1"><span class="s_main_color">Productos</span> Recientes</h2>
       <div class="clear"></div>
       <div class="s_listing s_grid_view clearfix">
-        <div class="s_item grid_2"> <a class="s_thumb" href="product.html"><img src="<?php echo base_url(); ?>img/frontend/product_140x140.jpg" title="Sony Cyber Shot S1000" alt="Sony Cyber Shot S1000" /></a>
-          <h3><a href="product.html">Sony Cyber Shot S1000</a></h3>
-          <p class="s_model">Product 8</p>
-          <p class="s_price"><span class="s_currency s_before">$</span>192.34</p>
-          <a class="s_button_add_to_cart" href="product.html"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
+      <pre>
+      <?php //print_r($maquinas); ?>
+      </pre>
+      <?php if(isset($maquinas)) : foreach($maquinas as $row) : ?>
+ 
+        <div class="s_item grid_2"> <a class="s_thumb showpop"  href = "#<?php echo $row->IdMaquina; ?>" ><img src="<?php echo base_url().'images/'. $row->IdMaquina.'/thumbs/'.$row->file_name ;?>" /></a>
+          <h3><a href="product.html"><?php echo $row->Maquina; ?></a></h3>
+          <p class="s_model"><?php echo $row->Modelo; ?></p>
+          <p class="s_price"><span class="s_currency s_before">$</span><?php echo $row->Precio; ?></p>
+          
         </div>
-        <div class="s_item grid_2"> <a class="s_thumb" href="product.html"><img src="<?php echo base_url(); ?>img/frontend/product_140x140.jpg" title="Panasonic Lumix" alt="Panasonic Lumix" /></a>
-          <h3><a href="product.html">Panasonic Lumix</a></h3>
-          <p class="s_model">Product 4</p>
-          <p class="s_price"><span class="s_currency s_before">$</span>153.87</p>
-          <a class="s_button_add_to_cart" href="product.html"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
-        <div class="s_item grid_2"> <a class="s_thumb" href="product.html"><img src="<?php echo base_url(); ?>img/frontend/product_140x140.jpg" title="Samsung P200" alt="Samsung P200" /></a>
-          <h3><a href="product.html">Samsung P200</a></h3>
-          <p class="s_model">Product 6</p>
-          <p class="s_price"><span class="s_currency s_before">$</span>384.67</p>
-          <a class="s_button_add_to_cart" href="product.html"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
-        <div class="s_item grid_2"> <a class="s_thumb" href="product.html"><img src="<?php echo base_url(); ?>img/frontend/product_140x140.jpg" title="Casio Exilim Zoom" alt="Casio Exilim Zoom" /></a>
-          <h3><a href="product.html">Casio Exilim Zoom</a></h3>
-          <p class="s_model">Product 7</p>
-          <p class="s_price"><span class="s_currency s_before">$</span>192.34</p>
-          <a class="s_button_add_to_cart" href="product.html"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
-        <div class="s_item grid_2"> <a class="s_thumb" href="product.html"><img src="<?php echo base_url(); ?>img/frontend/product_140x140.jpg" title="Canon Digital Ixus 200 IS" alt="Canon Digital Ixus 200 IS" /></a>
-          <h3><a href="product.html">Canon Digital Ixus 200 IS</a></h3>
-          <p class="s_model">Product 7</p>
-          <p class="s_price"><span class="s_currency s_before">$</span>192.34</p>
-          <a class="s_button_add_to_cart" href="product.html"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
-        <div class="s_item grid_2"> <a class="s_thumb" href="product.html"><img src="<?php echo base_url(); ?>img/frontend/product_140x140.jpg" title="Canon Digital Ixus 200 IS" alt="Canon Digital Ixus 200 IS" /></a>
-          <h3><a href="product.html">Canon Digital Ixus 200 IS</a></h3>
-          <p class="s_model">Product 7</p>
-          <p class="s_price"><span class="s_currency s_before">$</span>192.34</p>
-          <a class="s_button_add_to_cart" href="product.html"><span class="s_icon_16"><span class="s_icon"></span>Add to Cart</span></a>
-        </div>
+        <?php endforeach; ?>
+        <?php endif; ?>
+        
         <div class="clear"></div>
+		
+
       </div>
     </div>
-    
+    	
   </div>
+  
+  <?php if(isset($popups)): foreach($popups as $popup):?>	
+  <div class = "popup" id = "<?php echo $popup["maquina"]->IdMaquina; ?>"> 
+	<div class = "cerrar">X</div>
+		<div class = 'image_main'>
+    <img class ="main<?php  echo   $popup["maquina"]->IdMaquina; ?> " width = "258"  height = "250"  src="<?php echo base_url().'images/'. $popup["maquina"]->IdMaquina.'/'.$popup["main"]->file_name;?>" title="Leica M7" alt="Leica M7" />
+		</div>
+		
+		<div class = 'detail'>
+		<?php if(isset($popup["detail"])) : foreach($popup["detail"] as $image) :?>
+			<div class="image" >
+			<img  class = "img" width = "50"  height = "50" src = "<?php echo base_url().'images/'. $popup["maquina"]->IdMaquina.'/thumbs/'.$image->file_name ;?>" />
+			</div>
+		<?php endforeach; endif;?>
+		</div>
+		<div class = "info">
+			
+			<p class="s_price">
+				<span class="s_old_price"></span><br/>
+				</span><?php echo '$'.$popup["maquina"]->Precio; ?>
+				<span class="s_currency s_after"> pesos</span>
+			</p>
+        
+			<h2><?php echo $popup["maquina"]->Maquina; ?></h2>
+			<dl class="infofix">
+			  <dt>Tipo:</dt>
+			  <dd><?php echo $popup["maquina"]->Type; ?></dd>
+			  <dt>Marca:</dt>
+			  <dd><?php echo $popup["maquina"]->Marca; ?></dd>
+			  <dt>Modelo</dt>
+			  <dd><?php echo $popup["maquina"]->Modelo; ?></dd>
+			  <dt>Average Rating</dt>
+			  <dd>
+				<p class="s_rating s_rating_5"><span style="width: 100%;" class="s_percent"></span></p>
+			  </dd>
+			  <dt>Especificaciones:</dt>
+			  <p class="s_short_desc"><?php echo $popup["maquina"]->Especificaciones; ?></p>
+			</dl>
+		</div>
+  </div>
+  <?php endforeach; endif;?>
+ 
   <!-- end of content --> 
 
   

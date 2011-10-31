@@ -27,4 +27,38 @@ class Gallery_model extends CI_Model {
 		$query = $this->db->get_where('imagenes', array('IdImagenes' => $id));
 		return $query;
 	}
+	
+	function get_mainImage($idMaquina) {
+		$this->db->select('*');
+		$this->db->from('imagenes');
+		$this->db->where('default',true);
+		$this->db->where('promo',false);
+		$this->db->where('IdMaquina',$idMaquina);
+		$query = $this->db->get();
+		return $query->result();
+	}
+	
+	function makeDefault($idMaquina,$idImagen){
+		$query = $this->db->get_where('imagenes', array('IdMaquina' => $idMaquina,'default'=>true));
+		//print_r($query);
+		
+		if($query->num_rows > 0)
+		{
+			foreach ($query->result() as $row ) {
+           		$data = array('default' => false);
+				$this->db->where('IdImagenes',  $row->IdImagenes);
+				$this->db->update('imagenes', $data);
+			}
+		}
+		
+			$data = array(
+               'default' => true
+            );
+
+			$this->db->where('IdImagenes', $idImagen);
+			$this->db->update('imagenes', $data);
+			echo 'Imagen cambiada exitosamente!!';
+		
+			
+	}	
 }

@@ -68,7 +68,7 @@
             </form>
 			</div><!-- end #newsletter -->
 			
-			<h2>Impormaq is  under construction.</h2>
+			<h2>GetIt is  under construction.</h2>
 			
 		</div><!-- end #content -->
 
