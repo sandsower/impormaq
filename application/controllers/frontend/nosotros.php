@@ -5,7 +5,6 @@ class Nosotros extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		$this->is_logged_in();
 		$this->load->model('contenidos_model');
 	}
 
