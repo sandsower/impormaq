@@ -21,10 +21,11 @@ class Site extends CI_Controller {
 		$data['bienvenido'] = $result[0]->Bienvenido;
 		$maquinas =$this->maquinaria_model->getAllWithImages();
 		$data['maquinas'] = $maquinas;
-		$data["popups"] = $this->popupsInfo($maquinas);
+		$data['popups'] = $this->popupsInfo($maquinas);
 		$data['main_content'] = 'frontend/site';
 		$this->load->view('frontend/template',$data);
 	}
+	
 	function product(){
 		$data['main_content'] = 'frontend/product';
 		$this->load->view('frontend/temp',$data);
@@ -44,7 +45,6 @@ class Site extends CI_Controller {
 	{
 		for ($i = 0;$i < sizeof($maquinas); ++$i)
 		{
-			
 			$id = $maquinas[$i]->IdMaquina;
 			$maquina = $this->maquinaria_model->getById($id)->result();
 			$mainimage = $this->gallery_model->get_mainImage($id);

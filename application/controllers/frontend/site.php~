@@ -9,11 +9,8 @@ class Site extends CI_Controller {
 		$this->load->model('promociones_model');
 		$this->load->model('tipos_model');
 		$this->load->model('marcas_model');
-<<<<<<< HEAD
 		$this->load->model('contenidos_model');
-=======
 		$this->load->model('gallery_model');
->>>>>>> d6d0691d6dbe04d924541f52378b563dfc1469a0
 	}
 
 	function index(){
@@ -21,17 +18,14 @@ class Site extends CI_Controller {
 		$data['marcas'] = $this->marcas_model->getAll();
 		$data['tipos'] = $this->tipos_model->getAll();
 		$data['promociones'] = $this->promociones_model->getAll();
-<<<<<<< HEAD
 		$data['bienvenido'] = $result[0]->Bienvenido;
-=======
 		$maquinas =$this->maquinaria_model->getAllWithImages();
 		$data['maquinas'] = $maquinas;
-		$data["popups"] = $this->popupsInfo($maquinas);
-		
->>>>>>> d6d0691d6dbe04d924541f52378b563dfc1469a0
+		$data['popups'] = $this->popupsInfo($maquinas);
 		$data['main_content'] = 'frontend/site';
 		$this->load->view('frontend/template',$data);
 	}
+	
 	function product(){
 		$data['main_content'] = 'frontend/product';
 		$this->load->view('frontend/temp',$data);
@@ -46,9 +40,6 @@ class Site extends CI_Controller {
 			die();		
 		}		
 	}
-<<<<<<< HEAD
-}
-=======
 	
 	function popupsInfo($maquinas)
 	{
@@ -80,4 +71,3 @@ class Site extends CI_Controller {
 		$this->load->view('frontend/template',$data);
 	}
 }
->>>>>>> d6d0691d6dbe04d924541f52378b563dfc1469a0
