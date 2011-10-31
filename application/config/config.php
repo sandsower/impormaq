@@ -15,7 +15,7 @@
 |
 */
 
-$config['base_url']	= 'http://localhost:81/impormaq';
+$config['base_url']	= 'http://localhost/impormaq';
 /*
 |--------------------------------------------------------------------------
 | Index File
