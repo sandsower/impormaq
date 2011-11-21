@@ -22,6 +22,12 @@
 </head>
 
 <body>
+
+<pre>
+<?php //print_r($tipos);?>
+</pre>
+
+
 <div id="mask"></div>
 <div id="wrapper"> 
   
@@ -75,7 +81,7 @@
         <ul>
           <li id="menu_home"> <a href="<?php echo base_url(); ?>frontend/site">Home</a> </li>
           <?php if(isset($tipos)) : foreach($tipos as $row) : ?>
-            <li> <a href="#"><?php echo $row->Tipo; ?></a></li>
+            <li> <a href="<?php echo base_url()."frontend/catalogo/showCategory/".$row->idTipos; ?>"><?php echo $row->Tipo; ?></a></li>
           <?php endforeach; endif; ?>
         </ul>
       </div>
