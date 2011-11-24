@@ -45,7 +45,112 @@ class Maquinaria_model extends CI_Model {
 		 $query = $this->db->get();
 		return $query;
 	}
-
+	
+	
+	function getByIdTipo($idTipo){
+		//$query = $this->db->get_where('Maquinas', array('IdMaquina' => $id));
+		$this->db->select('*');
+		 $this->db->from('maquinas');
+			 $this->db->join('tipos', 'maquinas.IdTipos = tipos.idTipos');
+			 $this->db->join('marcas', 'maquinas.IdMarcas = marcas.IdMarca');
+			 $this->db->join('imagenes', 'maquinas.IdMaquina = imagenes.idMaquina');
+			 $this->db->where('maquinas.promo',false);
+			 $this->db->where('maquinas.venta',false);
+			 $this->db->where('imagenes.default',true);
+			 $this->db->where('maquinas.IdTipos',$idTipo);
+		 $query = $this->db->get();
+		return $query->result();
+	}
+	function getByPrice($precio)
+	{
+		$this->db->select('*');
+		$this->db->from('maquinas');
+		$this->db->join('tipos', 'maquinas.IdTipos = tipos.idTipos');
+		$this->db->join('marcas', 'maquinas.IdMarcas = marcas.IdMarca');
+		$this->db->join('imagenes', 'maquinas.IdMaquina = imagenes.idMaquina');
+		$this->db->where('maquinas.promo',false);
+		$this->db->where('maquinas.venta',false);
+		$this->db->where('imagenes.default',true);
+		$this->db->where('maquinas.Precio <=',$precio); 
+		$query = $this->db->get();
+		return $query->result();
+	
+	}
+	function getByIdMarca($marca){
+		$this->db->select('*');
+		$this->db->from('maquinas');
+		$this->db->join('tipos', 'maquinas.IdTipos = tipos.idTipos');
+		$this->db->join('marcas', 'maquinas.IdMarcas = marcas.IdMarca');
+		$this->db->join('imagenes', 'maquinas.IdMaquina = imagenes.idMaquina');
+		$this->db->where('maquinas.promo',false);
+		$this->db->where('maquinas.venta',false);
+		$this->db->where('imagenes.default',true);
+		$this->db->where('maquinas.IdMarcas',$marca);
+		 $query = $this->db->get();
+		return $query->result();
+	}
+	function getByIdTipoPrecio($tipo,$precio)
+	{
+		$this->db->select('*');
+		$this->db->from('maquinas');
+		$this->db->join('tipos', 'maquinas.IdTipos = tipos.idTipos');
+		$this->db->join('marcas', 'maquinas.IdMarcas = marcas.IdMarca');
+		$this->db->join('imagenes', 'maquinas.IdMaquina = imagenes.idMaquina');
+		$this->db->where('maquinas.promo',false);
+		$this->db->where('maquinas.venta',false);
+		$this->db->where('imagenes.default',true);
+		$this->db->where('maquinas.IdTipos',$tipo);
+		$this->db->where('maquinas.Precio <=',$precio); 
+		$query = $this->db->get();
+		return $query->result();
+	}
+	function getByIdMarcaPrecio($marca,$precio)
+	{
+		$this->db->select('*');
+		$this->db->from('maquinas');
+		$this->db->join('tipos', 'maquinas.IdTipos = tipos.idTipos');
+		$this->db->join('marcas', 'maquinas.IdMarcas = marcas.IdMarca');
+		$this->db->join('imagenes', 'maquinas.IdMaquina = imagenes.idMaquina');
+		$this->db->where('maquinas.promo',false);
+		$this->db->where('maquinas.venta',false);
+		$this->db->where('imagenes.default',true);
+		$this->db->where('maquinas.IdMarcas',$marca);
+		$this->db->where('maquinas.Precio <=',$precio); 
+		$query = $this->db->get();
+		return $query->result();
+	}
+	function getByIdTipoIdMarca($marca,$tipo)
+	{
+		$this->db->select('*');
+		$this->db->from('maquinas');
+		$this->db->join('tipos', 'maquinas.IdTipos = tipos.idTipos');
+		$this->db->join('marcas', 'maquinas.IdMarcas = marcas.IdMarca');
+		$this->db->join('imagenes', 'maquinas.IdMaquina = imagenes.idMaquina');
+		$this->db->where('maquinas.promo',false);
+		$this->db->where('maquinas.venta',false);
+		$this->db->where('imagenes.default',true);
+		$this->db->where('maquinas.IdTipos',$tipo);
+		$this->db->where('maquinas.IdMarcas',$marca);
+		$query = $this->db->get();
+		return $query->result();
+	
+	}
+	function getByIdTipoIdMarcaPrecio($precio,$marca,$Tipo){
+		$this->db->select('*');
+		$this->db->from('maquinas');
+		$this->db->join('tipos', 'maquinas.IdTipos = tipos.idTipos');
+		$this->db->join('marcas', 'maquinas.IdMarcas = marcas.IdMarca');
+		$this->db->join('imagenes', 'maquinas.IdMaquina = imagenes.idMaquina');
+		$this->db->where('maquinas.promo',false);
+		$this->db->where('maquinas.venta',false);
+		$this->db->where('imagenes.default',true);
+		$this->db->where('maquinas.IdTipos',$tipo);
+		$this->db->where('maquinas.IdMarcas',$marca);
+		$this->db->where('maquinas.Precio <=',$precio); 
+		$query = $this->db->get();
+		return $query->result();
+	}
+	
 	function insert($data){
 		$this->db->insert('maquinas', $data);
 	}
