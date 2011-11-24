@@ -58,6 +58,15 @@
 									echo $bienvenido;?>
 								<? endif; ?></textarea></td>
 						</tr>
+						<tr>
+						   <td><label class="left">Campos:</label</td>
+						   <td><?php if(isset($campos)): ?>
+            				 <?php echo form_dropdown('campos', $campos); ?>
+             				 <?php endif; ?><br/>
+             				 <textarea name="txtContenido" rows="5" cols="100"><? if(isset($contenido)) :
+									echo $contenido;?><? endif; ?></textarea>
+						   </td>
+						</tr>
 					</table>
 					
 		            <button>Modificar</button>

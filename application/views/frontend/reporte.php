@@ -27,14 +27,14 @@
       <div id="product_images" class="grid_4 alpha">
 		<div id = 'image_main'>
 			<a  id = "link" rel="prettyPhoto[gallery]" href="<?php echo base_url().'images/'. $maquina->IdMaquina.'/'.$main->file_name ;?>">
-			<img  id = "main" width = "258"  height = "250"  src="<?php echo base_url().'images/'. $maquina->IdMaquina.'/'.$main->file_name ;?>" title="Leica M7" alt="Leica M7" />
+			<img  class = "main<?php echo $maquina->IdMaquina; ?>" width = "258"  height = "250"  src="<?php echo base_url().'images/'. $maquina->IdMaquina.'/'.$main->file_name ;?>" title="Leica M7" alt="Leica M7" />
 			</a>
 		</div>
 		<div id = "detail">
 			<?php if(isset($detail)) : foreach($detail as $image) :?>
-			<div class="image" >
-			<img  class = "img" width = "50"  height = "50" src = "<?php echo base_url().'images/'. $maquina->IdMaquina.'/thumbs/'.$image->file_name ;?>" />
-			</div>
+				<div class="image" >
+					<img  class = "img" width = "50"  height = "50" src = "<?php echo base_url().'images/'. $maquina->IdMaquina.'/thumbs/'.$image->file_name ;?>" />
+				</div>
 			<?php endforeach; ?>
 			<?php endif; ?>
 		</div>

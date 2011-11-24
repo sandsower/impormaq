@@ -12,15 +12,14 @@ class Contenido extends CI_Controller {
 	function index(){
 		$data['main_content'] = 'backend/modulos/contenido/default';
 		$result = $this->contenidos_model->getAll();
-		$data['mision']= $result[0]->Mision;
-		$data['vision']= $result[0]->Vision;
-		$data['politicas']= $result[0]->Politicas;
-		$data['nosotros']= $result[0]->Nosotros;
-		$data['objetivo']= $result[0]->Objetivo;
-		$data['bienvenido'] = $result[0]->Bienvenido;
+		foreach($result as $item)
+		{
+			$info[$item->IdContenido] = $item->Titulo;
+		}
+		$data['campos'] = $info;
 		$this->load->view('backend/template',$data);
 	}
-
+   
 	function modify(){
 		$data = array(
 				'Mision' => $this->input->post('mision'),

@@ -1,3 +1,7 @@
+<pre>
+<?php //print_r($maquinas); ?>
+</pre>
+
   <!-- ********************** --> 
   <!--     I N T R O          --> 
   <!-- ********************** --> 
@@ -57,13 +61,12 @@
   <!--      C O N T E N T     --> 
   <!-- ********************** --> 
   <div id="content" class="container_12">
-    <? if(isset($bienvenido)) :?>
     <div id="welcome" class="grid_12">
       <h2>Bienvenido a Getit </h2>
       <p> <a href="">GetIt</a> es una tienda electronica estilizada con un dise&ntilde;o limpio e inovador que te permite usar una diferente combinacion de colores.</p>
-      <p><? echo $bienvenido; ?></p>
+      <p>Una caracteristica adicional es escoger entre diferentes tipos de presentacones de tus productos por cada categoria, asi que tu puedes personalizar cada parte de tu tienda.
+      Getit Te permite modificar el tama&ntilde;o de tus productos, tama&no de lista, posiciones de columnas, dandote el poder de adaptar facilmente cualquier tema a tu producto o servicio. Con la herramienta de colores puedes cambiar los elementos de tu sitio haciendolo unico y restaltando de todos los demas.</p>
     </div>
-    <? endif; ?>
     
     <div class="clear"></div>
 
@@ -77,9 +80,8 @@
       </pre>
       <?php if(isset($maquinas)) : foreach($maquinas as $row) : ?>
  
-
-        <div class="s_item grid_2"> <a class="s_thumb showpop" href = "#<?php  echo $row->IdMaquina;?>" ><img src="<?php echo base_url().'images/'. $row->IdMaquina.'/thumbs/'.$row->file_name ;?>" /></a>
-          <h3><a href="<?php echo  base_url()."frontend/site/reporte/".$row->IdMaquina; ?>"><?php echo $row->Maquina; ?></a></h3>
+        <div class="s_item grid_2"> <a class="s_thumb" href="#"><img src="<?php echo base_url().'images/'. $row->IdMaquina.'/thumbs/'.$row->file_name ;?>" /></a>
+          <h3><a href="product.html"><?php echo $row->Maquina; ?></a></h3>
           <p class="s_model"><?php echo $row->Modelo; ?></p>
           <p class="s_price"><span class="s_currency s_before">$</span><?php echo $row->Precio; ?></p>
           
@@ -88,10 +90,9 @@
         <?php endif; ?>
         
         <div class="clear"></div>
-		
-
       </div>
     </div>
+<<<<<<< HEAD
     	
   </div>
   
@@ -99,18 +100,13 @@
   <div class = "popup" id = "<?php echo $popup["maquina"]->IdMaquina; ?>"> 
 	<div class = "cerrar">X</div>
 		<div class = 'image_main'>
-<<<<<<< HEAD
     <img class ="main<?php  echo   $popup["maquina"]->IdMaquina; ?> " width = "258"  height = "250"  src="<?php echo base_url().'images/'. $popup["maquina"]->IdMaquina.'/'.$popup["main"]->file_name;?>" title="Leica M7" alt="Leica M7" />
-=======
-
-			<img class ="main<?php echo $popup["maquina"]->IdMaquina; ?>"   width = "258"  height = "250"   src="<?php echo base_url().'images/'. $popup["maquina"]->IdMaquina.'/'.$popup["main"]->file_name;?>" title="<?php echo $popup["main"]->file_name;?>" alt="<?php echo $popup["main"]->file_name;?>" />
->>>>>>> c839cce6038e2208c32eb914d6da412c7f52962a
 		</div>
 		
 		<div class = 'detail'>
 		<?php if(isset($popup["detail"])) : foreach($popup["detail"] as $image) :?>
 			<div class="image" >
-			<img  class = "img"  width = "50"  height = "50" src = "<?php echo base_url().'images/'. $popup["maquina"]->IdMaquina.'/thumbs/'.$image->file_name ;?>" />
+			<img  class = "img" width = "50"  height = "50" src = "<?php echo base_url().'images/'. $popup["maquina"]->IdMaquina.'/thumbs/'.$image->file_name ;?>" />
 			</div>
 		<?php endforeach; endif;?>
 		</div>
@@ -138,9 +134,10 @@
 			  <p class="s_short_desc"><?php echo $popup["maquina"]->Especificaciones; ?></p>
 			</dl>
 		</div>
+=======
+    
+>>>>>>> develop
   </div>
-  <?php endforeach; endif;?>
- 
   <!-- end of content --> 
 
   

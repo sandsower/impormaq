@@ -6,42 +6,60 @@
 
     
     <div id="category" class="grid_12">
-
-      <div class="s_subcategories s_grid_view s_listing clearfix">
-        <div class="s_subcategory"> <a href=""><img src="<?php echo base_url(); ?>img/frontend/category_100x100.jpg" title="Digital Cameras" alt="Digital Cameras" style="margin-bottom: 3px;" /></a> <a href="">Marca 1</a> </div>
-        <div class="s_subcategory"> <a href=""><img src="<?php echo base_url(); ?>img/frontend/category_100x100.jpg" title="Home Audio" alt="Home Audio" style="margin-bottom: 3px;" /></a> <a href="">Marca 2</a> </div>
-        <div class="s_subcategory"> <a href=""><img src="<?php echo base_url(); ?>img/frontend/category_100x100.jpg" title="Home Cinema" alt="Home Cinema" style="margin-bottom: 3px;" /></a> <a href="">Marca 3</a> </div>
-        <div class="s_subcategory"> <a href=""><img src="<?php echo base_url(); ?>img/frontend/category_100x100.jpg" title="Cell Phones" alt="Cell Phones" style="margin-bottom: 3px;" /></a> <a href="">Marca 4</a> </div>
-        <div class="s_subcategory"> <a href=""><img src="<?php echo base_url(); ?>img/frontend/category_100x100.jpg" title="MP3 Players" alt="MP3 Players" style="margin-bottom: 3px;" /></a> <a href="">Marca 5</a> </div>
-        <div class="s_subcategory"> <a href=""><img src="<?php echo base_url(); ?>img/frontend/category_100x100.jpg" title="Car-Audio" alt="Car-Audio" style="margin-bottom: 3px;" /></a> <a href="">Marca 6 </a> </div>
-        <div class="clear"></div>
-      </div>
-      
-      <div id="listing_options">
-        <div id="listing_sort" class="s_switcher">
-          <span class="s_selected">Default</span>
-          <ul class="s_options" style="display: none;">
-            <li><a href="">Nombre A - Z</a></li>
-            <li><a href="">Nombre Z - A</a></li>
-            <li><a href="">Precio Menor &gt; Mayor</a></li>
-            <li><a href="">Precio Mayor &gt; Menor</a></li>
-            <li><a href="">Rating Mayor</a></li>
-            <li><a href="">Rating Menor</a></li>
-            <li><a href="">Modelo A - Z</a></li>
-            <li><a href="">Modelo Z - A</a></li>
-          </ul>
-        </div>
-        <div id="view_mode" class="s_nav">
-          <ul class="clearfix">
-            <li id="view_list" class="s_selected"><a href="listing_3.html"><span class="s_icon"></span>List</a></li>
-          </ul>
-        </div>
-      </div>
-
+	 <form  id ="form1" method="post" action="<? echo base_url('frontend/catalogo/search'); ?>">
+	<div class = "search">
+		<div class = "inputs" >
+			<div>Maximo Precio <input type = "text" name="precio"/></div>
+		</div>
+		<div id = "selectors">
+			<div id="marca" class = "switcher">
+			 <span class="s_selected" id = "marcaText">Marca</span>
+			  <input type = "hidden"  id = "marcaInput"  name ="marca" value = "0"/>
+			  <ul class="s_options" id = "marcaOptions">
+				<li id = "0" class = "opmarca"  >Default</li>
+				<li>--------------------</li>
+				<?php if(isset($brands)):foreach($brands as $row):?>
+					<li id = "<?php echo $row->IdMarca ;?>" class = "opmarca" ><?php echo $row->Marca; ?></li>
+				<?php endforeach; endif;?>
+			  </ul>
+			  </div>
+			  <div id="tipo" class = "switcher">
+				<span class="s_selected" id = "tipoText">Tipo</span>
+				  <input type = "hidden"  id = "tipoInput" name ="tipo" value = "0"/>
+				  <ul class="s_options" id = "tipoOptions">
+					<li id = "0"  class = "optipo"  >Default</li>
+					<li>--------------------</li>
+					<?php if(isset($types)):foreach($types as $row):?>
+						<li id = "<?php echo $row->idTipos ;?>" class = "optipo" ><?php echo $row->Tipo; ?></li>
+					<?php endforeach; endif;?>
+				  </ul>
+			  </div>
+		  </div>
+      <div class = "submit"></div>
+	</div>
+	</form>
       <div class="clear"></div>
 
       <div class="s_listing s_list_view clearfix">
-
+	  <?php if(isset($maquinas)):foreach($maquinas as $row):?>
+		<div class="s_item clearfix">
+          <div class="grid_3 alpha"> 
+			  <a class="s_thumb" href="<?php echo base_url()."images/".$row->IdMaquina."/".$row->file_name;?>">
+			  <img 
+			  src="<?php echo base_url()."images/".$row->IdMaquina."/".$row->file_name;?>" 
+			  title="Canon Digital Ixus 200 IS" 
+			  alt="Canon Digital Ixus 200 IS" />
+			  </a> 
+		  </div>
+          <div class="grid_9 omega">
+            <h3><a href="<?php echo  base_url()."site/reporte/".$row->IdMaquina; ?>"><?php echo $row->Maquina; ?></a></h3>
+            <p class="s_model"><?php echo $row->Modelo; ?></p>
+            <p class="s_price"><span class="s_currency s_before">$</span><?php echo $row->Precio; ?></p>
+            <p class="s_description"><?php echo $row->Especificaciones; ?></p>
+          </div>
+        </div>
+	  <?php endforeach; endif;?>
+	<!--
         <div class="s_item clearfix">
           <div class="grid_3 alpha"> <a class="s_thumb" href="product.html"><img src="<?php echo base_url(); ?>img/frontend/product_140x140.jpg" title="Leica M7" alt="Leica M7" /></a> </div>
           <div class="grid_9 omega">
@@ -119,7 +137,7 @@
         </div>
 
         <div class="clear"></div>
-
+		-->
       </div>
       
       <div class="pagination">

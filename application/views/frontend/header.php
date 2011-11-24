@@ -22,6 +22,12 @@
 </head>
 
 <body>
+
+<pre>
+<?php //print_r($tipos);?>
+</pre>
+
+
 <div id="mask"></div>
 <div id="wrapper"> 
   
@@ -31,15 +37,15 @@
   <div id="header" class="container_12">
     <div class="grid_12">
     
-      <a id="site_logo" href="site">Shoppica store - Premium e-Commerce Theme</a> 
+      <a id="site_logo" href="<?php echo base_url(); ?>">Shoppica store - Premium e-Commerce Theme</a> 
 
       <div id="system_navigation" class="s_nav">
         <ul class="s_list_1 clearfix">
-          <li><a href="<?php echo base_url(); ?>frontend/site">Inicio</a></li>
-          <li><a href="<?php echo base_url(); ?>frontend/nosotros">Nosotros</a></li>
-          <li><a href="<?php echo base_url(); ?>frontend/catalogo">Catalogo</a></li>
-          <li><a href="<?php echo base_url(); ?>frontend/ubicacion">Donde encontrarnos?</a></li>
-          <li><a href="<?php echo base_url(); ?>frontend/contacto">Contacto</a></li>
+          <li><a href="<?php echo base_url(); ?>site">Inicio</a></li>
+          <li><a href="<?php echo base_url(); ?>nosotros">Nosotros</a></li>
+          <li><a href="<?php echo base_url(); ?>catalogo">Catalogo</a></li>
+          <li><a href="<?php echo base_url(); ?>ubicacion">Donde encontrarnos?</a></li>
+          <li><a href="<?php echo base_url(); ?>contacto">Contacto</a></li>
           <li><a href="<?php echo base_url(); ?>login">Entrar</a></li>
         </ul>
       </div>
@@ -75,7 +81,7 @@
         <ul>
           <li id="menu_home"> <a href="<?php echo base_url(); ?>frontend/site">Home</a> </li>
           <?php if(isset($tipos)) : foreach($tipos as $row) : ?>
-            <li> <a href="#"><?php echo $row->Tipo; ?></a></li>
+            <li> <a href="<?php echo base_url()."catalogo/showCategory/".$row->idTipos; ?>"><?php echo $row->Tipo; ?></a></li>
           <?php endforeach; endif; ?>
         </ul>
       </div>

@@ -21,7 +21,7 @@ class Catalogo extends CI_Controller {
 
 	function showCategory()
 	{
-		$id = $this->uri->segment(4,0);
+		$id = $this->uri->segment(3,0);
 		$maquinas = $this->maquinaria_model->getByIdTipo($id);
 		$data["maquinas"] = $maquinas;
 		$data["brands"] = $this->marcas_model->getAll();

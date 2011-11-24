@@ -11,10 +11,6 @@
 	<!-- Box Header: End -->
 	
 	<div class="box_content">
-<<<<<<< HEAD
-=======
-		<form method="post" action="contenido/modify" class="formItem">
->>>>>>> d6d0691d6dbe04d924541f52378b563dfc1469a0
 		<!-- Simple Sorting Table: Start -->
 		<div class="accordion">
 		
@@ -61,6 +57,15 @@
 							<td><textarea name="bienvenido" rows="5" cols="100"><? if(isset($bienvenido)) :
 									echo $bienvenido;?>
 								<? endif; ?></textarea></td>
+						</tr>
+						<tr>
+						   <td><label class="left">Campos</label</td>
+						   <td><?php if(isset($campos)): ?>
+            				 <?php echo form_dropdown('campos', $campos); ?>
+             				 <?php endif; ?><br/>
+             				 <textarea name="txtContenido" rows="5" cols="100"><? if(isset($contenido)) :
+									echo $contenido;?><? endif; ?></textarea>
+						   </td>
 						</tr>
 					</table>
 					
