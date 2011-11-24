@@ -41,11 +41,11 @@
 
       <div id="system_navigation" class="s_nav">
         <ul class="s_list_1 clearfix">
-          <li><a href="<?php echo base_url(); ?>frontend/site">Inicio</a></li>
-          <li><a href="<?php echo base_url(); ?>frontend/nosotros">Nosotros</a></li>
-          <li><a href="<?php echo base_url(); ?>frontend/catalogo">Catalogo</a></li>
-          <li><a href="<?php echo base_url(); ?>frontend/ubicacion">Donde encontrarnos?</a></li>
-          <li><a href="<?php echo base_url(); ?>frontend/contacto">Contacto</a></li>
+          <li><a href="<?php echo base_url(); ?>site">Inicio</a></li>
+          <li><a href="<?php echo base_url(); ?>nosotros">Nosotros</a></li>
+          <li><a href="<?php echo base_url(); ?>catalogo">Catalogo</a></li>
+          <li><a href="<?php echo base_url(); ?>ubicacion">Donde encontrarnos?</a></li>
+          <li><a href="<?php echo base_url(); ?>contacto">Contacto</a></li>
           <li><a href="<?php echo base_url(); ?>login">Entrar</a></li>
         </ul>
       </div>

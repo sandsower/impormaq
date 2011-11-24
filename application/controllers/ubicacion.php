@@ -9,6 +9,7 @@ class Ubicacion extends CI_Controller {
 	}
 
 	function index(){
+		//echo 'frontned';
 		$data['main_content'] = 'frontend/ubicacion';
 		$this->load->view('frontend/template',$data);
 	}
