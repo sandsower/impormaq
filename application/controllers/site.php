@@ -58,7 +58,7 @@ class Site extends CI_Controller {
 	function reporte()
 	{		
 		
-		$id = $this->uri->segment(4,0);
+		$id = $this->uri->segment(3,0);
 		$maquina = $this->maquinaria_model->getById($id)->result();
 		$mainimage = $this->gallery_model->get_mainImage($id);
 		$data['main'] =   $mainimage[0];

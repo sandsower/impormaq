@@ -37,7 +37,7 @@
   <div id="header" class="container_12">
     <div class="grid_12">
     
-      <a id="site_logo" href="site">Shoppica store - Premium e-Commerce Theme</a> 
+      <a id="site_logo" href="<?php echo base_url(); ?>">Shoppica store - Premium e-Commerce Theme</a> 
 
       <div id="system_navigation" class="s_nav">
         <ul class="s_list_1 clearfix">
@@ -81,7 +81,7 @@
         <ul>
           <li id="menu_home"> <a href="<?php echo base_url(); ?>frontend/site">Home</a> </li>
           <?php if(isset($tipos)) : foreach($tipos as $row) : ?>
-            <li> <a href="<?php echo base_url()."frontend/catalogo/showCategory/".$row->idTipos; ?>"><?php echo $row->Tipo; ?></a></li>
+            <li> <a href="<?php echo base_url()."catalogo/showCategory/".$row->idTipos; ?>"><?php echo $row->Tipo; ?></a></li>
           <?php endforeach; endif; ?>
         </ul>
       </div>

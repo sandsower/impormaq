@@ -52,7 +52,7 @@
 			  </a> 
 		  </div>
           <div class="grid_9 omega">
-            <h3><a href="<?php echo  base_url()."frontend/site/reporte/".$row->IdMaquina; ?>"><?php echo $row->Maquina; ?></a></h3>
+            <h3><a href="<?php echo  base_url()."site/reporte/".$row->IdMaquina; ?>"><?php echo $row->Maquina; ?></a></h3>
             <p class="s_model"><?php echo $row->Modelo; ?></p>
             <p class="s_price"><span class="s_currency s_before">$</span><?php echo $row->Precio; ?></p>
             <p class="s_description"><?php echo $row->Especificaciones; ?></p>
