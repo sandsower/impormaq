@@ -57,7 +57,8 @@ $(document).ready(function(){
     	}
     });
 
-    $('#save').click(function(){
+    $('#save').click(function(e){
+      e.stopPropagation();
     	var valor = $("input[@name=tipo]:checked").attr("value");
     	if(valor=="Editar")
 		{
@@ -108,6 +109,24 @@ $(document).ready(function(){
     		
     		$.post('contenido/delete', postData, function(data){
     				alert("Contenido eliminado con exito");
+      			$("#Contenido").html('');
+    				if($('#area').val() != 0)
+         		{
+			         var area = $('#area').val();
+             		var postData = {
+            			'area' : area
+    	         	};
+          		$.post('contenido/obtainInfo', postData, function(data){
+	       		var listItems= "<option value=0>--Seleccione titulo--</option>";
+      			for (var i = 0; i < data.length; i++){
+        			   listItems += "<option value='" + data[i].IdContenido + "'>" + data[i].Titulo + "</option>";
+      			}
+      			$("#Contenido").html(listItems);
+      			$("#Contenido").val(0);
+        		},
+        		"json"
+        	);
+        }
         		},
         		"json"
         	);

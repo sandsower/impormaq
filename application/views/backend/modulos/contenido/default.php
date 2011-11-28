@@ -1,8 +1,8 @@
 
 <!-- 75% Box Grid Container: Start -->
 <div class="grid_24">
-<script type="text/javascript" src="<?php echo base_url(); ?>js/Contenido/dropdown.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>js/Contenido/script.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>js/contenido/dropdown.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>js/contenido/script.js"></script>
 
 	<!-- Box Header: Start -->
 	<div class="box_top">
@@ -18,8 +18,6 @@
 		
 
 			<h5><a href="#">Información</a></h5>
-			
-			<form method="post" action="contenido/modify" class="formItem">
 				<div>
 					<input class="tipo" type="radio" name="tipo" value="Editar" checked> Editar<br>
 					<input class="tipo" type="radio" name="tipo" value="Crear"> Crear<br>
@@ -55,28 +53,11 @@
 								<textarea id="texto" ></textarea>
 							</div>
 						</tr>
-						<tr>
-							<td><label class="left">Bienvenido:</label></td>
-							<td><textarea name="bienvenido" rows="5" cols="100"><? if(isset($bienvenido)) :
-									echo $bienvenido;?>
-								<? endif; ?></textarea></td>
-						</tr>
-						<tr>
-						   <td><label class="left">Campos:</label</td>
-						   <td><?php if(isset($campos)): ?>
-            				 <?php echo form_dropdown('campos', $campos); ?>
-             				 <?php endif; ?><br/>
-             				 <textarea name="txtContenido" rows="5" cols="100"><? if(isset($contenido)) :
-									echo $contenido;?><? endif; ?></textarea>
-						   </td>
-						</tr>
 					</table>
-					
-		            <button>Modificar</button>
-		         </form>	
+         		<button id="save">Guardar cambios</button>
 				</div>
-				
-				<h5><a href="#">Imagenes</a></h5>l
+				<!--
+				<h5><a href="#">Imagenes</a></h5>
 			
 				<div>
 				   <table>
@@ -97,12 +78,10 @@
 		            </div>
 		            </td>
 				      <tr>
-				   </table>
+				   </table>-->
 				</div>
 		</div>
 		<!-- Simple Sorting Table: End -->
-		</form>
-		<button id="save">Guardar cambios</button>
 	</div>
 	
 </div>

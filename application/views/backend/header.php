@@ -135,8 +135,7 @@
 						<li><a href="<?php echo base_url(); ?>backend/contenido" class="icon pages">Contenido</a></li>  	
 						<li><a href="<?php echo base_url(); ?>backend/estilo" class="icon pages">Estilo</a></li>
 						<li><a href="<?php echo base_url(); ?>backend/ventas" class="icon pages">Ventas</a></li>  
-			            <li><a href="<?php echo base_url(); ?>backend/promociones" class="icon pages">Promociones</a></li>  
-			            <li><a href="<?php echo base_url(); ?>backend/actividad" class="icon pages">Actividad</a></li> 
+			            <li><a href="<?php echo base_url(); ?>backend/promociones" class="icon pages">Promociones</a></li>
 			        </ul>  
 			        <!-- Navigation Dropdown Menu Item Content: End --> 
 				</li>

@@ -7,10 +7,6 @@ class Contenidos_model extends CI_Model {
         parent::__construct();
     }
     
-<<<<<<< HEAD
-	function getAll(){
-		$query = $this->db->get('contenidos');
-=======
 	function getById($id){
 		$this->db->select("*");
 		$this->db->from("Contenido");
@@ -25,15 +21,10 @@ class Contenidos_model extends CI_Model {
 		$this->db->from("Contenido");
 		$this->db->where("Area",$area);
 		$query = $this->db->get();
->>>>>>> f845d02a5999ff618fde88256846700c75cba0be
 		return $query->result();
 	}
 
 	function update($data){
-<<<<<<< HEAD
-		$this->db->where('IdContenidos', 1);
-		return $this->db->update('contenidos', $data);	
-=======
 		$this->db->where('IdContenido', $data['IdContenido']);
 		return $this->db->update('contenido', $data);
 	}
@@ -50,6 +41,5 @@ class Contenidos_model extends CI_Model {
 
 	function delete($id){
 		return $this->db->delete('Contenido', array('IdContenido' => $id));
->>>>>>> f845d02a5999ff618fde88256846700c75cba0be
 	}
 }

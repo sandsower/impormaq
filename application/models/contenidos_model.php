@@ -9,7 +9,7 @@ class Contenidos_model extends CI_Model {
     
 	function getById($id){
 		$this->db->select("*");
-		$this->db->from("Contenido");
+		$this->db->from("contenido");
 		$this->db->where("IdContenido",$id);
 		$query = $this->db->get();
 		return $query->result();
@@ -18,7 +18,7 @@ class Contenidos_model extends CI_Model {
 	function getAllByArea($area)
 	{
 		$this->db->select("*");
-		$this->db->from("Contenido");
+		$this->db->from("contenido");
 		$this->db->where("Area",$area);
 		$query = $this->db->get();
 		return $query->result();
@@ -31,15 +31,15 @@ class Contenidos_model extends CI_Model {
 
 	function getAllAreas()
 	{
-		$query = $this->db->query("SELECT DISTINCT Area FROM Contenido");
+		$query = $this->db->query("SELECT DISTINCT Area FROM contenido");
 		return $query->result();
 	}
 
 	function insert($data){
-		return $this->db->insert('Contenido', $data);
+		return $this->db->insert('contenido', $data);
 	}
 
 	function delete($id){
-		return $this->db->delete('Contenido', array('IdContenido' => $id));
+		return $this->db->delete('contenido', array('IdContenido' => $id));
 	}
 }

@@ -7,33 +7,21 @@
     #previously this would not have been possible.
     #'system' can be replaced if you have renamed your system folder.
     RewriteCond %{REQUEST_URI} ^system.*
-<<<<<<< HEAD
-    RewriteRule ^(.*)$ getit/index.php?/$1 [L]
-=======
-    RewriteRule ^(.*)$ getIt/index.php?/$1 [L]
->>>>>>> c5bab6f1decfa07012576df01578c48ac0eb4e95
+    RewriteRule ^(.*)$ impormaq/index.php?/$1 [L]
     
     #When your application folder isn't in the system folder
     #This snippet prevents user access to the application folder
     #Submitted by: Fabdrol
     #Rename 'application' to your applications folder name.
     RewriteCond %{REQUEST_URI} ^application.*
-<<<<<<< HEAD
-    RewriteRule ^(.*)$ getit/index.php?/$1 [L]
-=======
-    RewriteRule ^(.*)$ getIt/index.php?/$1 [L]
->>>>>>> c5bab6f1decfa07012576df01578c48ac0eb4e95
+    RewriteRule ^(.*)$ impormaq/index.php?/$1 [L]
 
     #Checks to see if the user is attempting to access a valid file,
     #such as an image or css document, if this isn't true it sends the
     #request to index.php
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-<<<<<<< HEAD
-    RewriteRule ^(.*)$ getit/index.php?/$1 [L]
-=======
-    RewriteRule ^(.*)$ getIt/index.php?/$1 [L]
->>>>>>> c5bab6f1decfa07012576df01578c48ac0eb4e95
+    RewriteRule ^(.*)$ impormaq/index.php?/$1 [L]
 </IfModule>
 
 <IfModule !mod_rewrite.c>

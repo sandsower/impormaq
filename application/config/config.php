@@ -15,7 +15,7 @@
 |
 */
 
-$config['base_url']	= 'http://localhost/getIt';
+$config['base_url']	= 'http://localhost/impormaq';
 /*
 |--------------------------------------------------------------------------
 | Index File

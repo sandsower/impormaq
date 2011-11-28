@@ -1,0 +1,167 @@
+$(document).ready(function(){
+	$(".tipo").click(function(e){
+		var valor = $("input[@name=tipo]:checked").attr("value");
+		cambiarContenido(valor);
+	});
+
+	$('#area').selected(function(){
+		var valor = $("input[@name=tipo]:checked").attr("value");
+		if($('#area').val() != 0)
+		{
+			var area = $('#area').val();
+
+    		var postData = {
+      			'area' : area
+    		};
+
+    		$.post('contenido/obtainInfo', postData, function(data){
+	    		var listItems= "<option value=0>--Seleccione titulo--</option>";
+      			for (var i = 0; i < data.length; i++){
+        			listItems += "<option value='" + data[i].IdContenido + "'>" + data[i].Titulo + "</option>";
+      			}
+      			$("#Contenido").html(listItems);
+      			$("#Contenido").val(0);
+        		},
+        		"json"
+        	);
+        }
+    });
+
+    $('#Contenido').selected(function(){
+		var valor = $("input[@name=tipo]:checked").attr("value");
+    	if($('#Contenido').val() != 0 && valor != "Borrar")
+    	{
+    		var IdContenido = $('#Contenido').val();
+
+    		var postData = 
+    		{
+    			'id' : IdContenido
+    		};
+
+    		$.post('contenido/obtainContent', postData, function(data){
+    				$('#titulo').val(data[0].Titulo);
+    				$('#texto').html(data[0].Texto);
+        		},
+        		"json"
+        	);
+    	}
+    	else if($('#Contenido').val() == 0)
+    	{
+    		$('#titulo').val('');
+    		$('#texto').html('');
+    	}
+    	else
+    	{
+    		$('#ModTitulo').hide();
+    		$('#ModTexto').hide();
+    	}
+    });
+
+    $('#save').click(function(e){
+      e.stopPropagation();
+    	var valor = $("input[@name=tipo]:checked").attr("value");
+    	if(valor=="Editar")
+		{
+    		var IdContenido = $('#Contenido').val();
+    		var titulo = $('#titulo').val();
+    		var texto = $('textarea#texto').val();
+    		var area = $('#area').val();
+
+    		var postData = {
+    			'id' : IdContenido,
+    			'titulo' : titulo,
+    			'texto' : texto,
+    			'area' : area
+    		};
+    		
+    		$.post('contenido/modify', postData, function(data){
+    				alert("Contenido modificado con exito");
+        		},
+        		"json"
+        	);
+
+		}
+		else if(valor == "Crear")
+		{
+			var titulo = $('#titulo').val();
+    		var texto = $('textarea#texto').val();
+    		var area = $('#area').val();
+
+    		var postData = {
+    			'titulo' : titulo,
+    			'texto' : texto,
+    			'area' : area
+    		};
+    		
+    		$.post('contenido/create', postData, function(data){
+	    			alert("Contenido creado con exito");
+        		},
+        		"json"
+        	);
+		}
+		else if(valor == "Borrar")
+		{
+			var IdContenido = $('#Contenido').val();
+
+			var postData = {
+    			'id' : IdContenido
+    		};
+    		
+    		$.post('contenido/delete', postData, function(data){
+    				alert("Contenido eliminado con exito");
+    				if($('#area').val() != 0)
+         		{
+			         var area = $('#area').val();
+             		var postData = {
+            			'area' : area
+    	         	};
+          		$.post('contenido/obtainInfo', postData, function(data){
+	       		var listItems= "<option value=0>--Seleccione titulo--</option>";
+      			for (var i = 0; i < data.length; i++){
+        			   listItems += "<option value='" + data[i].IdContenido + "'>" + data[i].Titulo + "</option>";
+      			}
+      			$("#Contenido").html(listItems);
+      			$("#Contenido").val(0);
+        		},
+        		"json"
+        	);
+        }
+        		},
+        		"json"
+        	);
+		}
+    });
+});
+
+
+function cambiarContenido(valor){
+
+	if(valor=="Editar")
+	{
+		if(!$('#SeleccionarContenido').is(':visible'))
+		{
+			$('#SeleccionarContenido').show();
+		}
+		$("#textoArea").text("Seleccione el area que desea modificar:");
+		$('#ModTitulo').show();
+		$('#ModTexto').show();
+	}
+	else if(valor == "Crear")
+	{
+		$('#SeleccionarContenido').hide();
+		$("#textoArea").text("Seleccione el area donde desea guardar el contenido:");
+		$('#ModTitulo').show();
+		$('#ModTexto').show();
+	}
+	else if(valor == "Borrar")
+	{
+		if(!$('#SeleccionarContenido').is(':visible'))
+		{
+			$('#SeleccionarContenido').show();
+		}
+		$("#textoArea").text("Seleccione el area donde esta el contenido que desea eliminar:");
+		$("#textoContenido").text("Seleccione el titulo del contenido a eliminar:");
+		$('#ModTitulo').hide();
+		$('#ModTexto').hide();
+	}
+}
