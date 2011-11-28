@@ -57,12 +57,13 @@
   <!--      C O N T E N T     --> 
   <!-- ********************** --> 
   <div id="content" class="container_12">
+    <? if(isset($bienvenido)) :?>
     <div id="welcome" class="grid_12">
       <h2>Bienvenido a Getit </h2>
       <p> <a href="">GetIt</a> es una tienda electronica estilizada con un dise&ntilde;o limpio e inovador que te permite usar una diferente combinacion de colores.</p>
-      <p>Una caracteristica adicional es escoger entre diferentes tipos de presentacones de tus productos por cada categoria, asi que tu puedes personalizar cada parte de tu tienda.
-      Getit Te permite modificar el tama&ntilde;o de tus productos, tama&no de lista, posiciones de columnas, dandote el poder de adaptar facilmente cualquier tema a tu producto o servicio. Con la herramienta de colores puedes cambiar los elementos de tu sitio haciendolo unico y restaltando de todos los demas.</p>
+      <p><? echo $bienvenido; ?></p>
     </div>
+    <? endif; ?>
     
     <div class="clear"></div>
 
@@ -98,7 +99,6 @@
   <div class = "popup" id = "<?php echo $popup["maquina"]->IdMaquina; ?>"> 
 	<div class = "cerrar">X</div>
 		<div class = 'image_main'>
-
 			<img class ="main<?php echo $popup["maquina"]->IdMaquina; ?>"   width = "258"  height = "250"   src="<?php echo base_url().'images/'. $popup["maquina"]->IdMaquina.'/'.$popup["main"]->file_name;?>" title="<?php echo $popup["main"]->file_name;?>" alt="<?php echo $popup["main"]->file_name;?>" />
 		</div>
 		

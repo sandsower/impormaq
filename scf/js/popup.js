@@ -13,9 +13,11 @@ function mostrar() {
 		{
 			
 			var value = $(this).attr('src');
+			var id = value.split('/')[5];
 			value = value.replace("/thumbs/","/");
 			$(".link").attr('href',value);
-			$(".main").attr('src',value);
+			
+			$(".main"+id).attr('src',value);
 		
 		});
 } //checkHover

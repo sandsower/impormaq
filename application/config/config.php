@@ -15,7 +15,7 @@
 |
 */
 
-$config['base_url']	= 'http://localhost/getit';
+$config['base_url']	= 'http://localhost/getIt';
 /*
 |--------------------------------------------------------------------------
 | Index File

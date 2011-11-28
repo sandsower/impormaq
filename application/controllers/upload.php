@@ -86,5 +86,13 @@ class Upload extends CI_Controller {
 		}
 		redirect($texto);
 	}
+
+	function makeDefault(){
+        $idMaquina= $this->uri->segment(3,0);
+        $idImagen= $this->uri->segment(4,0);
+        $this->gallery_model->makeDefault($idMaquina,$idImagen);
+         
+         
+    }
 }
 ?>
