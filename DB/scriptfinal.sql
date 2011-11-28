@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 27, 2011 at 10:21 p.m.
+-- Generation Time: Nov 28, 2011 at 04:54 a.m.
 -- Server version: 5.5.8
 -- PHP Version: 5.3.5
 
@@ -40,7 +40,8 @@ CREATE TABLE IF NOT EXISTS `ci_sessions` (
 --
 
 INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
-('56526d5f03702a0038444391461b247b', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:8.0) Gecko/20100101 Firefox/8.0', 1322428679, 'a:3:{s:8:"username";s:8:"garrison";s:6:"UserId";s:1:"1";s:12:"is_logged_in";b:1;}');
+('2090bd014f18d4cd9f82ef20bd9b6e73', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:8.0) Gecko/20100101 Firefox/8.0', 1322432524, 'a:3:{s:8:"username";s:8:"garrison";s:6:"UserId";s:1:"1";s:12:"is_logged_in";b:1;}'),
+('90e74c14abdbf792643dc04bd93e6afb', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:8.0) Gecko/20100101 Firefox/8.0', 1322447424, 'a:3:{s:8:"username";s:8:"garrison";s:6:"UserId";s:1:"1";s:12:"is_logged_in";b:1;}');
 
 -- --------------------------------------------------------
 
@@ -98,11 +99,10 @@ CREATE TABLE IF NOT EXISTS `contenido` (
 --
 
 INSERT INTO `contenido` (`IdContenido`, `Titulo`, `Texto`, `Area`) VALUES
-(1, 'Nosotros', 'Nosotros nos dedicamos a hacer algo.', 1),
-(2, 'Comunidad', 'Nuestra comunidad se dedica a bla bla bla bla bla bla bla bla bla bla...', 2),
-(3, 'Ustedes', 'Ustedes se dedican a bla bla bla bla bla bla bla bla bla bla...', 1),
-(4, 'Ellos', 'Ellos se dedican a bla bla bla bla bla bla bla bla bla bla...', 2),
-(6, 'Nosotros tambien', 'Nosotros también nos dedicamos a hacer algo.', 2);
+(1, 'Nosotros', 'GetIt está desarrollado pensado en las pymes mexicanas las cuales necesiten tener presencia en internet para mejorar sus ventas y aumentar su cartera de clientes. Pensamos que cualquier sector industrial puede ser beneficiado con este producto, ya que es un sistema flexible, el cual se adapta a las necesidades de todas y cada una de las empresas. ', 1),
+(2, 'Objetivo', 'Ofrecerá sistemas que se adecuen a las necesidades de pequeñas y medianas empresas, lo suficientemente flexibles los cuales permitirán agregar funcionalidades extras por un precio accesible. ', 1),
+(3, 'Mision', 'GetIt es una empresa comprometida con las PYMES mexicanas, ayudándolas a sobresalir entre sus competidores a través de productos y servicios vanguardistas y de alta calidad que les permite publicitarse y vender sus productos por medio de internet. Asi es. ', 1),
+(4, 'Vision', 'Ser una empresa que en 10 años sea reconocida a nivel nacional, con el respaldo de las pequeñas y medianas empresas, buscando una mejora continua para elevar la calidad y vanguardia de sus servicios y productos, cumpliendo con las necesidades tecnológicas que cada empresa requiera. ', 1);
 
 -- --------------------------------------------------------
 
@@ -172,6 +172,27 @@ INSERT INTO `imagenes` (`IdImagenes`, `idMaquina`, `file_name`, `file_type`, `fi
 (188, 36, '_maq-pesada.jpg', 'image/jpeg', '/Users/Garrison/Sites/impormaq/images/36/promo/', '/Users/Garrison/Sites/impormaq/images/36/promo/_maq-pesada.jpg', '_maq-pesada', '_maq-pesada.jpg', '_maq-pesada.jpg', '.jpg', '30.21', '1', '360', '290', 'jpeg', 'width="360" height="290"', '1', NULL),
 (189, 36, '_maq-pesada.jpg', 'image/jpeg', '/Users/Garrison/Sites/impormaq/images/36/', '/Users/Garrison/Sites/impormaq/images/36/_maq-pesada.jpg', '_maq-pesada', '_maq-pesada.jpg', '_maq-pesada.jpg', '.jpg', '30.21', '1', '360', '290', 'jpeg', 'width="360" height="290"', '0', '1'),
 (190, 36, '34190370_31.jpg', 'image/jpeg', '/Users/Garrison/Sites/impormaq/images/36/', '/Users/Garrison/Sites/impormaq/images/36/34190370_31.jpg', '34190370_31', '34190370_3.jpg', '34190370_3.jpg', '.jpg', '42.53', '1', '625', '469', 'jpeg', 'width="625" height="469"', '0', '0');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `imagenes_contenido`
+--
+
+CREATE TABLE IF NOT EXISTS `imagenes_contenido` (
+  `IDImagenes_Contenido` int(11) NOT NULL AUTO_INCREMENT,
+  `IDContenido` int(11) NOT NULL,
+  `Filename` varchar(200) NOT NULL,
+  `Posicion` int(11) NOT NULL,
+  `IsLogo` int(11) NOT NULL,
+  PRIMARY KEY (`IDImagenes_Contenido`),
+  UNIQUE KEY `IDContenido` (`IDContenido`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `imagenes_contenido`
+--
+
 
 -- --------------------------------------------------------
 
