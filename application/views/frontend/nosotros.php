@@ -2,44 +2,28 @@
   <!--   S H O P   I N F O    --> 
   <!-- ********************** --> 
   <div id="content" class="container_12">
+  <script type="text/javascript" src="<?php echo base_url(); ?>js/nosotros.js"></script>
 
     <div class="grid_12">
-    <? if(isset($nosotros)) :?>
-      <h2>Nosotros</h2>
-	   <img class="wrap_center" width="400" src="<?php echo base_url(); ?>img/frontend/contenido/imgcen.jpg" alt="" />
-	  <p>
-    <? echo $nosotros;?>
-	  </p>
-    <? endif; ?>
-
-    <? if(isset($objetivo)) :?>
-	  <h3>Objetivo</h3>
-	  <p>
-    <? echo $objetivo; ?>
-	  </p>
-    <? endif; ?>
-
-    <? if(isset($mision)) :?>
-      <h3 style = "padding-top:30px;">Mision</h3>
-	  <img class="wrap_right" width="200" src="<?php echo base_url(); ?>img/frontend/contenido/imgder.jpg" alt="" />
-    <p>
-    <? echo $mision; ?>
-	  </p>
-    <? endif; ?>
-
-    <? if(isset($vision)) :?>
-      <h3 style = "padding-top:30px;" >Vision</h3>
-      <img class="wrap_left"   width="200" src="<?php echo base_url(); ?>img/frontend/contenido/imgizq.jpg" alt="" />
-      <p>
-      <? echo $vision; ?>
-      </p>
-    <? endif; ?>
-
-    <? if(isset($politicas)) :?>
-      <h3 style = "padding-top:30px;" >Politicas</h3>
-      <p>
-      <? echo $politicas; ?>
-      </p>
+    <? $cuenta = 0;
+    if(isset($contenido)) : foreach($contenido as $con):?>
+      <h2><label id="<? echo $con->Titulo; ?>"><? echo $con->Titulo; ?></label></h2>
+    <div id="<? echo $con->Titulo; ?>Contenido" <? if($cuenta != 0):?> style="display:none;" <? endif; ?> class="contenido">
+      <? $cuenta++; ?>
+      <? if($cuenta == 1) :?>
+        <img class="wrap_center" width="400" src="<?php echo base_url(); ?>img/frontend/nosotros.png" alt="" />
+      <? endif; ?>
+      <? if($cuenta == 3) :?>
+        <img class="wrap_right" width="200" alt="" src="<?php echo base_url(); ?>img/frontend/Mision.png">
+      <? endif; ?>
+      <? if($cuenta == 4) :?>
+        <img class="wrap_left" width="200" alt="" src="<?php echo base_url(); ?>img/frontend/Vision.png">
+      <? endif; ?>
+	    <p>
+        <? echo $con->Texto; ?>
+	    </p>
+    </div>
+    <? endforeach; ?>
     <? endif; ?>
 	  </div>
   </div>  
