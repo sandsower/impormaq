@@ -6,13 +6,13 @@
       <div id="product_intro" class="container_12">
         <div id="product_intro_info" class="grid_5">
           <div style="position: relative;">
-            <h2><a href="#">Archivo de promoci&oacute;n</a></h2>
+            <h2><a href="#">Caterpillar 330C</a></h2>
             <div class="s_rating_holder">
-              <p class="s_rating s_rating_big s_rating_5"> <span style="width: 60%;" class="s_percent"></span> </p>
-              <span class="s_average">3 out of 5</span> </div>
-            <p class="s_desc"> Texto Promocional</p>
+              <p class="s_rating s_rating_big s_rating_5"> <span style="width: 100%;" class="s_percent"></span> </p>
+              <span class="s_average">5 de 5</span> </div>
+            <p class="s_desc"> ¡Aproveche está única oportunidad!</p>
             <div class="s_price_holder">
-              <p class="s_price"> <span class="s_currency s_before">$</span>384.67 </p>
+              <p class="s_price"> <span class="s_currency s_before">$</span>430000 </p>
             </div>
           </div>
           <?php if(isset($promociones)) : foreach($promociones as $row) : ?>
@@ -20,7 +20,7 @@
             <h2><a href="#"><?php echo $row->TituloPromocional; ?></a></h2>
             <div class="s_rating_holder">
               <p class="s_rating s_rating_big s_rating_5"> <span style="width: 60%;" class="s_percent"></span> </p>
-              <span class="s_average">3 out of 5</span> </div>
+              <span class="s_average">3 de 5</span> </div>
             <p class="s_desc"><?php echo $row->TextoPromocional; ?></p>
             <div class="s_price_holder">
               <p class="s_price"> <span class="s_currency s_before">$</span><?php echo $row->PrecioPromocional; ?> </p>
@@ -31,7 +31,7 @@
         </div>
         <div id="product_intro_preview">
           <div class="slides_container">
-          <div class="slideItem" style="display: none"><a href="#"><img src="<?php echo base_url(); ?>img/frontend/product_300x300.jpg" alt="" /></a></div>
+          <div class="slideItem" style="display: none"><a href="#"><img src="<?php echo base_url(); ?>img/frontend/default.jpg" alt="" /></a></div>
           <?php if(isset($promociones)) : foreach($promociones as $row) : ?>
             <div class="slideItem" style="display: none"><a href="#"><img src="<?php echo base_url().'images/'. $row->IdMaquina.'/promo/'.$row->file_name; ?>" alt="" /></a></div>
             <?php endforeach; ?>
@@ -99,12 +99,7 @@
   <div class = "popup" id = "<?php echo $popup["maquina"]->IdMaquina; ?>"> 
 	<div class = "cerrar">X</div>
 		<div class = 'image_main'>
-<<<<<<< HEAD
-    <img class ="main<?php  echo   $popup["maquina"]->IdMaquina; ?> " width = "258"  height = "250"  src="<?php echo base_url().'images/'. $popup["maquina"]->IdMaquina.'/'.$popup["main"]->file_name;?>" title="Leica M7" alt="Leica M7" />
-=======
-
 			<img class ="main<?php echo $popup["maquina"]->IdMaquina; ?>"   width = "258"  height = "250"   src="<?php echo base_url().'images/'. $popup["maquina"]->IdMaquina.'/'.$popup["main"]->file_name;?>" title="<?php echo $popup["main"]->file_name;?>" alt="<?php echo $popup["main"]->file_name;?>" />
->>>>>>> c839cce6038e2208c32eb914d6da412c7f52962a
 		</div>
 		
 		<div class = 'detail'>
